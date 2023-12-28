@@ -2,46 +2,48 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
+//镇站三喵
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Life is a Good Thing',
+    Svg: require('@site/static/img/water.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        This website is used to record some interesting moments in my life.
+        Regardless of happy or sad, each is unique.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Focus on What Really Matters',
+    Svg: require('@site/static/img/orange.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Also, I&apos;ll record some promblems in work or study.
+        Suming up is a good habbit. So start to focus on thinking
+        what we have done instead of working all the time.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Powered by Passions',
+    Svg: require('@site/static/img/sandwith.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Extend and maintain own website is a significant thing for me. 
+        Passions is a good thing, maybe the best thing, and mine will never, ever dies.
       </>
     ),
   },
 ];
-
-function Feature({Svg, title, description}) {
+//组件 类似于函数 给定上面的输入 返回的是安顿好位置的html页面
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+      <div className={clsx('text--center', styles.fadeIn)}> 
+        <Svg className={clsx(styles.featureSvg)} role="img" />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className={clsx('text--center padding-horiz--md', styles.fadeIn)}> 
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>

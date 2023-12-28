@@ -9,3 +9,17 @@
   height: 200px;
   width: 200px;
 }
+/* styles.module.css */
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /*淡入动画 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeIn {
+  animation: fadeInAnimation 2.0s ease-in-out forwards;
+}
