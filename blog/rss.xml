@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>SeekYou Blog</title>
+        <link>https://2seekyou.github.io/blog</link>
+        <description>SeekYou Blog</description>
+        <lastBuildDate>Thu, 21 Dec 2023 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[2023年度总结-上]]></title>
+            <link>https://2seekyou.github.io/blog/2023-sum-up-1</link>
+            <guid>https://2seekyou.github.io/blog/2023-sum-up-1</guid>
+            <pubDate>Thu, 21 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[2023年即将接近尾声，在此写下20年人生中的第一次年度总结。（上）]]></description>
+            <content:encoded><![CDATA[<p>2023年即将接近尾声，在此写下20年人生中的第一次年度总结。（上）</p>
+<p>自来上海以来，近期算是我最闲暇的时光，正好可以搭自己的博客，做自己想做的一些事情，顺便记录一下我的2023年。（多图警告！）</p>
+<p>自从上大学以来已经有三年半载了。如果不算大四这年（实习，找工作，考研，保研），相当于我大学的主要生涯也确实是结束了。突然感觉时间过的好快，一下我就成学长了，我也快毕业了，我也20出头了。</p>
+<p>因此在此做下我2023年度的总结，顺带设想一下2024的一年。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023年度展示">2023年度展示！：<a href="https://2seekyou.github.io/blog/2023-sum-up-1#2023%E5%B9%B4%E5%BA%A6%E5%B1%95%E7%A4%BA" class="hash-link" aria-label="Direct link to 2023年度展示！：" title="Direct link to 2023年度展示！：">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="20231-开始正式加入百度飞桨大家庭">2023.1 开始正式加入百度飞桨大家庭<a href="https://2seekyou.github.io/blog/2023-sum-up-1#20231-%E5%BC%80%E5%A7%8B%E6%AD%A3%E5%BC%8F%E5%8A%A0%E5%85%A5%E7%99%BE%E5%BA%A6%E9%A3%9E%E6%A1%A8%E5%A4%A7%E5%AE%B6%E5%BA%AD" class="hash-link" aria-label="Direct link to 2023.1 开始正式加入百度飞桨大家庭" title="Direct link to 2023.1 开始正式��加入百度飞桨大家庭">​</a></h3>
+<p><img loading="lazy" alt="聘书" src="https://2seekyou.github.io/assets/images/1-0eafebefeb9ef3c1e3be8c50115fdac6.jpg" width="1443" height="1080" class="img_ev3q">
+收到来自飞桨的聘书</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="20233-准备智能车线上赛">2023.3 准备智能车线上赛<a href="https://2seekyou.github.io/blog/2023-sum-up-1#20233-%E5%87%86%E5%A4%87%E6%99%BA%E8%83%BD%E8%BD%A6%E7%BA%BF%E4%B8%8A%E8%B5%9B" class="hash-link" aria-label="Direct link to 2023.3 准备智能车线上赛" title="Direct link to 2023.3 准备智能车线上赛">​</a></h3>
+<p>其实对于今年的参赛安排，我个人是相当矛盾的。一方面是由于去年的国奖使我已经获得了保研资格，只是绩点太低，并不能确定我是保内还是保外。此时也算是我比较迷茫的时期。一方面绩点摆在这里，今年就算全部的科目满绩点也不能保证达到保外的要求，因此我大概率是保本校的。但是我自己又不太想留在本校，但是面对考研我没有做好足够的心理准备是毫无疑问的。</p>
+<p>同时期父母施压，希望我边把本学期绩点搞好，边参加比赛，边准备考研的复习。显然是不太可能的。唯独最后者我不太上心，因为时间的问题</p>]]></content:encoded>
+            <category>summary</category>
+            <category>seekyou</category>
+        </item>
+        <item>
+            <title><![CDATA[第一次]]></title>
+            <link>https://2seekyou.github.io/blog/first-blog-post</link>
+            <guid>https://2seekyou.github.io/blog/first-blog-post</guid>
+            <pubDate>Tue, 19 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to cuiquan's blog.]]></description>
+            <content:encoded><![CDATA[<p>Welcome to cuiquan's blog.</p>
+<p>毫无疑问这是我的第一篇博客，随心记录一下最近的一些想法和感受。</p>
+<p>Okay!Hello everyone！</p>
+<p>毫无疑问，博客算是创建成功了。docusaurus的大概用法是了解了，暂时就只当作博客来用，作为项目后期的优化和其他功能的附加，那就是之后的事情了。打算等后期内容多一些了就把目前多余的tutorial换成一些专栏分类。希望能有这样一天吧！</p>
+<p>这里是最初版本的<a href="https://www.seekyou.top/" target="_blank" rel="noopener noreferrer">blog</a>，使用的hugo框架，但是由于<a href="https://github.com/tianrking" target="_blank" rel="noopener noreferrer">学长tianrking</a>的建议，改用了docusaurus。发现确实舒适很多。</p>
+<p>除此之外，很有意思的一件事情——也是使我鼓起劲头来做这个博客的原因——我在github上发现去年参加智能车的山大威海的一位佬的开源项目，同时还挂上了自己的博客。无意之间翻了翻，发现这位巨佬从小学毕业就开始自己和同学做网页，维护网页。时长长达<strong>8年</strong>之久不曾间断，实在是令我大为震惊。</p>
+<p>我花费了大约半天的时间几乎把佬的一些日常博客看完，深深感受到同辈之间的鸿沟。明明是同一届的同学却差距如此之大。看着大佬从初中到高中到大学的日常记录，有游戏博客，技术博客也有生活记录。不禁让我想起我自己的过去9年，几乎没有认真记录过。很难不让人怀念...</p>
+<p>又想起了自己一个月之前搭的博客，却始终没有再push过，深感惭愧。再加上我自己也深刻地发现自己没有总结的习惯，似乎一直在做，很少会去总结自己做的内容，以至于后面再做的时候常常会重蹈覆辙。私认为这并不是一个好事。于是打算认认真真搞好这个博客。</p>]]></content:encoded>
+            <category>seekyou</category>
+        </item>
+        <item>
+            <title><![CDATA[欢迎来到SeekYou！]]></title>
+            <link>https://2seekyou.github.io/blog/Welcome-to-seekyous-blog</link>
+            <guid>https://2seekyou.github.io/blog/Welcome-to-seekyous-blog</guid>
+            <pubDate>Fri, 15 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[欢迎来到崔的小站]]></description>
+            <content:encoded><![CDATA[<p><strong>欢迎来到崔的小站</strong></p>]]></content:encoded>
+            <category>welcome</category>
+        </item>
+        <item>
+            <title><![CDATA[MDX Blog Post]]></title>
+            <link>https://2seekyou.github.io/blog/mdx-blog-post</link>
+            <guid>https://2seekyou.github.io/blog/mdx-blog-post</guid>
+            <pubDate>Sun, 01 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></description>
+            <content:encoded><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer">MDX</a>.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p><div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">button onClick</span><span class="token operator" style="color:#393A34">=</span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'button clicked!'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">}</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator" style="color:#393A34">!</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token operator" style="color:#393A34">/</span><span class="token plain">button</span><span class="token operator" style="color:#393A34">&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><button>Click me!</button></div></div>]]></content:encoded>
+            <category>docusaurus</category>
+        </item>
+    </channel>
+</rss>

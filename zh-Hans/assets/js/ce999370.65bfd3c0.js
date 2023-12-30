@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkseekyou_blog=self.webpackChunkseekyou_blog||[]).push([[8576],{5112:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/zh-Hans/blog/tags/docusaurus","allTagsPath":"/zh-Hans/blog/tags","count":1,"unlisted":false}')}}]);
