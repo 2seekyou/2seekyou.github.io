@@ -44,8 +44,8 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          //editUrl:
-          //'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          // 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -117,7 +117,7 @@ const config = {
                 href: 'https://join.skype.com/invite/ybaQadoUcuaJ',
               },
               {
-                label: 'Bilibili', 
+                label: 'bilibili', 
                 href: 'https://space.bilibili.com/473511957',
               },
             ],
@@ -129,10 +129,14 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/cowqer',//expected to add some project website
               },
+              {
+                label: 'GPT',
+                href: 'https://gpt.seekyou.top',
+              },
             ],
           },
         ],
-        copyright: `Copyright ©2023.12 Seekyou,Built by cuiquan.`,
+        copyright: `Copyright ©2023.12 Seekyou,Built by C.Q.`,
       },
       prism: {
         theme: prismThemes.github,

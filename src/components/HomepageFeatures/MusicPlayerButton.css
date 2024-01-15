@@ -2,20 +2,21 @@
 .music-player-container {
     display: flex;
     justify-content: flex-end; /* 将内容推向容器的最右边 */
+    text-align: right; /* 设置容器内元素右对齐 */
     align-items: center; /* 垂直居中 */
     /* 其他样式属性 */
     /* ... */
   }
 /* 默认按钮样式 */
 button.music-player-btn {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
     color: rgb(128, 215, 249);
     padding: 5px 5px;
     border: none;
     border-radius: 2px;
     cursor: pointer;
     font-size: 14px;
-    animation: sparkle 0.5s ease;
+    animation: sparkle 2s ease;
   }
   
   /* 鼠标悬停时的样式 */
@@ -26,12 +27,16 @@ button.music-player-btn:hover {
   
 @keyframes sparkle {
     0% {
-      transform: scale(1);
-      opacity: 1;
+      transform: scale(0.0);
+      opacity: 0;
+    }
+    20% {
+      transform: scale(0.2);
+      opacity: 0.25;
     }
     50% {
-      transform: scale(1.1);
-      opacity: 0.7;
+      transform: scale(0.5);
+      opacity: 0.5;
     }
     100% {
       transform: scale(1);
