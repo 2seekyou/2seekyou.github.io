@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkseekyou_blog=self.webpackChunkseekyou_blog||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"2023\xb7\u5e74\u5ea6\u603b\u7ed3","permalink":"/blog/2023-sum-up-1","unlisted":false},{"title":"Welcome\uff01","permalink":"/blog/first-blog-post","unlisted":false}]}')}}]);
