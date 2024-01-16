@@ -34,46 +34,46 @@
 <p>在我看来这种行为需要的只是机灵而已，根本就不需要具体做些什么东西，即使我也做过类似的大创，但是也并不觉得光彩，只是一些学长赚钱的工具罢了。我承认这些项目中确实有那种有些技术性的东西在，但是甚至比不过滥竽充数的大多数。
 所幸借助着学弟和Chatgpt的力量，线上文档成绩在前30直接免费get大疆无人机和rm小车租借资格！</p>
 <p>大疆M3e</p>
-<p><img loading="lazy" alt="9.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/9-3a3f83ddd7b517ece6973096fd354079.jpg" width="512" height="332" class="img_ev3q"></p>
+<p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBUyL.png" alt="OvBUyL.png" class="img_ev3q"></p>
 <p>大疆RMEP</p>
-<p><img loading="lazy" alt="5.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/5-51d3965599e2d1b39784043f8a7ed3dc.jpg" width="508" height="381" class="img_ev3q"></p>
+<p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBTUC.jpg" alt="OvBTUC.jpg" class="img_ev3q"></p>
 <p>正好机器人线上赛去年也是我的学长做的，今年开始自己学着用python写几个简单的图像处理demo，拿个60分还是不算太难。也上传了github <a href="https://github.com/cowqer/2023international-online-competition-of-auto-running-robots" target="_blank" rel="noopener noreferrer">here！</a> 因为写的比较简单，所以也没在意细节，反正也只是反复提交和刷分。</p>
 <p>题目的内容几乎都是对赛道上的一些简单图像做元素识别，输出目标图形的圆心和半径，或者是多边形的中心点坐标和长宽。并不算太复杂，但是要多提交比对，因为参考数据比较少，验证集大概也只有20多个吧,大多数的图像学和边缘检测加上多边形检测就基本够用了。</p>
 <p><img loading="lazy" alt="7.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/7-96960957eb31be429b47e4eb77f6a738.jpg" width="505" height="364" class="img_ev3q"></p>
 <p>两台小机器人</p>
 <p>上文说到我此时的计划只准备线上赛，线下全权交给学弟和组长。但是事实是组长直接开头到结尾没来过，硬件也差不多，几乎就学弟一个人在搞。我自己也想以比赛为借口逃避考研，也有想借着无人机大赛冲刺国特，直接保外的想法。虽然我知道我自己的任务已经完成了，但是整个组毕竟在这里，我做不出来半途而废的举动，也不想整个组就此解散，我也没有办法，我也不是这种性格。</p>
 <p>或许比赛对我的意义已经不打了，但是在我看来，这是我的提议才有的组别，这是我起初识人有误才导致的结果，我应该要负起这个责任。总而言之就是依旧在比赛上又花了不少心思，自己又重新成了组长开始一点点接手，重新拉人一起做硬件，帮着和学弟一起调车一起熬夜。</p>
-<p>顺便还看到隔壁计网院的考研上岸率···我看着就感觉到后怕更不想去复习了。
-（第二天这个就不见了，怀疑是觉得不太光荣就被撕掉了）</p>
-<p><img loading="lazy" alt="3.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/3-6ce6c5fdd3cd0559b2088ab51cb7c1fc.jpg" width="507" height="677" class="img_ev3q"></p>
+<p>顺便还看到隔壁计网院的考研上岸率···我看着就感觉到害怕，也更不想去复习了。
+（只存在了一天，怀疑是觉得不太光荣就被撕掉了）</p>
+<p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBWsi.jpg" alt="OvBWsi.jpg" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="确定保研之后">确定保研之后<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E7%A1%AE%E5%AE%9A%E4%BF%9D%E7%A0%94%E4%B9%8B%E5%90%8E" class="hash-link" aria-label="确定保研之后的直接链接" title="确定保研之后的直接链接">​</a></h2>
 <p>即使这学期的绩点几乎满绩，但最终排名定格还差10名左右。没能保送外校。但是我也做好了心理准备，也接受了事实，还安慰自己没事，反正本校老师啥都熟，以后出去读博什么的也方便。
 而且这个时候的比赛还在继续，要达到89月份的话也没什么备考时间留给我了，我也就顺利成章成功地逃避考研继续之后的比赛。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="旅游--比赛-1">旅游 + 比赛 1<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E6%97%85%E6%B8%B8--%E6%AF%94%E8%B5%9B-1" class="hash-link" aria-label="旅游 + 比赛 1的直接链接" title="旅游 + 比赛 1的直接链接">​</a></h3>
 <p>在完全模型的华南区赛结束后，我们马上开始准备了无人机组的重庆西部赛区比赛，时间很短，满打满算可能也不超过5天的备赛时间。
 几乎是天天通宵，一口气都没歇过直奔重庆。好在线下的比赛难度不是很大，简单的完赛还是做到了，国二GET！也就顺理成章地正式进入完赛后的旅游环节！
-<img loading="lazy" alt="10.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/10-ded2c2c982d7fedb42bfc091d811d1b8.jpg" width="508" height="381" class="img_ev3q"></p>
+<img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBkaX.jpg" alt="OvBkaX.jpg" class="img_ev3q"></p>
 <p>来都来了，重庆火锅总得试试吧</p>
-<p><img loading="lazy" alt="12.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/12-74d766965246f559093ad53b54da6690.jpg" width="508" height="381" class="img_ev3q"></p>
-<p>最高点的重庆夜景</p>
-<p><img loading="lazy" alt="13.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/13-cee313c0ea87ee049618d5fbed54ae6d.jpg" width="508" height="381" class="img_ev3q"></p>
+<p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBxet.jpg" alt="OvBxet.jpg" class="img_ev3q"></p>
+<p>重庆最高点的夜景</p>
+<p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBqRS.jpg" alt="OvBqRS.jpg" class="img_ev3q"></p>
 <p>顺带也去了一趟成都，四川的麻辣豆花，very nice！</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="旅游--比赛-2">旅游 + 比赛 2<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E6%97%85%E6%B8%B8--%E6%AF%94%E8%B5%9B-2" class="hash-link" aria-label="旅游 + 比赛 2的直接链接" title="旅游 + 比赛 2的直接链接">​</a></h3>
 <p>最意想不到的事情是又进了国赛···原本打算放暑假了，卓大发的推文出来，卡线华南最后一名进国赛了。所以又加上一段智能车国赛·天津之旅。
-<img loading="lazy" alt="18.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/18-de117e6c14b49863702ef8b8fbe25470.jpg" width="508" height="381" class="img_ev3q"></p>
+<img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBzGx.jpg" alt="OvBzGx.jpg" class="img_ev3q"></p>
 <p>天津工业大学</p>
 <p>但是由于中途的一些小插曲————百度飞桨的夏季峰会wave summit正好在比赛前一天的北京举行，而之前大疆组又碰巧要开一个开发者会议，在比赛结束3天后的深圳天空之城举行。
-<img loading="lazy" alt="19.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/19-b60eb5bf094bb225180806a73c900ebd.jpg" width="504" height="379" class="img_ev3q"></p>
+<img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBoha.jpg" alt="OvBoha.jpg" class="img_ev3q"></p>
 <p>峰会现场</p>
-<p><img loading="lazy" alt="17.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/17-2840d70521df09fa0acb858f3ece3411.jpg" width="228" height="508" class="img_ev3q"></p>
+<p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBihp.jpg" alt="OvBihp.jpg" class="img_ev3q"></p>
 <p>大疆天空之城</p>
-<p>所以这段就变成北京-天津-深圳之旅。总而言之就是通过比赛，我几乎跑遍全国主要的东西南北——南京 成都 深圳 北京。最后旅途结束时可以看到整个暑假几乎都在铁路上过的。</p>
-<p><img loading="lazy" alt="16.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/16-18c7647478b44c843117dd04c40a520f.jpg" width="195" height="515" class="img_ev3q"></p>
+<p>所以这段就变成北京-天津-深圳之旅。总而言之就是通过比赛，我几乎跑遍全国主要的东西南北——南京 成都 深圳 北京。最后旅途结束时收获满满一把车票!!</p>
+<p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBFIj.jpg" alt="OvBFIj.jpg" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="上半年总结">上半年总结<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%80%BB%E7%BB%93" class="hash-link" aria-label="上半年总结的直接链接" title="上半年总结的直接链接">​</a></h2>
 <p>上半年其实并不只是展现在这里的风光，也有很多七七八八的烦心事或者说觉得做的很差的地方。为什么这么说呢？因为我上半年几乎都没有认真的学习过。</p>
 <p>当然我指的是技术方面，学校的课程我还是有认真准备复习的。中途用到的许多东西都是在已有的基础上进行二次开发或者只是繁琐的PID调参，对我个人来说并没有真正学习到有用的技术，或者说思想上有什么很大的突破。</p>
 <p>加上去年年底出来的chatgpt，使得我就变得更懒惰了，反而不会像是以前一样认认真真去看他人的博客，长期性的不加思考的cv大法让我觉得相当空虚。有一种仿佛什么都学了但是什么都没有学到的感觉。虽然在没出现gpt之前我也有过类似的行为，但有一些遇到的问题还是会自己思考，去想办法搞明白。但是现在就算是出现了什么问题我也只是把问题再抛给gpt，让他去思考。仿佛成了一个只会复制粘贴的工具人。。
-<img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/Ov5cvc.jpg" alt="Ov5cvc.jpg" class="img_ev3q"></p>
+<img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/Ov5cvc.jpg" alt="20.jpg" class="img_ev3q"></p>
 <p>我不得不承认gpt的出现大幅度提升了我的工作效率，相较于出现了快一年还有人不知道的人。我也喜欢借着一些类似的语言麻痹自己，让自己心安：这种东西只能算是工具罢了，我使用的工具产生的生产结果为什么不能算我的个人所获呢？举个例子，我用gpt生产的论文为什么不算我自己的呢？</p>
 <p>这样一番话看似冠冕堂皇，但是也存在一些悖论在其中，就是关于gpt的定义是否真的只是工具？一旦他的生产效益过大，超过了简单的工具定义，例如现在github上一些利用gpt生成大型项目的开源项目，这样庞大的生产效益，但是你只需要提供几个关键词prompt说的详细，总感觉有些过于玄乎。</p>
 <p>不下于哈利波特中的魔咒一般，10个字母不到就能变得如此神奇。而需要的只不过是想象力罢了——很相像对吧？就是这么神奇，对现在的我来说感觉到相当恐惧，仿佛以后只需要人们会写prompt去生产代码，根据效果再反馈给他改进，运行测试过程的bug就反复抛给他就行——而实际上我早已经开始这么做了···</p>]]></content>
