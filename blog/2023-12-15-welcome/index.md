@@ -1,6 +1,6 @@
 ---
 slug: first-blog-post
-title: Welcome to cq's cite
+title: Welcome！
 authors:
   name: Cui quan
   title: Maintainer of Site
