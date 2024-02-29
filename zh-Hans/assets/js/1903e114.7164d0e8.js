@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkseekyou_blog=self.webpackChunkseekyou_blog||[]).push([[5347],{3380:e=>{e.exports=JSON.parse('{"permalink":"/zh-Hans/blog/tags/note","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
