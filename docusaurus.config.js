@@ -68,9 +68,9 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'DocSidebar',
             position: 'right',
-            label: 'Tutorial',
+            label: 'Project',
           },
           {
             type: 'localeDropdown',
@@ -130,7 +130,7 @@ const config = {
                 href: 'https://github.com/cowqer',//expected to add some project website
               },
               {
-                label: 'GPT',
+                label: 'GPT(expired)',
                 href: 'https://gpt.seekyou.top',
               },
             ],
