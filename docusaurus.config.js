@@ -67,19 +67,25 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'DocSidebar',
+            to: 'docs/skill',
             position: 'right',
             label: 'Project',
-          },
-          {
-            type: 'localeDropdown',
-            position: 'right',
           },
           {
             to: '/blog', 
             label: 'Blog', 
             position: 'right'
+          },
+          {
+            label: 'More',
+            position: 'right',
+            items: [
+              { label: 'Note', to: 'docs/note' },
+            ],
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
           {
             href: 'https://github.com/cowqer',

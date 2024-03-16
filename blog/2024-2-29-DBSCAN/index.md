@@ -1,6 +1,6 @@
 ---
 slug: DBSCAN
-title: About DBSCAN 
+title: 记录DBSCAN 
 authors: [seekyou]
 tags: [Note,seekyou,DBSCAN]
 ---
@@ -12,6 +12,7 @@ tags: [Note,seekyou,DBSCAN]
 DBSCAN is a density-based clustering algorithm that groups together data points that are closely packed, while marking points that lie alone in low-density regions as outliers.  
 
 Unlike K-means, DBSCAN doesn't require specifying the number of clusters beforehand and is robust to noise and outliers. Along with its hierarchical extensions HDBSCAN, it is applied mostly in Automotive Radar Data.
+
 最近对有关雷达数据的聚类方法做了些调研，主要看的一些评估指标和有关DBSCAN的方法，于此重新复习一下DBSCAN。文件附上：
 <a href="RESEARCH-ON-RADAR-DATA-CLUSTERING.pdf">pdf文件</a>
 

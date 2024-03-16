@@ -4,12 +4,12 @@ title: 笔记：计算机缺失的一课
 authors: [seekyou]
 tags: [Note,seekyou,2024]
 ---
-The Note of Missing Semester of CS Education
+# The Note of Missing Semester of CS Education
 <!-- truncate -->
-# MIT Lecture online 
-## 关于断更:
-github为什么断了一个多月？ 那必然是因为寒假在家实在是不方便办公，大病+太冷+事多。
-近期抽空看完了之前只看了git那部分的课程，视频+课件参半看的差不多了。记录一些笔记，主要也是自己不太熟悉，以及感觉之后会用到的。附上链接[MIT: Missing Semester of CS education](https://openai.com )
+
+## MIT Lecture Online 
+
+近期抽空看完了之前只看了git部分的课程，视频+课件参半看的差不多了。记录一些笔记，主要也是自己不太熟悉，以及感觉之后会用到的。附上链接[MIT: Missing Semester of CS education](https://missing.csail.mit.edu/2020/course-shell/)如果注册不成功的话也可以去bilibili上看，有搬运带翻译的完整视频。
 
 ## some commad:
 `man + function` manual page of function  
