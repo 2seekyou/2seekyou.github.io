@@ -72,6 +72,12 @@ const config = {
             label: 'Project',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'DocSidebar',
+            position: 'left',
+            label: 'Test',
+          },
+          {
             to: '/blog', 
             label: 'Blog', 
             position: 'right'
