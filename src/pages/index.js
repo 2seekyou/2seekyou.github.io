@@ -32,6 +32,8 @@ function HomepageHeader() {
             alt="Typing SVG"
           />
         </a>
+        <a href="https://git.io/typing-svg" onClick={handleImageClick}>//动态字显示功能
+        </a>
       </div>
     </header>
   );

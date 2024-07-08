@@ -1,5 +1,5 @@
 ---
-slug: Git
+slug: Git+
 title: Git 操作手册
 authors: [seekyou]
 tags: [Git,seekyou]
