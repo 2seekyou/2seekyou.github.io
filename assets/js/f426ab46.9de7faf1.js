@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkseekyou_blog=self.webpackChunkseekyou_blog||[]).push([[1272],{3089:e=>{e.exports=JSON.parse('{"label":"SARDET","permalink":"/blog/tags/sardet","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
