@@ -1,0 +1,35 @@
+.custom-image-container {
+  background-color: rgb(128, 215, 249); /* 用于测试CSS是否加载 */
+  display: grid;
+  place-content: center;
+  min-height: 10vh;
+  background: #49cbff;;
+  filter: drop-shadow(0 0 10px #00ffff);
+}
+
+  
+  .custom-image {
+    --s: 80px; /* image size */
+  
+    width: var(--s);
+    aspect-ratio: 1;
+    padding: calc(0.09 * var(--s)) calc(var(--s) / 2 - var(--_p));
+    box-sizing: border-box;
+    object-fit: cover;
+    border-image: radial-gradient(#ffb7df 69%, #2f00ff00 70%) 84.5% /
+      calc(var(--s) / 2) / 0 var(--_p);
+    clip-path: polygon(
+      calc(-41% - var(--_p)) 0,
+      calc(50% - var(--_p)) 91%,
+      calc(50% + var(--_p)) 91%,
+      calc(141% + var(--_p)) 0
+    );
+    transition: 0.5s;
+    cursor: pointer;
+    --_p: 0px;
+  }
+  
+  .custom-image:hover {
+    --_p: calc(var(--s) / 2);
+  }
+  
