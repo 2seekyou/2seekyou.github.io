@@ -23,12 +23,10 @@ export default function BottomFeatures() {
   }
 
   return (
-
           <Feature
            buttonText="INTRODUCE"
-           onButtonClick={() => alert('Button Clicked!')}
+           onButtonClick={() => window.location.href = 'introduce'}
           />
-
   );
 }
 
