@@ -1794,6 +1794,17 @@
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
 }
+@keyframes borderBlink {
+  0% {
+    border-color: rgb(179, 246, 255);
+  }
+  50% {
+    border-color: #00e1ff; /* 边框闪烁的颜色 */
+  }
+  100% {
+    border-color: rgb(255, 255, 255);
+  }
+}
 
 /* Shutter Out Horizontal */
 .hvr-shutter-out-horizontal {
@@ -1801,13 +1812,14 @@
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(17, 0, 255, 0);
   position: relative;
-  background: #e1e1e1;
+  background: rgba(174, 246, 255, 0.979);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  border: 3px solid rgba(105, 209, 250, 0.979); /* 边框初始为透明 */
 }
 .hvr-shutter-out-horizontal:before {
   content: "";
@@ -1817,7 +1829,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: #2098D1;
+  background: #ffa9d8 69%;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -1836,7 +1848,12 @@
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-
+.hvr-shutter-out-horizontal:hover, 
+.hvr-shutter-out-horizontal:focus, 
+.hvr-shutter-out-horizontal:active {
+  animation: borderBlink 1.5s infinite; /* 添加边框闪烁动画 */
+  border-color: #ff00ff; /* 边框颜色 */
+}
 /* Shutter In Vertical */
 .hvr-shutter-in-vertical {
   display: inline-block;

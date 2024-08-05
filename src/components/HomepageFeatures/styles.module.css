@@ -13,11 +13,35 @@
   width: 200px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中（如果需要） */
+  width: 10%; /* 使容器占满父元素的宽度 */
+  display: grid;
+  place-content: center;
+}
+
+.button {
+  background-color: #58a9ff; /* 按钮背景色 */
+  border: none; /* 按钮边框 */
+  color: rgb(255, 255, 255); /* 按钮文字颜色 */
+  padding: 0.5rem 4rem; /* 按钮内边距 */
+  font-size: 1.5rem; /* 按钮文字大小 */
+  border-radius: 0.25rem; /* 按钮圆角 */
+  cursor: pointer; /* 鼠标悬停时的指针样式 */
+  transition: background-color 0.5s ease; /* 背景色过渡效果 */
+}
+
+.linkRight {
+  display: inline-block;
+  margin-right: 1000px; /* 调整此值以设置移动的距离 */
+}
 /* styles.module.css */
 @keyframes fadeInAnimation {
   from {
     opacity: 0;
-    transform: translateY(30px); /*淡入动画 */
+    transform: translateY(40px); /*淡入动画 */
   }
   to {
     opacity: 1;
@@ -25,7 +49,7 @@
   }
 }
 .fadeIn {
-  animation: fadeInAnimation 2.0s ease-in-out forwards;
+  animation: fadeInAnimation 1.5s ease-in-out forwards;
 }
 
 /* Bob */
@@ -91,4 +115,121 @@
   animation-fill-mode: forwards;
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
+}
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+
+/* Radial Out */
+
+/* Radial Out */
+.hvr-radial-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  background: #e1e1e1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-radial-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-radial-out:hover, .hvr-radial-out:focus, .hvr-radial-out:active {
+  color: white;
+}
+.hvr-radial-out:hover:before, .hvr-radial-out:focus:before, .hvr-radial-out:active:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+/* Shutter Out Horizontal */
+.shutter-out-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background: #0044ff;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.shutter-out-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0082be;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.shutter-out-horizontal:hover, .shutter-out-horizontal:focus, .shutter-out-horizontal:active {
+  color: rgb(255, 0, 0);
+}
+.shutter-out-horizontal:hover:before, .shutter-out-horizontal:focus:before, .shutter-out-horizontal:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }

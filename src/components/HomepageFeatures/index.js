@@ -5,17 +5,18 @@ import Translate from '@docusaurus/Translate';
 
 
 export default function HomepageFeatures() {
-  function Feature({ Svg, title, description }) {
+  function Feature({ Svg, title, description, buttonText, onButtonClick}) {
     return (
       <div className={clsx('col col--4')}>
         <div className={clsx('text--center', styles.fadeIn)}> 
-          <Svg className={clsx(styles.featureSvg)} role="img" />
+          <Svg className={clsx(styles.featureSvg)} role="img" /> {/* SVG 图标 */}
         </div>
-        <div className={clsx('text--center padding-horiz--md', styles.fadeIn)}> 
+        <div className={clsx('text--center padding-horiz--md', styles.fadeIn)}> {/* SVG 图标对应文字 */}
           <Heading as="h2" className={styles.featureTitle}>
-            {title}
+            {title}{/* SVG 图标对应标题 */}
           </Heading>
           <p>{description}</p>
+
         </div>
       </div>
     );
@@ -37,6 +38,7 @@ export default function HomepageFeatures() {
                 This website is used to record some interesting moments in my life. Regardless of happy or sad, each is unique.
               </Translate>
             }
+            
           />
           <Feature
             title={
