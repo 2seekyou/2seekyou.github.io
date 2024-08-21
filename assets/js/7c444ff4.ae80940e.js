@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkseekyou_blog=self.webpackChunkseekyou_blog||[]).push([[1316],{3955:e=>{e.exports=JSON.parse('{"title":"C++","slug":"/category/c","permalink":"/docs/category/c","navigation":{"previous":{"title":"1","permalink":"/docs/skill/programming-languages/python/1"},"next":{"title":"1","permalink":"/docs/skill/programming-languages/C++/1"}}}')}}]);
