@@ -81,8 +81,8 @@ const config = {
             label: 'More',
             position: 'right',
             items: [
-              { label: 'Note', to: 'docs/descri' },
-              { label: 'test', to: 'docs/all-skill-intro' },
+              { label: 'Note', to: '/docs/skill' },
+              { label: 'test', to: '/docs/all-skill-intro' },
             ],
           },
           {
@@ -110,7 +110,7 @@ const config = {
             items: [
               {
                 label: 'Note',
-                to: '/skill/descri',
+                to: '/docs/skill',
               },
               {
                 label: 'Blog',
@@ -118,7 +118,7 @@ const config = {
               },
               {
                 label: 'All',
-                to: '/docs',
+                to: '/docs/all-skill-intro',
               },
             ],
           },

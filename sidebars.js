@@ -30,7 +30,8 @@ const sidebars = {
     },
   ],
   Note: [
-    'skill/descri',
+    'skill/skill',
+
     {
 
       label: '学习笔记',
