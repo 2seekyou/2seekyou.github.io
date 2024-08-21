@@ -1,6 +1,6 @@
 ---
 slug: The-Note-of-Missing-Semester
-title: 笔记：计算机缺失的一课
+title: 计算机缺失的一课
 authors: [seekyou]
 tags: [Note,seekyou,2024]
 ---

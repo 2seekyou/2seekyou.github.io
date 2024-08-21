@@ -66,17 +66,12 @@ const config = {
           src: 'img/yanqing.svg',
         },
         items: [
-          {
-            to: 'docs/skill',
-            position: 'right',
-            label: 'Project',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'DocSidebar',
-            position: 'left',
-            label: 'Testing',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'DocSidebar',
+          //   position: 'left',
+          //   label: 'Testing',
+          // },
           {
             to: '/blog', 
             label: 'Blog', 
@@ -86,12 +81,18 @@ const config = {
             label: 'More',
             position: 'right',
             items: [
-              { label: 'Note', to: 'docs/note' },
+              { label: 'Note', to: 'docs/descri' },
+              { label: 'test', to: 'docs/all-skill-intro' },
             ],
           },
           {
             type: 'localeDropdown',
             position: 'right',
+          },
+          {
+            to: 'introduce',
+            position: 'right',
+            label: 'About',
           },
           {
             href: 'https://github.com/cowqer',
@@ -108,8 +109,8 @@ const config = {
             title: 'Record',
             items: [
               {
-                label: 'Project',
-                to: '/docs/intro',
+                label: 'Note',
+                to: '/skill/descri',
               },
               {
                 label: 'Blog',
@@ -117,7 +118,7 @@ const config = {
               },
               {
                 label: 'All',
-                to: '/docs/intro',
+                to: '/docs',
               },
             ],
           },

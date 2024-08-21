@@ -182,6 +182,6 @@ Git 可以给任意一个提交打上标签，以示重要，默认使用标签�
 - 发起pr的描述信息尽可能详细，不仅方便管理员查看，也方便其他人发现你修复的 bug
 
 
-## 参考来自：
-[开源指北]（https://oschina.gitee.io/opensource-guide/git_tutorial/Git%20%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/%E5%B8%B8%E7%94%A8%20Git%20%E5%91%BD%E4%BB%A4/#%E6%89%93%E6%A0%87%E7%AD%BE）
+## 参考
+[开源指北](https://oschina.gitee.io/opensource-guide/git_tutorial/Git%20%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/%E5%B8%B8%E7%94%A8%20Git%20%E5%91%BD%E4%BB%A4/#%E6%89%93%E6%A0%87%E7%AD%BE)
 （本文只记录了基础内容，进阶操作对我来说太早了哈哈）

@@ -22,14 +22,24 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
+        <h1
+          style={{
+            fontSize: '3.5rem',  // 调整字体大小
+            fontWeight: 'bold',
+            color: '#fff',
+            fontDisplay: 'swap',  // 需要在 CSS 中使用 `font-display`，内联样式可能不支持
+            textAlign: 'center',
+            marginTop: '0',
+            marginBottom: '1rem'
+          }}
+        >
           <Translate>
           Seekyou's site
           </Translate>
-        </Heading>
+        </h1>
         <a href="https://git.io/typing-svg" onClick={handleImageClick} className={styles.linkRight}>
           <img
-            src="https://readme-typing-svg.demolab.com?font=Roboto&size=25&duration=4500&pause=50000&color=F7F7F7&center=true%C2%A0%E7%9C%9F&vCenter=Ture%C2%A0%E5%81%87&repeat=true%C2%A0%E7%9C%9F&random=false%C2%A0%E5%81%87&width=441&lines=->>+++Hello!++This+is+seekyou++(*%C2%B4%E2%88%80%60)++~++%E2%99%A5++<<-"
+            src="https://readme-typing-svg.demolab.com?font=Roboto&size=25&duration=1500&pause=50000&color=F7F7F7&center=true%C2%A0%E7%9C%9F&Center=Ture%C2%A0%E5%81%87&repeat=true%C2%A0%E7%9C%9F&random=false%C2%A0%E5%81%87&width=441&lines= ->>+++Hello!++This+is+seekyou++(*%C2%B4%E2%88%80%60)++~++%E2%99%A5++<<-"
             alt="Typing SVG"
           />
         </a>
@@ -40,6 +50,8 @@ function HomepageHeader() {
     </header>
   );
 }
+
+
 
 //主页结构
 export default function Home() {

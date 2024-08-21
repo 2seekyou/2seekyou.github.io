@@ -1,7 +1,7 @@
 ---
 id: docusaurus-translate
 slug: /docusaurus-translate
-title: 翻译
+title: Docusaurus-翻译
 authors: seekyou
 ---
 
