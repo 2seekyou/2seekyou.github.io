@@ -2,11 +2,86 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://2seekyou.github.io/blog</id>
     <title>SeekYou Blog</title>
-    <updated>2024-07-08T00:00:00.000Z</updated>
+    <updated>2024-10-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://2seekyou.github.io/blog"/>
     <subtitle>SeekYou Blog</subtitle>
     <icon>https://2seekyou.github.io/img/yanqing.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[天智杯比赛]]></title>
+        <id>https://2seekyou.github.io/blog/beijing</id>
+        <link href="https://2seekyou.github.io/blog/beijing"/>
+        <updated>2024-10-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[算是比较失败的一次赛后总结]]></summary>
+        <content type="html"><![CDATA[<p>算是比较失败的一次赛后总结</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="赛事介绍">赛事介绍<a href="https://2seekyou.github.io/blog/beijing#%E8%B5%9B%E4%BA%8B%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="Direct link to 赛事介绍" title="Direct link to 赛事介绍">​</a></h2>
+<p>比赛内容：SAR目标检测，可以参考之前SAR100k的博客，大概做这样一件事情。我也看了十来二十篇文章。浮现的代码也有数个。但是并没能起到什么作用···</p>
+<p>具体是什么情况呢···原先只是想着借着比赛为由整出一篇论文的，但是吧···几乎一直是在复现他人做的各种内容，看的论文也很杂，也没想清楚应该怎么做。
+但是确实是挺想去看看的。但是事后事情的发展多少有点出乎意料了。</p>
+<p><a href="https://img.tg/image/OEKHVl" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKHVl.th.jpg" alt="OEKHVl.th.jpg" class="img_ev3q"></a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="出发之前">出发之前<a href="https://2seekyou.github.io/blog/beijing#%E5%87%BA%E5%8F%91%E4%B9%8B%E5%89%8D" class="hash-link" aria-label="Direct link to 出发之前" title="Direct link to 出发之前">​</a></h2>
+<p>其实出发之前10天左右有确定下大概的比赛时间，但是我们没有特别注意。而且当时我并没有过分关注比赛信息。直到大约只有一周的时候我才注意到一些关键信息：</p>
+<ul>
+<li>比赛全程（可能）没有网络</li>
+<li>比赛场地不能带手机和电脑</li>
+<li>比赛的资料只进不出 <strong>拷贝方式是光驱</strong></li>
+<li>电脑上的环境只包含vscode 可能没有cuda torch等</li>
+</ul>
+<p>这三个规则对我可以说是闻所未闻，但是考虑到是涉密比赛，又显得很合理。但是无疑对我有着极大的限制作用：</p>
+<ol>
+<li>没有网络，不能带手机电脑，遇到bug只能手撕代码，不能查资料。这意味着几乎没有容错性，只要出bug就修个大半天就可以放弃了</li>
+<li>资料只进不出，所以相应的安装包环境只能用光驱拷贝，而且环境不能当场下意味着只能打包为docker，但是当时我还不会</li>
+<li>数据集格式未知，可能要针对算法转换为相应的格式</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="应对措施">应对措施<a href="https://2seekyou.github.io/blog/beijing#%E5%BA%94%E5%AF%B9%E6%8E%AA%E6%96%BD" class="hash-link" aria-label="Direct link to 应对措施" title="Direct link to 应对措施">​</a></h3>
+<p>针对以上三个问题我也做了相应的准备：</p>
+<ol>
+<li>copy相关各种教程到txt，然后拷贝到光驱里。</li>
+<li>学了打包docker 但是太大了 当时老师给的光驱只有4个多G，且数量有限，得分开光驱存而且还要合理分配空间。在总容量不过20g的情况下，我还下了一个nvidia的显卡驱动。两个环境加一起就10g+了。</li>
+<li>叫三个被老师拉来的<strong>本科生</strong>写了写数据集转换的脚本 我自己也写好了相应的脚本 <strong>（并没有）</strong></li>
+</ol>
+<p><em><strong>因此，自认为做好充足准备的我觉得拿个成绩至少不成问题，乘上了前往北京的飞机</strong></em></p>
+<p><a href="https://img.tg/image/OEZt1j" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/29/OEZt1j.md.jpg" alt="OEZt1j.md.jpg" class="img_ev3q"></a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="比赛途中">比赛途中<a href="https://2seekyou.github.io/blog/beijing#%E6%AF%94%E8%B5%9B%E9%80%94%E4%B8%AD" class="hash-link" aria-label="Direct link to 比赛途中" title="Direct link to 比赛途中">​</a></h2>
+<p>回过头来看，其实还是自身实力不足，太依赖gpt了，导致我现在的纯手撕代码能力相较于两年前似乎还下降了..话说回来我也不知道为什么要我带上三个大三的本科生打这种比赛，不如我自己去摇人。三个人几乎什么都不会，我几乎全程一个人做每一项工作。而问题也是多到数不胜数。当然在一些策略安排上也出了非常多的问题。</p>
+<p>首先，数据集格式是xml格式的。当时的我还没处理过几次xml文件，因此写的脚本针对性太强（至于本科生写的都不能用，他们连python都没学，我也不能要求太多。。），且它标注的方式似乎有点不一样。我所需要的是转txt后再转yolo。现在回头看看其实我应该能猜到的。自己标注的这类型的数据集源一般都是xml的，我是当时使用过的都是别人合成修改过的数据集，因此没有意识到这一点。针对数据集的格式转换上就花费了不少的时间——<strong>问题1</strong></p>
+<p>其次，在战略上：官方是允许查资料的，不过要在楼外才能用电脑。我当时想着报错的都是小问题，应该自己改改就能解决···
+结果改到后面还是不得不下去找资料——<strong>问题2</strong></p>
+<p>意外情况：赛程只有两天的上午+下午。而光驱拷贝资料的速度是慢的离谱，加上电脑本身的一些问题几乎就把第一个上午占满了。我没想到我们后续的光驱拷贝过去都用不了，赛方的ubuntu系统识别不了我的光驱盘。在反复耗了2h才找到解决方案——先拷贝到双系统的windows共享文件夹，再重进入到ubuntu里。但是这无疑又耗时增加了数倍调试时间——<strong>问题3</strong></p>
+<p>毫无疑问，在前期对这些东西的准备上太差了，导致试错成本过高，甚至没到训练的步骤，在前期配置上就已经彻头彻尾的输了。</p>
+<p>至于其他的本科生，我也不能求全责备（他们至少还是起到了陪伴的作用），归根结底还是自己实力不够，怪不得别人。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="弃赛">弃赛<a href="https://2seekyou.github.io/blog/beijing#%E5%BC%83%E8%B5%9B" class="hash-link" aria-label="Direct link to 弃赛" title="Direct link to 弃赛">​</a></h2>
+<p>到第二天上午，我依然没能开始训练，卡在各种各样的地方，且已经疲惫的不行了。在下午前往赛场的路上，我甚至开始畏惧，逃避了。在赛场门前徘徊了很久很久。
+我在想一个说服自己去的理由，想能不能坚持到最后的理由。但是做不到，我觉得光是在里面坐着都觉得丢脸，什么都做不到。加上那三人也不想，不如出去溜达溜达。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="散步">散步<a href="https://2seekyou.github.io/blog/beijing#%E6%95%A3%E6%AD%A5" class="hash-link" aria-label="Direct link to 散步" title="Direct link to 散步">​</a></h2>
+<p>我都不敢把这段称为旅游，因为从始至终都抱着忐忑不安的心，或者说还没缓过来。在清北附近，但是忘记找学姐打个招呼了，有点笨。脑子里不知道想啥呢。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://2seekyou.github.io/blog/beijing#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="Direct link to 总结" title="Direct link to 总结">​</a></h2>
+<p>时至如今，我依然没想明白能输成这样的根本原因在哪，虽然实力上确实存在不足，但是不至于。我只能归结于我遗漏了某一个关键点，且到最后也没能发现。</p>
+<p>用比赛后回来发的朋友圈总结吧，总之是相当失败的一次经历，除了自身的实力问题，没有遇到什么其他的指的学习的地方。可能只是前者占比过大，后续的许多小问题也被忽视了。</p>
+<p><a href="https://img.tg/image/OEZ4Hp" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/29/OEZ4Hp.md.jpg" alt="OEZ4Hp.md.jpg" class="img_ev3q"></a></p>]]></content>
+        <author>
+            <name>Cui quan</name>
+            <uri>https://github.com/cowqer</uri>
+        </author>
+        <category label="Note" term="Note"/>
+        <category label="seekyou" term="seekyou"/>
+        <category label="competition" term="competition"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[地平线智能车赛]]></title>
+        <id>https://2seekyou.github.io/blog/wuhan</id>
+        <link href="https://2seekyou.github.io/blog/wuhan"/>
+        <updated>2024-08-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[待更新]]></summary>
+        <content type="html"><![CDATA[<p>待更新</p>]]></content>
+        <author>
+            <name>Cui quan</name>
+            <uri>https://github.com/cowqer</uri>
+        </author>
+        <category label="Note" term="Note"/>
+        <category label="seekyou" term="seekyou"/>
+        <category label="competition" term="competition"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[SARDET-100K数据集]]></title>
         <id>https://2seekyou.github.io/blog/SARDET-100K</id>
@@ -37,13 +112,13 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="sardet_100k数据集">SARDet_100K数据集<a href="https://2seekyou.github.io/blog/SARDET-100K#sardet_100k%E6%95%B0%E6%8D%AE%E9%9B%86" class="hash-link" aria-label="Direct link to SARDet_100K数据集" title="Direct link to SARDet_100K数据集">​</a></h2>
 <p>目前现存的SAR数据集相对有限，低分辨率的数据集往往局限于宏观视图上的场景分类，高分辨率的数据集虽能更好描述例如船，车这类的小目标，但是获取条件苛刻，且往往缺乏多样性（例如波段，偏振，分辨率等方面）。</p>
 <p>而该团队提出的SARDet_100K融合的十种数据集不仅各类参数多样化，没有冲突的对象类别，数据来源也不同。下图为数据集预览：</p>
-<p><img loading="lazy" src="https://img-blog.csdnimg.cn/direct/50185b3037da4fae99dc67c9e352982c.png" alt="数据集预览" class="img_ev3q"></p>
+<p><a href="https://img.tg/image/OEKDmb" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKDmb.md.png" alt="OEKDmb.md.png" class="img_ev3q"></a></p>
 <p>数据集相关信息如下：</p>
-<p><img loading="lazy" src="https://img-blog.csdnimg.cn/direct/97d4978f37d547e2a90daeef11f86eea.png" alt="数据集信息" class="img_ev3q"></p>
+<p><a href="https://img.tg/image/OEK4bP" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEK4bP.png" alt="OEK4bP.png" class="img_ev3q"></a></p>
 <p>下图数据集标准化流程，包括了数据集划分，大图像切片和标签注释格式统一。</p>
-<p><img loading="lazy" src="https://img-blog.csdnimg.cn/direct/5be9cf9465804c4da63b4a167ea56f54.png" alt="数据集标准化流程" class="img_ev3q"></p>
+<p><a href="https://img.tg/image/OEKR26" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKR26.md.png" alt="OEKR26.md.png" class="img_ev3q"></a></p>
 <p>（下面为笔者仅针对训练集进行的简单数据分析，可能有所偏差，仅供参考。）</p>
-<p><img loading="lazy" src="https://img-blog.csdnimg.cn/direct/06eac988849e454582308f39abe9f18c.png" alt="analy" class="img_ev3q"></p>
+<p><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKP4F.png" alt="OEKP4F.png" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="msfa">MSFA<a href="https://2seekyou.github.io/blog/SARDET-100K#msfa" class="hash-link" aria-label="Direct link to MSFA" title="Direct link to MSFA">​</a></h2>
 <p>(Multi-Stage with Filter Augmentation Pretraining Framework)——滤波增强的多阶段预训练框架</p>
 <p>目前近期的研究主要依赖于默认的ImageNet预训练方法提出网络设计等提高SAR目标检测的性能，而忽略了从用于预训练的自然数据集和用于微调的SAR数据集之间的显著域差异，以及主干网络和整个检测框架之间的模型差异。</p>
@@ -54,30 +129,28 @@
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="滤波增强输入">滤波增强输入<a href="https://2seekyou.github.io/blog/SARDET-100K#%E6%BB%A4%E6%B3%A2%E5%A2%9E%E5%BC%BA%E8%BE%93%E5%85%A5" class="hash-link" aria-label="Direct link to 滤波增强输入" title="Direct link to 滤波增强输入">​</a></h3>
 <p>本文采用一些手工制作的滤波算子，例如HOG，Canny，Haar，WST，GRE等，将原本输入与相应滤波变换后的数据串联作为新的输入。这样通过把数据从像素空间投射到滤波增强特征空间，从而显著减少自然RGB图像和SAR图像之间的域差异。如下图4(a)所示：</p>
-<p><img loading="lazy" src="https://img-blog.csdnimg.cn/direct/264ab5e0fc9341afa9bd5dac08f9181c.png" alt="滤波增强输入" class="img_ev3q"></p>
+<p><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKJiD.png" alt="OEKJiD.png" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="多级预训练框架">多级预训练框架<a href="https://2seekyou.github.io/blog/SARDET-100K#%E5%A4%9A%E7%BA%A7%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A1%86%E6%9E%B6" class="hash-link" aria-label="Direct link to 多级预训练框架" title="Direct link to 多级预训练框架">​</a></h3>
 <p>在传统的预训练模式中：</p>
 <p>预训练阶段首先在 ImageNet（IN）数据集上随机初始化并训练骨干网络 ，然后在 SAR 数据集上使用预训练好的的检测模型进行微调。如下列公式：</p>
-<p><img loading="lazy" src="https://latex.csdn.net/eq?%5Clabel%20%7Beqn%3A2%7D%20B%20%3D%20%5Ctext%20%7BTrain%7D_%7Bcls%7D%28B_%7B%5Ctheta%20%7D%29%28D_%7BIN%7D%29%20%5Ctext%20%7B%2C%7D" alt="模型训练步骤" class="img_ev3q"></p>
+<p><a href="https://img.tg/image/OEKm3I" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKm3I.png" alt="OEKm3I.png" class="img_ev3q"></a></p>
 <p>本文提出的方法相当于是在第一步完成后添加了一步：用大规模遥感数据集作为域迁移的检测预训练，该数据集域下游SAR数据集也有着相似的对象形状，大小。如上图图4(b)所示，这种方式在自然RGB图像在ImageNet上的光学分别和SAR上的目标分布间搭起了一座桥梁。</p>
 <p>公式也变成了：</p>
-<p><img loading="lazy" src="https://latex.csdn.net/eq?%5Clabel%20%7Beqn%3A2%7D%20B%20%3D%20%5Ctext%20%7BTrain%7D_%7Bcls%7D%28B_%7B%5Ctheta%20%7D%29%28D_%7BIN%7D%29%20%5Ctext%20%7B%2C%7D" alt="模型训练步骤" class="img_ev3q"></p>
-<p><img loading="lazy" src="https://latex.csdn.net/eq?%5Clabel%20%7Beqn%3A5%7D%20A%27%20%3D%20%5Ctext%20%7BTrain%7D_%7Bdet%7D%28A_B%29%28D_%7BRS%7D%29%20%5Ctext%20%7B.%7D" alt="2" class="img_ev3q"></p>
-<p><img loading="lazy" src="https://latex.csdn.net/eq?%5Clabel%20%7Beqn%3A5%7D%20A%27%20%3D%20%5Ctext%20%7BTrain%7D_%7Bdet%7D%28A_B%29%28D_%7BRS%7D%29%20%5Ctext%20%7B.%7D" alt="改进的模型训练步骤" class="img_ev3q"></p>
+<p><a href="https://img.tg/image/OEKgQ1" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKgQ1.png" alt="OEKgQ1.png" class="img_ev3q"></a></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="msfa-1">MSFA<a href="https://2seekyou.github.io/blog/SARDET-100K#msfa-1" class="hash-link" aria-label="Direct link to MSFA" title="Direct link to MSFA">​</a></h3>
 <p>MSFA融合以上两者后的框架与传统方法的框架对比如下所示：</p>
-<p><img loading="lazy" src="https://img-blog.csdnimg.cn/direct/3fe7b996325743f6b643746155b325d1.png" alt="MSFA对比" class="img_ev3q"></p>
+<p><a href="https://img.tg/image/OEKrbq" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKrbq.png" alt="OEKrbq.png" class="img_ev3q"></a></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="实验分析">实验分析<a href="https://2seekyou.github.io/blog/SARDET-100K#%E5%AE%9E%E9%AA%8C%E5%88%86%E6%9E%90" class="hash-link" aria-label="Direct link to 实验分析" title="Direct link to 实验分析">​</a></h2>
 <p>下图主要是添加不同滤波增强输入算子后的mAP比较以及ImageNet 和 SARDet-100k 在 RGB 和手工特征空间上的皮尔逊相关系数 (PCC)。</p>
 <p>可以发现：自然图像与SAR图像之间的域差异较大，但是经过滤波增强后的图像域差异显著减小。</p>
-<p><img loading="lazy" src="https://img-blog.csdnimg.cn/direct/a3b50b52cee347498840d25ad954dd9b.png" alt="实验结果1" class="img_ev3q"></p>
+<p><a href="https://img.tg/image/OEKAgc" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKAgc.png" alt="OEKAgc.png" class="img_ev3q"></a></p>
 <p>可以看出WST不仅缩小域差异的特点以及提取多尺度信息的能力产生了出色的性能，也能看出单纯算子的叠加并不能提供实质有效的额外信息。</p>
-<p><img loading="lazy" src="https://img-blog.csdnimg.cn/direct/a94a432b763e4c0682a9954e6b195aee.png" alt="实验结果2" class="img_ev3q"></p>
+<p><a href="https://img.tg/image/OEKKVr" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKKVr.png" alt="OEKKVr.png" class="img_ev3q"></a></p>
 <p>上图为不同预训练策略的效果显示。</p>
 <p>为了对其有效性和普遍性进行评估，该团队使用各种检测器和骨干网络上进行了丰富的实验，如下图所示，验证了该方法具有相当广泛的适用性和显著的有效性。</p>
-<p><img loading="lazy" src="https://img-blog.csdnimg.cn/direct/a3473b658c104f59b56af8f23d57c5cc.png" alt="实验结果3" class="img_ev3q"></p>
+<p><a href="https://img.tg/image/OEKyrG" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKyrG.png" alt="OEKyrG.png" class="img_ev3q"></a></p>
 <p>最后是MSFA与以前的SOTA方法比对。如下图所示，该文提出的方法明显优于之前所有的方法，在SSDD数据集的mAP@50指标达到了97.9%，在HRSID上达到了83.7%。</p>
-<p><img loading="lazy" src="https://img-blog.csdnimg.cn/direct/461353f448ce40ec81b2df029e892be2.png" alt="SOTA对比" class="img_ev3q"></p>
+<p><a href="https://img.tg/image/OEKvqM" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKvqM.png" alt="OEKvqM.png" class="img_ev3q"></a></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="局限性">局限性<a href="https://2seekyou.github.io/blog/SARDET-100K#%E5%B1%80%E9%99%90%E6%80%A7" class="hash-link" aria-label="Direct link to 局限性" title="Direct link to 局限性">​</a></h2>
 <ul>
 <li>考虑到存在大量无注释的SAR数据集（例如最经典的MSTAR，FARAD等等），可以尝试探索半监督，弱监督或者无监督的方法。</li>
@@ -250,7 +323,7 @@
 <p>大疆天空之城</p>
 <p>所以这段就变成北京-天津-深圳之旅。总而言之就是通过比赛，我几乎跑遍全国主要的东西南北——南京 成都 深圳 北京。最后旅途结束时收获满满一把车票!!</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBFIj.jpg" alt="OvBFIj.jpg" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="上半年总结">上半年总结<a href="https://2seekyou.github.io/blog/2023-sum-up-1#%E4%B8%8A%E5%8D%8A%E5%B9%B4%EF%BF%BD%EF%BF%BD%E6%80%BB%E7%BB%93" class="hash-link" aria-label="Direct link to 上半年总结" title="Direct link to 上半年总结">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="上半年总结">上半年总结<a href="https://2seekyou.github.io/blog/2023-sum-up-1#%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%80%BB%E7%BB%93" class="hash-link" aria-label="Direct link to 上半年总结" title="Direct link to 上半年总结">​</a></h2>
 <p>上半年其实并不只是展现在这里的风光，也有很多七七八八的烦心事或者说觉得做的很差的地方。为什么这么说呢？因为我上半年几乎都没有认真的学习过。</p>
 <p>当然我指的是技术方面，学校的课程我还是有认真准备复习的😅。比赛几个月中途用到的许多东西都是在已有的基础上进行二次开发或者只是繁琐的PID调参，对我个人来说并没有真正学习到有用的技术，或者说思想上有什么很大的突破。</p>
 <p>加上去年年底出来的chatgpt，我就变得更懒惰了，反而不会像以前一样认认真真去看他人的博客，长期性不加思考的cv大法让我觉得相当空虚，有一种仿佛什么都学了但是什么都没有学到的感觉。虽然在没出现gpt之前我也有过类似的行为，但有一些遇到的问题还是会自己思考，去想办法搞懂。但是现在就算是出现了什么问题我也只是把问题再抛给gpt，让他去思考。仿佛成了一个只会复制粘贴的工具人···
