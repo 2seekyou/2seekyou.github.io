@@ -40,19 +40,19 @@ tags: [Note,seekyou,SARDET]
 
 而该团队提出的SARDet_100K融合的十种数据集不仅各类参数多样化，没有冲突的对象类别，数据来源也不同。下图为数据集预览：
 
-![数据集预览](https://img-blog.csdnimg.cn/direct/50185b3037da4fae99dc67c9e352982c.png)
+[![OEKDmb.md.png](https://ooo.0x0.ooo/2024/12/28/OEKDmb.md.png)](https://img.tg/image/OEKDmb)
 
 数据集相关信息如下：
 
-![数据集信息](https://img-blog.csdnimg.cn/direct/97d4978f37d547e2a90daeef11f86eea.png)
+[![OEK4bP.png](https://ooo.0x0.ooo/2024/12/28/OEK4bP.png)](https://img.tg/image/OEK4bP)
 
 下图数据集标准化流程，包括了数据集划分，大图像切片和标签注释格式统一。
 
-![数据集标准化流程](https://img-blog.csdnimg.cn/direct/5be9cf9465804c4da63b4a167ea56f54.png)
+[![OEKR26.md.png](https://ooo.0x0.ooo/2024/12/28/OEKR26.md.png)](https://img.tg/image/OEKR26)
 
 （下面为笔者仅针对训练集进行的简单数据分析，可能有所偏差，仅供参考。）
 
-![analy](https://img-blog.csdnimg.cn/direct/06eac988849e454582308f39abe9f18c.png)
+![OEKP4F.png](https://ooo.0x0.ooo/2024/12/28/OEKP4F.png)
 
 ## MSFA 
 (Multi-Stage with Filter Augmentation Pretraining Framework)——滤波增强的多阶段预训练框架
@@ -68,7 +68,7 @@ tags: [Note,seekyou,SARDET]
 
 本文采用一些手工制作的滤波算子，例如HOG，Canny，Haar，WST，GRE等，将原本输入与相应滤波变换后的数据串联作为新的输入。这样通过把数据从像素空间投射到滤波增强特征空间，从而显著减少自然RGB图像和SAR图像之间的域差异。如下图4(a)所示：
 
-![滤波增强输入](https://img-blog.csdnimg.cn/direct/264ab5e0fc9341afa9bd5dac08f9181c.png)
+![OEKJiD.png](https://ooo.0x0.ooo/2024/12/28/OEKJiD.png)
 
 ### 多级预训练框架
 
@@ -76,24 +76,19 @@ tags: [Note,seekyou,SARDET]
 
 预训练阶段首先在 ImageNet（IN）数据集上随机初始化并训练骨干网络 ，然后在 SAR 数据集上使用预训练好的的检测模型进行微调。如下列公式：
 
-![模型训练步骤](https://latex.csdn.net/eq?%5Clabel%20%7Beqn%3A2%7D%20B%20%3D%20%5Ctext%20%7BTrain%7D_%7Bcls%7D%28B_%7B%5Ctheta%20%7D%29%28D_%7BIN%7D%29%20%5Ctext%20%7B%2C%7D)
+[![OEKm3I.png](https://ooo.0x0.ooo/2024/12/28/OEKm3I.png)](https://img.tg/image/OEKm3I)
 
 本文提出的方法相当于是在第一步完成后添加了一步：用大规模遥感数据集作为域迁移的检测预训练，该数据集域下游SAR数据集也有着相似的对象形状，大小。如上图图4(b)所示，这种方式在自然RGB图像在ImageNet上的光学分别和SAR上的目标分布间搭起了一座桥梁。
 
 公式也变成了：
 
-![模型训练步骤](https://latex.csdn.net/eq?%5Clabel%20%7Beqn%3A2%7D%20B%20%3D%20%5Ctext%20%7BTrain%7D_%7Bcls%7D%28B_%7B%5Ctheta%20%7D%29%28D_%7BIN%7D%29%20%5Ctext%20%7B%2C%7D)
-
-![2](https://latex.csdn.net/eq?%5Clabel%20%7Beqn%3A5%7D%20A%27%20%3D%20%5Ctext%20%7BTrain%7D_%7Bdet%7D%28A_B%29%28D_%7BRS%7D%29%20%5Ctext%20%7B.%7D)
-
-![改进的模型训练步骤](https://latex.csdn.net/eq?%5Clabel%20%7Beqn%3A5%7D%20A%27%20%3D%20%5Ctext%20%7BTrain%7D_%7Bdet%7D%28A_B%29%28D_%7BRS%7D%29%20%5Ctext%20%7B.%7D)
-
+[![OEKgQ1.png](https://ooo.0x0.ooo/2024/12/28/OEKgQ1.png)](https://img.tg/image/OEKgQ1)
 
 ### MSFA
 
 MSFA融合以上两者后的框架与传统方法的框架对比如下所示：
 
-![MSFA对比](https://img-blog.csdnimg.cn/direct/3fe7b996325743f6b643746155b325d1.png)
+[![OEKrbq.png](https://ooo.0x0.ooo/2024/12/28/OEKrbq.png)](https://img.tg/image/OEKrbq)
 
 ## 实验分析
 
@@ -101,21 +96,22 @@ MSFA融合以上两者后的框架与传统方法的框架对比如下所示：
 
 可以发现：自然图像与SAR图像之间的域差异较大，但是经过滤波增强后的图像域差异显著减小。
 
-![实验结果1](https://img-blog.csdnimg.cn/direct/a3b50b52cee347498840d25ad954dd9b.png)
+[![OEKAgc.png](https://ooo.0x0.ooo/2024/12/28/OEKAgc.png)](https://img.tg/image/OEKAgc)
 
 可以看出WST不仅缩小域差异的特点以及提取多尺度信息的能力产生了出色的性能，也能看出单纯算子的叠加并不能提供实质有效的额外信息。
 
-![实验结果2](https://img-blog.csdnimg.cn/direct/a94a432b763e4c0682a9954e6b195aee.png)
+[![OEKKVr.png](https://ooo.0x0.ooo/2024/12/28/OEKKVr.png)](https://img.tg/image/OEKKVr)
 
 上图为不同预训练策略的效果显示。
 
 为了对其有效性和普遍性进行评估，该团队使用各种检测器和骨干网络上进行了丰富的实验，如下图所示，验证了该方法具有相当广泛的适用性和显著的有效性。
 
-![实验结果3](https://img-blog.csdnimg.cn/direct/a3473b658c104f59b56af8f23d57c5cc.png)
+[![OEKyrG.png](https://ooo.0x0.ooo/2024/12/28/OEKyrG.png)](https://img.tg/image/OEKyrG)
 
 最后是MSFA与以前的SOTA方法比对。如下图所示，该文提出的方法明显优于之前所有的方法，在SSDD数据集的mAP@50指标达到了97.9%，在HRSID上达到了83.7%。
 
-![SOTA对比](https://img-blog.csdnimg.cn/direct/461353f448ce40ec81b2df029e892be2.png)
+[![OEKvqM.png](https://ooo.0x0.ooo/2024/12/28/OEKvqM.png)](https://img.tg/image/OEKvqM)
+
 
 ## 局限性
 
