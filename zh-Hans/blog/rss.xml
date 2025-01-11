@@ -4,10 +4,189 @@
         <title>SeekYou Blog</title>
         <link>https://2seekyou.github.io/zh-Hans/blog</link>
         <description>SeekYou Blog</description>
-        <lastBuildDate>Tue, 01 Oct 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 11 Jan 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hans</language>
+        <item>
+            <title><![CDATA[竞赛经验分享]]></title>
+            <link>https://2seekyou.github.io/zh-Hans/blog/shareing</link>
+            <guid>https://2seekyou.github.io/zh-Hans/blog/shareing</guid>
+            <pubDate>Sat, 11 Jan 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[实验室冬令营讲座--主题：竞赛经验分享]]></description>
+            <content:encoded><![CDATA[<p>实验室冬令营讲座--主题：<strong>竞赛经验分享</strong></p>
+<p>来自一名20级老学长（智能车复役选手）的一些竞赛经验分享</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="自我介绍">自我介绍<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="自我介绍的直接链接" title="自我介绍的直接链接">​</a></h2>
+<p>先来个''<strong>简短</strong>''的自我介绍:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="崔全">崔全<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%B4%94%E5%85%A8" class="hash-link" aria-label="崔全的直接链接" title="崔全的直接链接">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="中国自动化学会会员湘潭大学电工电子实验室负责人湘潭大学百度飞桨领航团团长">中国自动化学会会员、湘潭大学电工电子实验室负责人、湘潭大学百度飞桨领航团团长<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%B8%AD%E5%9B%BD%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E4%BC%9A%E4%BC%9A%E5%91%98%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A6%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E5%AE%9E%E9%AA%8C%E5%AE%A4%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A6%E7%99%BE%E5%BA%A6%E9%A3%9E%E6%A1%A8%E9%A2%86%E8%88%AA%E5%9B%A2%E5%9B%A2%E9%95%BF" class="hash-link" aria-label="中国自动化学会会员、湘潭大学电工电子实验室负责人、湘潭大学百度飞桨�领航团团长的直接链接" title="中国自动化学会会员、湘潭大学电工电子实验室负责人、湘潭大学百度飞桨领航团团长的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="参与国家级大学生创新训练项目已结题参与上海交通大学交换实习课题">参与国家级大学生创新训练项目，已结题；参与上海交通大学交换实习课题。<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%8F%82%E4%B8%8E%E5%9B%BD%E5%AE%B6%E7%BA%A7%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%88%9B%E6%96%B0%E8%AE%AD%E7%BB%83%E9%A1%B9%E7%9B%AE%E5%B7%B2%E7%BB%93%E9%A2%98%E5%8F%82%E4%B8%8E%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E4%BA%A4%E6%8D%A2%E5%AE%9E%E4%B9%A0%E8%AF%BE%E9%A2%98" class="hash-link" aria-label="参与国家级大学生创新训练项目，已结题；参与上海交通大学交换实习课题。的直接链接" title="参与国家级大学生创新训练项目，已结题；参与上海交通大学交换实习课题。的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="所获竞赛奖项">所获竞赛奖项：<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%89%80%E8%8E%B7%E7%AB%9E%E8%B5%9B%E5%A5%96%E9%A1%B9" class="hash-link" aria-label="所获竞赛奖项：的直接链接" title="所获竞赛奖项：的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2022年12月-十七届全国大学生智能汽车竞赛室外专项赛全国一等奖">· 2022年12月 十七届全国大学生智能汽车竞赛室外专项赛全国一等奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2022%E5%B9%B412%E6%9C%88-%E5%8D%81%E4%B8%83%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E5%AE%A4%E5%A4%96%E4%B8%93%E9%A1%B9%E8%B5%9B%E5%85%A8%E5%9B%BD%E4%B8%80%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2022年12月 十七届全国大学生智能汽车竞赛室外专项赛全国一等奖的直接链接" title="· 2022年12月 十七届全国大学生智能汽车竞赛室外专项赛全国一等奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2022年08月-十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖">· 2022年08月 十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2022%E5%B9%B408%E6%9C%88-%E5%8D%81%E4%B8%83%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E7%99%BE%E5%BA%A6%E5%AE%8C%E5%85%A8%E6%A8%A1%E5%9E%8B%E7%BB%84%E5%85%A8%E5%9B%BD%E4%BA%8C%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2022年08月 ��十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接" title="· 2022年08月 十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2023年07月-十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖">· 2023年07月 十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2023%E5%B9%B407%E6%9C%88-%E5%8D%81%E5%85%AB%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E5%A4%A7%E7%96%86%E5%A4%A9%E9%80%94%E5%88%9B%E6%84%8F%E7%BB%84%E5%85%A8%E5%9B%BD%E4%BA%8C%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2023年07月 十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖的直接链接" title="· 2023年07月 十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2023年08月-十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖">· 2023年08月 十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2023%E5%B9%B408%E6%9C%88-%E5%8D%81%E5%85%AB%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E7%99%BE%E5%BA%A6%E5%AE%8C%E5%85%A8%E6%A8%A1%E5%9E%8B%E7%BB%84%E5%85%A8%E5%9B%BD%E4%BA%8C%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2023年08月 十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接" title="· 2023年08月 十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2024年07月-十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖">· 2024年07月 十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2024%E5%B9%B407%E6%9C%88-%E5%8D%81%E4%B9%9D%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E5%9C%B0%E5%B9%B3%E7%BA%BF%E6%99%BA%E6%85%A7%E5%8C%BB%E7%96%97%E7%BB%84%E5%85%A8%E5%9B%BD%E4%B8%80%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2024年07月 十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖的直接链接" title="· 2024年07月 十九届全国大学生智能汽车竞赛地平线智慧医疗组全国�一等奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2022年08月-2022全球智能自主机器人比赛优秀奖">· 2022年08月 2022全球智能自主机器人比赛优秀奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2022%E5%B9%B408%E6%9C%88-2022%E5%85%A8%E7%90%83%E6%99%BA%E8%83%BD%E8%87%AA%E4%B8%BB%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%AF%94%E8%B5%9B%E4%BC%98%E7%A7%80%E5%A5%96" class="hash-link" aria-label="· 2022年08月 2022全球智能自主机器人比赛优秀奖的直接链接" title="· 2022年08月 2022全球智能自主机器人比赛优秀奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-挑战杯人工智能大赛研电赛等省级校级奖项近20项">· 挑战杯，人工智能大赛，研电赛等省级，校级奖项近20项<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-%E6%8C%91%E6%88%98%E6%9D%AF%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%A7%E8%B5%9B%E7%A0%94%E7%94%B5%E8%B5%9B%E7%AD%89%E7%9C%81%E7%BA%A7%E6%A0%A1%E7%BA%A7%E5%A5%96%E9%A1%B9%E8%BF%9120%E9%A1%B9" class="hash-link" aria-label="· 挑战杯，人工智能大赛，研电赛等省级，校级奖项近20项的直接链接" title="· 挑战杯，人工智能大赛，研电赛等省级，校级奖项近20项的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="荣誉证书">荣誉证书：<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%8D%A3%E8%AA%89%E8%AF%81%E4%B9%A6" class="hash-link" aria-label="荣誉证书：的直接链接" title="荣誉证书：的直接链接">​</a></h4>
+<p>湖南省优秀志愿者、湘潭大学甲等奖学金，三好学生、优秀竞赛团队，优秀毕业生等10余项</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="擅长方向">擅长方向<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%93%85%E9%95%BF%E6%96%B9%E5%90%91" class="hash-link" aria-label="擅长方向的直接链接" title="擅长方向的直接链接">​</a></h4>
+<p><strong>Linux / Python / ROS / Git / Deep Learning</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="竞赛历程">竞赛历程<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E7%AB%9E%E8%B5%9B%E5%8E%86%E7%A8%8B" class="hash-link" aria-label="竞赛历程的直接链接" title="竞赛历程的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="主要竞赛介绍">主要竞赛介绍<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%B8%BB%E8%A6%81%E7%AB%9E%E8%B5%9B%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="主要竞赛介绍的直接链接" title="主要竞赛介绍的直接链接">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="智能车竞赛">智能车竞赛<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%99%BA%E8%83%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B" class="hash-link" aria-label="智能车竞赛的直接链接" title="智能车竞赛的直接链接">​</a></h4>
+<p>全称全国大学生智能汽车竞赛。要求在规定的模型汽车平台上，基于赛题要求的微控制器作为核心控制模块，通过增加NXP摄像头模块、北斗-GPS 模块、RTK模块、超声波模块、UWB模块等模块以及编写相应软件程序，制作一个能够自主识别道路的模型汽车，按照规定路线行进，以完成时间最短者为优胜。</p>
+<p>竞速比赛共分为八（十）个组别，每个组别在比赛环境、比赛任务、单片机平台、车模等方面有不同的要求。</p>
+<p>核心任务：自制硬件，基于设计好的车模开发相应的程序完成赛题任务（以竞速为主）。因此常常分工为软件和硬件。</p>
+<p>特点：备赛时间通常较长，约周期3-7个月；含金量高；难度较大；竞赛场地通常不定；赛题各式各样</p>
+<p><a href="https://img.tg/image/OEfMPU" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/10/OEfMPU.md.jpg" alt="OEfMPU.md.jpg" class="img_ev3q"></a></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="电子设计大赛">电子设计大赛<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B" class="hash-link" aria-label="电子设计大赛的直接链接" title="电子设计大赛的直接链接">​</a></h4>
+<p>全称全国大学生电子设计大赛。</p>
+<p>试题类型基本以电源类，信号源类，高频类，放大类，仪器仪表类，控制类为主，题目将会在比赛开始当天公布，每个队伍只能选其中一道题目，然后开始为期<strong>四天三夜</strong>的作品制作，<strong>首次比赛地点在自己学校实验室</strong>内，比赛期间学生可以查阅有关纸质或网络技术资料，队内学生可以集体商讨设计思想，确定设计方案，分工负责、团结协作，以队为基本单位独立完成竞赛任务；</p>
+<p>特点：四天三夜；难度大；含金量高</p>
+<p><a href="https://img.tg/image/OEfOlY" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/10/OEfOlY.md.jpg" alt="OEfOlY.md.jpg" class="img_ev3q"></a></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="挑战杯">挑战杯<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%8C%91%E6%88%98%E6%9D%AF" class="hash-link" aria-label="挑战杯的直接链接" title="挑战杯的直接链接">​</a></h4>
+<p>挑战杯是“挑战杯”全国大学生系列科技学术竞赛的简称，是由共青团中央、中国科协、教育部和全国学联、举办地人民政府共同主办的全国性的大学生课外学术实践竞赛。“挑战杯”竞赛在中国共有两个并列项目，一个是“挑战杯”中国大学生创业计划竞赛；另一个则是“挑战杯”全国大学生课外学术科技作品竞赛。也称“大挑”“小挑”。是国内大学生最关注最热门的全国性竞赛。</p>
+<ul>
+<li>比赛时间：校内竞赛3-5月，省级复赛5-6月，全国大赛7-11月</li>
+<li>参赛形式：自然科学类学术论文；哲学社会科学类社会调查报告和学术论文；科技发明制作（A类和B类）</li>
+<li>评审侧重：侧重技术创新、科技成果转化情况、形成专利技术或产品等。</li>
+</ul>
+<p>特点：覆盖专业广；难度极大；含金量“很高”；PPT+（实物）+报告；团队人员较多</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="互联网">互联网+<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%BA%92%E8%81%94%E7%BD%91" class="hash-link" aria-label="互联网+的直接链接" title="互联网+的直接链接">​</a></h4>
+<ul>
+<li>参赛报名6月，高校初赛6月-9月中旬，省市复赛6月-9月中旬，全国总决赛11月上旬</li>
+<li>评审侧重：技术创新性、可落地、商业化强的项目</li>
+</ul>
+<p>特点：覆盖专业广；难度极大；含金量“很高”；PPT+（实物）+报告团队人员较多</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="其他竞赛介绍">其他竞赛介绍<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%85%B6%E4%BB%96%E7%AB%9E%E8%B5%9B%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="其他竞赛介绍的直接链接" title="其他竞赛介绍的直接链接">​</a></h3>
+<ol>
+<li>
+<p><a href="https://sxxy.njts.edu.cn/2024/0913/c3721a84943/page.htm" target="_blank" rel="noopener noreferrer">大学生赛事榜单上的比赛84项</a></p>
+</li>
+<li>
+<p>湘潭大学校内认可的ABC类竞赛（保研综测）</p>
+</li>
+</ol>
+<p><a href="https://img.tg/image/OEYwzp" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/10/OEYwzp.md.png" alt="OEYwzp.md.png" class="img_ev3q"></a></p>
+<ol start="3">
+<li>企业竞赛，社会竞赛</li>
+</ol>
+<p>例如Kaggle平台，阿里天池，百度飞桨，腾讯云等。偏向计算机，部分有实物</p>
+<ol start="4">
+<li>研究生竞赛</li>
+</ol>
+<p>共18项赛题，限<strong>保研或导师推荐的优秀本科生</strong>参与，但每组最多一名</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="我的竞赛经历">我的竞赛经历<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%88%91%E7%9A%84%E7%AB%9E%E8%B5%9B%E7%BB%8F%E5%8E%86" class="hash-link" aria-label="我的竞赛经历的直接链接" title="我的竞赛经历的直接链接">​</a></h3>
+<p>很多人问过我，或者觉得我一开始就什么都会，所以才能到处拿奖————<strong>实则不然</strong>。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="起源">起源<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%B5%B7%E6%BA%90" class="hash-link" aria-label="起源的直接链接" title="起源的直接链接">​</a></h4>
+<p>我是大二才开始参赛，大一主要在实验室学习（打杂）。打杂期间也只参加过一个小小的比赛————心形灯设计，但是却成为我一切的起点：</p>
+<p><a href="https://img.tg/image/OEf1db" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/11/OEf1db.md.png" alt="OEf1db.md.png" class="img_ev3q"></a></p>
+<p>**甚至当时循环都不会写，点灯都是手动一个个IO口设置的。**用的51，硬件上也是是否简陋。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="小白参赛">小白参赛<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%B0%8F%E7%99%BD%E5%8F%82%E8%B5%9B" class="hash-link" aria-label="小白参赛的直接链接" title="小白参赛的直接链接">​</a></h4>
+<p>21年12月出规则：没认真看规则的我连硬件设备是什么都不知道，拿着单片机熟悉例程就花了将近半个月，剩下做的<strong>基本都是无用功</strong>。</p>
+<p>22年4月拿到车模：这时候硬件设备（类似于树莓派的边缘计算设备）到了两个月，却常常报错，要么开机没反应，要么卡死。</p>
+<p>22年5-6月下地，开环跑基本完赛。
+<a href="https://www.bilibili.com/video/BV1EB4y1W7wL/?spm_id_from=333.1387.homepage.video_card.click" target="_blank" rel="noopener noreferrer">初次下地</a>并没有很久，也是因为前期工作做的比较足的原因。</p>
+<p>中途因为不清楚规则，没看清楚电压需求，多焊接了一块板，有次正负接反，导致炸了一手。</p>
+<p><a href="https://img.tg/image/OEYu7t" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/10/OEYu7t.th.png" alt="OEYu7t.th.png" class="img_ev3q"></a></p>
+<p>22年7月省赛：通宵2天，赛前1小时烧了全部硬件，临时换了全套硬件（未测试过），<strong>侥幸</strong>的是，全部换了后都能正常运行，且跑的更快了。但是<a href="https://www.bilibili.com/video/BV1fg411y7BP?spm_id_from=333.788.recommend_more_video.0&amp;vd_source=e0005b7afaf78cb60b18478fab1428a1" target="_blank" rel="noopener noreferrer">成绩依旧很一般</a>，在华南赛区只有三等奖。</p>
+<p>后面<strong>侥幸</strong>进了国赛，但是由于前期工作不足，许多附加的任务没能完成，因此只拿到了国二。</p>
+<p><a href="https://img.tg/image/OEfeNg" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/11/OEfeNg.th.jpg" alt="OEfeNg.th.jpg" class="img_ev3q"></a></p>
+<p>甚至车模接线都接的乱七八糟 对比一下上一届的车模</p>
+<p><a href="https://img.tg/image/OEfvRa" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/11/OEfvRa.th.jpg" alt="OEfvRa.th.jpg" class="img_ev3q"></a></p>
+<p>比赛中途顺便接了个机器人的比赛，两个的时间安排上我没能很好的权衡，导致最后只能拿到优秀奖</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="二次参赛"><a href="https://cq.seekyou.fun/blog/2023-sum-up-1" target="_blank" rel="noopener noreferrer">二次参赛</a><a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%BA%8C%E6%AC%A1%E5%8F%82%E8%B5%9B" class="hash-link" aria-label="二次参赛的直接链接" title="二次参赛的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="三次参赛"><a href="https://cq.seekyou.fun/blog/wuhan" target="_blank" rel="noopener noreferrer">三次参赛</a><a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%B8%89%E6%AC%A1%E5%8F%82%E8%B5%9B" class="hash-link" aria-label="三次参赛的直接链接" title="三次参赛的直接链接">​</a></h4>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="智能车备赛经验">智能车备赛经验<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%99%BA%E8%83%BD%E8%BD%A6%E5%A4%87%E8%B5%9B%E7%BB%8F%E9%AA%8C" class="hash-link" aria-label="智能车备赛经验的直接链接" title="智能车备赛经验的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="入门">入门<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%85%A5%E9%97%A8" class="hash-link" aria-label="入门的直接链接" title="入门的直接链接">​</a></h3>
+<p>过程大体上是，学C语言，安软件，买零件，跟着视频尝试调用模块，然后搭车写代码，让车动起来，接着让车跑起来。具体要了解的大概有 ：
+<strong>C语言、AD画板、单片机、 使用电机舵机等器件 、PWM、ADC、中断、UART</strong>......上面会了就能勉强做出个能动的车。诸如此类的任务在冬令营中能得到很好的实践。</p>
+<p>然后就是 <strong>丰富功能来提高车模能力或者提高调车效率</strong>，比如增加显示模块、按键调参、匿名上位机传参、数据存储”记忆大法“、使用其他软件分析数据、优化算法。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="个人经验">个人经验<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%B8%AA%E4%BA%BA%E7%BB%8F%E9%AA%8C" class="hash-link" aria-label="个人经验的直接链接" title="个人经验的直接链接">​</a></h3>
+<ol>
+<li>
+<p><strong>多交流</strong>，竞争关系不妨碍合作，合作有时候反而是一种双赢。<strong>不管是队友还是学长老师</strong>，抑或是同校的竞争对手，都应该积极交流。</p>
+</li>
+<li>
+<p><strong>比赛规则</strong>很重要，要经常去官网看看比赛规则有没有变化，规则出来后<strong>反复地，仔细地</strong>看，想好各种可能情况和意外，甚至找到官方都不确定的一些规则，擅以利用。</p>
+</li>
+<li>
+<p><strong>硬件</strong>打板焊接以及实际电路的检查，需要的更多是经验和运气，所以，一定要和实验室的学长打好关系，<strong>问问题时想好再问</strong>，这个阶段真的很靠学长的。</p>
+</li>
+<li>
+<p><strong>调试</strong>的过程中，太过于底层的东西可以不用过多了解，最近两年一般都会有赞助厂商写好封装库。参赛的选手只要学会其中的函数用法，直接调用即可，主要是在控制和参数的整定，以及控制的流程，信息处理的方法方式。（<strong>拼积木</strong>）</p>
+</li>
+<li>
+<p><strong>PID算法</strong>通常是使用最多的算法，其变体也有非常多。具体的话就需要看各种资料，多去请教学长相关的理解。</p>
+</li>
+<li>
+<p>一个好的<strong>传感器布</strong>局（例如摄像头选择，高度角度固定）和好的<strong>信号处理方式</strong>（视频流处理算法）真其重要性有时甚至不亚于好的PID,有时真就和网上说的那样“只要信号处理好，就算开环也能跑。”当然，具体的信号处理方式这一块还是要找学长，拿到往年的码源自己去琢磨其中的逻辑，然后不断尝试，最终不断优化从而得到一个比较好的效果。</p>
+</li>
+<li>
+<p><strong>先做，再做好</strong>。优先保证最基本的完赛——先及格，再想着提高。</p>
+</li>
+<li>
+<p><strong>勇敢的人先享受世界（先拿国奖）</strong>。不要觉得自己低人一等，不要畏难，积极发现问题，解决问题。在压力下冷静思考，在失败中总结经验。<strong>大胆去想，大胆去选，大胆去做，大胆去卷</strong>。</p>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="电赛备赛经验">电赛备赛经验<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E7%94%B5%E8%B5%9B%E5%A4%87%E8%B5%9B%E7%BB%8F%E9%AA%8C" class="hash-link" aria-label="电赛备赛经验的直接链接" title="电赛备赛经验的直接链接">​</a></h2>
+<ol>
+<li><strong>具备良好的基础</strong></li>
+</ol>
+<p>良好的基础必不可少，在参加校内电赛前，你就应该要具备<strong>基本电路知识，c语言以及51，stm32，arduino单片机</strong>的使用，最好能自己独自用单片机做过一些小设计，比如<strong>循迹小车，电子锁，定时器</strong>等，也许会有同学说老师还没教怎么办，对于这个问题，我只能说等老师教是完全没用的，大学排的专业课都比较靠后，而且老师教的也基本是理论，甚至理论都只是皮毛，真正在比赛时老师教的内容完全不够用，所以必须主动去学习，<strong>加入实验室</strong>就是一个不错的选择，拥有好的学习环境与资源，去网上买块开发板看视频就能开始自我学习了。</p>
+<ol start="2">
+<li><strong>选好队友</strong></li>
+</ol>
+<p>电赛必须是3-5人组队，好的队友必不可少，找到技能互补、合作良好的队友，这直接影响了队伍在参赛时的方向、进度和成绩。</p>
+<ol start="3">
+<li><strong>赛前做好充分准备</strong></li>
+</ol>
+<p>赛前有一段比较长的时间备赛，在这段时间里，最好能跟队友与指导老师商议自己队伍的做题方向，然后寻找往年的题目进行练习，在<strong>开赛前一周公布器件清单时，就要做好器件购买</strong>，不然比赛四天三夜紧迫的时间，根本来不及再购买新的比赛器件，而且那段时间比赛专用芯片可能会涨价，缺货等。</p>
+<p>我当年做过控制题，在赛前做了平衡小车，倒立摆，风力摆，板球控制系统等往年控制类赛题，那段时间了对<strong>单片机编程，机械结构搭建，PID算法</strong>都有了很大程度的熟悉，为了减少开发时配置中遇到的坑，在电赛中使用了arduino单片机，arduino的性能也很强，具有大量的库，相比于C51，STM32等，arduino硬件平台更加亲民，完全脱离了寄存器的配置，几乎所有功能都已经有了上层库调用，透明掉了大部分与硬件相关的操作，对于不熟悉程序底层配置的的人来说，简直是电赛利器，所以使用arduino单片机在电赛中也是有一定优势的，另外，目前的电赛是德州仪器（TI）买断了赞助，所以在所有题目中会有一道题目必须限定TI的处理器，很大概率会是控制类型题中的一道，所以学有余力的同学也可以学习一下TI的板子，比如MSP430等，而且在比赛中使用TI处理器，测评同等分数下会更有优势，还有，目前的赛题是不能使用树莓派等高端处理器来做题，不然会当做违规处理。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="关于问问题">关于<strong>问问题</strong>：<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%85%B3%E4%BA%8E%E9%97%AE%E9%97%AE%E9%A2%98" class="hash-link" aria-label="关于问问题的直接链接" title="关于问问题的直接链接">​</a></h2>
+<p>在不确定对方是否有空的时候建议大家问问题时尽量按照下列格式来（<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way" target="_blank" rel="noopener noreferrer">参考How-To-Ask-Questions-The-Smart-Way</a>）：</p>
+<ol>
+<li><strong>仔細、清楚</strong>地描述你的問題</li>
+<li>描述問題發生的<strong>环境（背景）</strong>（硬件配置、语言、软件版本、以及相關的信息）</li>
+<li>描述在提問前你是怎樣去<strong>研究和理解</strong>這個問題的</li>
+<li>描述在<strong>提問前</strong>為確定問題<strong>而已经采取的診斷步驟</strong>。</li>
+<li>描述最近做過什麼可能相關的<strong>硬件改动或软件改动</strong>。</li>
+<li>尽可能的提供一個可以<strong>重现這個問題的既定環境</strong>的方法。</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="话不在多而在精">话不在多而在精<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%AF%9D%E4%B8%8D%E5%9C%A8%E5%A4%9A%E8%80%8C%E5%9C%A8%E7%B2%BE" class="hash-link" aria-label="话不在多而在精的直接链接" title="话不在多而在精的直接链接">​</a></h3>
+<p>你需要提供精确有内容的信息。 这并不是要求你简单的把成堆的出错代码或者数据完全转录到你的提问中。 如果你有庞大而复杂的测试样例能重现程序当时的情境，尽量将它剪裁得越小越好。</p>
+<p>这样做的用处至少有三点。 第一，<strong>表现出你为简化问题付出了努力</strong>，这可以使你得到回答的机会增加; 第二，简化问题使你更有<strong>可能得到有用的答案</strong>; 第三，在精炼你的bug报告的过程中，你很可能就<strong>自己找到</strong>了解决方法或权宜之计。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="別用低聲下氣取代你真正該做的事">別用低聲下氣取代你真正該做的事<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%88%A5%E7%94%A8%E4%BD%8E%E8%81%B2%E4%B8%8B%E6%B0%A3%E5%8F%96%E4%BB%A3%E4%BD%A0%E7%9C%9F%E6%AD%A3%E8%A9%B2%E5%81%9A%E7%9A%84%E4%BA%8B" class="hash-link" aria-label="別用低聲下氣取代你真正該做的事的直接链接" title="別用低聲下氣取代你真正該做的事的直接链接">​</a></h3>
+<p>有些人明白他们不该粗鲁或傲慢的提问并要求得到答复，但他们选择另一个极端 -- 低声下气：<em>“我是个新手小白，xxx废物，碰到xx问题，有大佬解答、帮我看看吗“</em>...。 这既使人困扰，也没有用，尤其是伴随着与实际问题含糊不清的描述时更令人反感。</p>
+<p>别用原始灵长类动物的把戏来浪费你我的时间。 取而代之的是，尽可能清楚地描述背景条件和你的问题情况。 这比低声下气更好地定位了你的位置。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="描述問題症狀而非猜測">描述問題症狀而非猜測<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%8F%8F%E8%BF%B0%E5%95%8F%E9%A1%8C%E7%97%87%E7%8B%80%E8%80%8C%E9%9D%9E%E7%8C%9C%E6%B8%AC" class="hash-link" aria-label="描述問題症狀而非猜測的直接链接" title="描述問題症狀而非猜測的直接链接">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="蠢問題">蠢問題<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%A0%A2%E5%95%8F%E9%A1%8C" class="hash-link" aria-label="蠢問題的直接链接" title="蠢問題的直接链接">​</a></h4>
+<blockquote>
+<p>我在运行以前能运行的代码时，我的小车无法正常运行跑不起来，我怀疑是昨天有β射线、γ射线射到车上了，怎么办？</p>
+</blockquote>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="聪明問題">聪明問題<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%81%AA%E6%98%8E%E5%95%8F%E9%A1%8C" class="hash-link" aria-label="聪明問題的直接链接" title="聪明問題的直接链接">​</a></h4>
+<blockquote>
+<p>我采用的是ubuntu18.04，C++，运行的代码内容如下：，运行后的<strong>输出</strong>有：（），有没有报错其中摄像头采集（正常打开/），串口（正常打开/），下位机接受的数据（正常/丢失？），车模的电机/舵机是否正常。车在跑（某个路段）的的时候出现···状况，尝试过调pid参数，<strong>更改代码</strong>的哪些地方，但是都没有效果。在基础路段（直道，弯道）正常。</p>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="礼多人不怪">礼多人不怪<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E7%A4%BC%E5%A4%9A%E4%BA%BA%E4%B8%8D%E6%80%AA" class="hash-link" aria-label="礼多人不怪的直接链接" title="礼多人不怪的直接链接">​</a></h3>
+<p>彬彬有礼，多用<strong>请</strong>和<strong>谢谢您的关注，或谢谢你的关照</strong>。让大家都知道你对他们花时间免费提供帮助心存感激。</p>
+<p>坦白说，这一点其实并没有比使用清晰、正确、精准且合乎语法和避免使用专用格式重要（也不能取而代之）。帮助者们一般宁可读有点<strong>唐突但技术上鲜明</strong>的 Bug 报告，而不是那种有礼但含糊的报告。</p>
+<p>然而，如果你有一串的问题待解决，客气一点肯定会增加你得到有用回应的机会。</p>
+<p>当然，在完事以后，发个小红包，或请他人喝杯咖啡或奶茶，关系更好的话请客吃饭也是能极大提高以后继续帮忙的可能性。<strong>一定不要太过吝啬</strong>，要知道大多数情况下，他人是没有直接帮助你的义务的，而你一点小小的回报，却能让你们之间的关系拉近许多，以后无论是哪方面的问题都可以更好交流，或者有继续合作的机会就大很多。</p>
+<blockquote>
+<p>更多内容请参考原文 How-To-Ask-Questions-The-Smart-Way</p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接">​</a></h2>
+<p>希望学弟学妹们保持好奇心，勇于挑战自己，持之以恒地努力。在大学生活中不断成长，不怕失败，勇于尝试，不断积累经验，迎接未来的每一个挑战！</p>
+<p><a href="https://img.tg/image/OEfNOl" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/11/OEfNOl.png" alt="OEfNOl.png" class="img_ev3q"></a></p>
+<p>QQ:<strong>(seekyou)</strong> 1625629469</p>
+<p><a href="https://img.tg/image/OEfrEB" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/11/OEfrEB.th.png" alt="OEfrEB.th.png" class="img_ev3q"></a></p>]]></content:encoded>
+            <category>Note</category>
+            <category>seekyou</category>
+            <category>competition</category>
+        </item>
         <item>
             <title><![CDATA[天智杯比赛]]></title>
             <link>https://2seekyou.github.io/zh-Hans/blog/beijing</link>
@@ -20,7 +199,7 @@
 <p>具体是什么情况呢···原先只是想着借着比赛为由整出一篇论文的，但是吧···几乎一直是在复现他人做的各种内容，看的论文也很杂，也没想清楚应该怎么做。
 但是确实是挺想去看看的。但是事后事情的发展多少有点出乎意料了。</p>
 <p><a href="https://img.tg/image/OEKHVl" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKHVl.th.jpg" alt="OEKHVl.th.jpg" class="img_ev3q"></a></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="出发之前">出发之前<a href="https://2seekyou.github.io/zh-Hans/blog/beijing#%E5%87%BA%E5%8F%91%E4%B9%8B%E5%89%8D" class="hash-link" aria-label="出发之前的直接链接" title="出发之前的直�接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="出发之前">出发之前<a href="https://2seekyou.github.io/zh-Hans/blog/beijing#%E5%87%BA%E5%8F%91%E4%B9%8B%E5%89%8D" class="hash-link" aria-label="出发之前的直接链接" title="出发之前的直接链接">​</a></h2>
 <p>其实出发之前10天左右有确定下大概的比赛时间，但是我们没有特别注意。而且当时我并没有过分关注比赛信息。直到大约只有一周的时候我才注意到一些关键信息：</p>
 <ul>
 <li>比赛全程（可能）没有网络</li>
@@ -55,7 +234,7 @@
 <p>到第二天上午，我依然没能开始训练，卡在各种各样的地方，且已经疲惫的不行了。在下午前往赛场的路上，我甚至开始畏惧，逃避了。在赛场门前徘徊了很久很久。
 我在想一个说服自己去的理由，想能不能坚持到最后的理由。但是做不到，我觉得光是在里面坐着都觉得丢脸，什么都做不到。加上那三人也不想，不如出去溜达溜达。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="散步">散步<a href="https://2seekyou.github.io/zh-Hans/blog/beijing#%E6%95%A3%E6%AD%A5" class="hash-link" aria-label="散步的直接链接" title="散步的直接链接">​</a></h2>
-<p>我都不敢把这段称为旅游，因为从始至终都抱着忐忑不安的心，或者说还没缓过来。在清北附近，但是忘记找学姐打个招呼了，有点笨。脑子里不知道想啥呢。</p>
+<p>我都不敢把这段称为旅游，因为从始至终都抱着忐忑不安的心，或者说还没缓过来。在清北附近，但是忘记找之前在北大读博后的学姐打个招呼了，有点笨。脑子里不知道想啥呢。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://2seekyou.github.io/zh-Hans/blog/beijing#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接">​</a></h2>
 <p>时至如今，我依然没想明白能输成这样的根本原因在哪，虽然实力上确实存在不足，但是不至于。我只能归结于我遗漏了某一个关键点，且到最后也没能发现。</p>
 <p>用比赛后回来发的朋友圈总结吧，总之是相当失败的一次经历，除了自身的实力问题，没有遇到什么其他的指的学习的地方。可能只是前者占比过大，后续的许多小问题也被忽视了。</p>
@@ -257,21 +436,21 @@
 <p>自从上大学以来已经有三年半载了。如果不算大四这年（实习，找工作，考研，保研），相当于我大学的主要生涯也确实是结束了。突然感觉时间过的好快，一下我就成学长了，我也快毕业了，我也20出头了。</p>
 <p>因此在此做下我2023年度的总结，顺带设想一下2024的一年。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023起点还是终点">2023·起点还是终点<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#2023%E8%B5%B7%E7%82%B9%E8%BF%98%E6%98%AF%E7%BB%88%E7%82%B9" class="hash-link" aria-label="2023·起点还是终点的直接链接" title="2023·起点还是终点的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="比赛--保研的选择">比赛 + 保研的选择<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E6%AF%94%E8%B5%9B--%E4%BF%9D%E7%A0%94%E7%9A%84%E9%80%89%E6%8B%A9" class="hash-link" aria-label="比赛 + 保研的选择的直接链接" title="比�赛 + 保研的选择的直接链接">​</a></h3>
-<p>对于今年的参赛安排，我个人也是相当矛盾的。一方面是由于去年的A类国一和国二使我已经获得了保研资格，只是绩点太低，并不能确定我是保内还是保外。另一方面是要不要尝试争取一下国特，如果能拿到绩点对我就没有影响了，但是难度嘛。。。</p>
-<p>上半年也算是我比较迷茫的时期。一方面绩点摆在这里，今年就算全部的科目满绩点也大概不能保证达到保外的要求，因此我大概率是保本校的。但是我自己又不太想留在本校，但是面对考研我没有做好足够的心理准备，这件事情属实令我困扰了很久，甚至萌生了要不要降级去刷一年绩点的想法。当然这个想法遭到除了同学以外所有人的反对。原因各式各样，就不细说了。</p>
-<p>同时期父母唠叨不停，希望我边把本学期绩点搞好，边参加比赛，边准备考研的复习。显然是不太可能的。唯独最后者我不太上心，因为时间的问题，我此时的计划只准备线上赛，线下全权交给学弟和组长。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="比赛--保研的选择">比赛 + 保研的选择<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E6%AF%94%E8%B5%9B--%E4%BF%9D%E7%A0%94%E7%9A%84%E9%80%89%E6%8B%A9" class="hash-link" aria-label="比赛 + 保研的选择的直接链接" title="比赛 + 保研的选择的直接链接">​</a></h3>
+<p>对于今年的参赛安排，我个人也是相当矛盾的。一方面是由<strong>于去年的A类国一和国二使我已经获得了保研资格</strong>，只是绩点太低，并不能确定我是保内还是保外。另一方面是要不要尝试争取一下国特，如果能拿到绩点对我就没有影响了，但是难度嘛。。。</p>
+<p>上半年也算是我比较迷茫的时期。一方面绩点摆在这里，今年就算全部的科目满绩点也大概不能保证达到保外的要求，因此我大概率是保本校的。但是我自己又不太想留在本校，但是面对考研我没有做好足够的心理准备，这件事情属实令我困扰了很久，<strong>甚至萌生了要不要降级去刷一年绩点的想法</strong>。当然这个想法遭到除了同学以外所有人的反对。原因各式各样，就不细说了。</p>
+<p>同时期父母唠叨不停，希望我边把本学期绩点搞好，边参加比赛，边准备考研的复习。显然是不太可能的。唯独最后者我不太上心，因为时间的问题，我<strong>此时的计划只准备线上赛，线下全权交给学弟和组长</strong>。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="全模型线上赛">全模型线上赛<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E5%85%A8%E6%A8%A1%E5%9E%8B%E7%BA%BF%E4%B8%8A%E8%B5%9B" class="hash-link" aria-label="全模型线上赛的直接链接" title="全模型线上赛的直接链接">​</a></h3>
 <p>因此，虽然此时我有打算考研考出去，但是没有做好足够的心理准备，也是借着竞赛的理由奔波在实验室，甚至就把实验室当宿舍。</p>
-<p>每日三点一线般的准备着：1比赛2绩点3考研。显然最后一者是我相当排斥的，所以准备也就最少。而比赛上打算想我之前的学长学习，就一口气报了好几个，大疆天途无人机组，百度完全模型组，智能机器人啥的几乎能报的都报了个遍。</p>
-<p>而前期的准备对我来说也是一种别样的学习。由于去年的线上赛全程都是我的学长在做，所有我几乎是从零开始学习用aistudio调参，怎么训练模型，怎么用脚本后台任务挂机。所幸在跑了大概1个多月后，也查看了很多大佬的一些项目baseline讲解，加上各种多尺度，调阈值，换模型，数据增强，模型的score达到了排行榜的第十名。除去最上面的一些重复的账号，应该排在第五了。</p>
+<p>每日三点一线般的准备着：<strong>1比赛2绩点3考研</strong>。显然最后一者是我相当排斥的，所以准备也就最少。而比赛上打算想我之前的学长学习，就一口气报了好几个，大疆天途无人机组，百度完全模型组，智能机器人啥的几乎能报的都报了个遍。</p>
+<p>而前期的准备对我来说也是一种别样的学习。由于去年的线上赛全程都是我的学长在做，所有我几乎是从零开始学习用aistudio调参，怎么训练模型，怎么用脚本后台任务挂机。所幸在跑了大概1个多月后，也查看了很多大佬的一些项目baseline讲解，加上各种多尺度，调阈值，换模型，数据增强，模型的score达到了排行榜的<strong>第十名</strong>。除去最上面的一些重复的账号，应该排在第五了。</p>
 <p>或许我也没想到，自从这之后，模型的F1-score就再也没能提上去了。最终定格在74名。但是在整个华南赛区大概是前5，也还算比较满意了哈哈。（实际也只有区赛会算一点线上赛的分数）</p>
-<p>报这些组别其实有一个很吸引我的点，因为我对单片机并没有那么熟悉，大多数时候都是用的一些基本功能，而用ubuntu系统和各式各样的边缘计算设备总给我一种很高级的感觉（因为贵）。这段时间也算是更加熟悉了一些有意思的东西，例如用贝叶斯曲线做曲线拟合，用霍夫检测视频帧里的固定形状，多线程去同时运行目标检测和姿态控制。</p>
-<p>虽说原理还不是很理解，就像哪些自动控制原理或者现代控制原理书上那些苦涩难懂的公式一样，我并不打算去深入理解其含义，也不需要去理解那么深入，只要代码能运行，车子能跑，对比赛来说跑的好就行。这样的唯结果论是我目前最赞同的。</p>
+<p>报这些组别其实有一个很吸引我的点，因为我对单片机并没有那么熟悉，大多数时候都是用的一些基本功能，而用ubuntu系统和各式各样的边缘计算设备总给我一种很高级的感觉（因为贵）。这段时间也算是更加熟悉了一些有意思的东西，<strong>例如用贝叶斯曲线做曲线拟合，用霍夫检测视频帧里的固定形状，多线程去同时运行目标检测和姿态控制。</strong></p>
+<p>虽说原理还不是很理解，就像哪些自动控制原理或者现代控制原理书上那些苦涩难懂的公式一样，我并不打算去深入理解其含义，也不需要去理解那么深入，只要代码能运行，车子能跑，对比赛来说跑的好就行。<strong>这样的唯结果论是我目前最赞同的。</strong></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="设备租借备赛">设备租借备赛<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E8%AE%BE%E5%A4%87%E7%A7%9F%E5%80%9F%E5%A4%87%E8%B5%9B" class="hash-link" aria-label="设备租借备赛的直接链接" title="设备租借备赛的直接链接">​</a></h3>
 <p>我其实非常疑惑，这种技术性的竞赛，免费租借的名额竟然是靠一个赛季规划文档来决定的，对我来说的就像是自动化专业天天学ppt怎么做，怎么好看怎么拿奖。这种行为还被学校的大多数人校所支持，一堆人搞着哪些所谓的大创，不知道用着多少年前的项目，不断得增添各种花里胡哨的功能，甚至原封不动上交，拿个优秀结题，或者什么大创的奖，然后综测和保研嘎嘎加分。</p>
-<p>在我看来这种行为需要的只是机灵而已，根本就不需要具体做些什么东西，即使我也做过类似的大创，但是也并不觉得光彩，只是一些学长赚钱的工具罢了。我承认这些项目中确实有那种有些技术性的东西在，但是甚至比不过滥竽充数的大多数。
-所幸借助着学弟和Chatgpt的力量，线上文档成绩在前30直接免费get大疆无人机和rm小车租借资格！</p>
+<p>在我看来这种行为需要的只是机灵而已，根本就不需要具体做些什么东西，即使我也做过类似的大创，但是也并不觉得光彩，只是一些学长赚钱的工具罢了。<strong>我承认这些项目中确实有那种有些技术性的东西在，但是甚至比不过滥竽充数的大多数。</strong></p>
+<p>所幸借助着学弟和Chatgpt的力量，线上文档成绩在<strong>前30直接免费get大疆无人机和rm小车租借资格</strong>！</p>
 <p>大疆M3e</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBUyL.png" alt="OvBUyL.png" class="img_ev3q"></p>
 <p>大疆RMEP</p>
@@ -280,17 +459,17 @@
 <p>题目的内容几乎都是对赛道上的一些简单图像做元素识别，输出目标图形的圆心和半径，或者是多边形的中心点坐标和长宽。并不算太复杂，但是要多提交比对，因为参考数据比较少，验证集大概也只有20多个吧,大多数的图像学和边缘检测加上多边形检测就基本够用了。</p>
 <p><img loading="lazy" alt="7.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/7-96960957eb31be429b47e4eb77f6a738.jpg" width="505" height="364" class="img_ev3q"></p>
 <p>两台小机器人</p>
-<p>上文说到我此时的计划只准备线上赛，线下全权交给学弟和组长。但是事实是组长直接开头到结尾没来过，硬件也差不多，几乎就学弟一个人在搞。我自己也想以比赛为借口逃避考研，也有想借着无人机大赛冲刺国特，直接保外的想法。虽然我知道我自己的任务已经完成了，但是整个组毕竟在这里，我做不出来半途而废的举动，也不想整个组就此解散，我也没有办法，我也不是这种性格。</p>
+<p>上文说到我此时的计划只准备线上赛，线下全权交给学弟和组长。但是事实是组长直接开头到结尾没来过，硬件也差不多，几乎就学弟一个人在搞。我自己也想以比赛为借口逃避考研，也有想借着无人机大赛冲刺国特，直接保外的想法。虽然我知道我自己的任务已经完成了，<strong>但是整个组毕竟在这里，我做不出来半途而废的举动，也不想整个组就此解散，我也没有办法，我也不是这种性格。</strong></p>
 <p>或许比赛对我的意义已经不打了，但是在我看来，这是我的提议才有的组别，这是我起初识人有误才导致的结果，我应该要负起这个责任。总而言之就是依旧在比赛上又花了不少心思，自己又重新成了组长开始一点点接手，重新拉人一起做硬件，帮着和学弟一起调车一起熬夜。</p>
 <p>顺便还看到隔壁计网院的考研上岸率···我看着就感觉到害怕，也更不想去复习了。
 （只存在了一天，怀疑是觉得不太光荣就被撕掉了）</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBWsi.jpg" alt="OvBWsi.jpg" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="确定保研之后">确定保研之后<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E7%A1%AE%E5%AE%9A%E4%BF%9D%E7%A0%94%E4%B9%8B%E5%90%8E" class="hash-link" aria-label="确定保研之后的直接链接" title="确定保研之后的直接链接">​</a></h2>
-<p>即使这学期的绩点几乎满绩，但最终排名定格还差10名左右。没能保送外校。但是我也做好了心理准备，也接受了事实，还安慰自己没事，反正本校老师啥都熟，以后出去读博什么的也方便。
+<p>即使这学期的绩点几乎满绩，但最终排名定格还差10名左右。<strong>没能保送外校</strong>。但是我也做好了心理准备，也接受了事实，还安慰自己没事，反正本校老师啥都熟，以后出去读博什么的也方便。
 而且这个时候的比赛还在继续，要达到89月份的话也没什么备考时间留给我了，我也就顺利成章成功地逃避考研继续之后的比赛。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="旅游--比赛-1">旅游 + 比赛 1<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E6%97%85%E6%B8%B8--%E6%AF%94%E8%B5%9B-1" class="hash-link" aria-label="旅游 + 比赛 1的直接链接" title="旅游 + 比赛 1的直接链接">​</a></h3>
-<p>在完全模型的华南区赛结束后，我们马上开始准备了无人机组的重庆西部赛区比赛，时间很短，满打满算可能也不超过5天的备赛时间。
-几乎是天天通宵，一口气都没歇过直奔重庆。好在线下的比赛难度不是很大，简单的完赛还是做到了，国二GET！也就顺理成章地正式进入完赛后的旅游环节！
+<p>在完全模型的华南区赛结束后，我们马上开始准备了无人机组的重庆西部赛区比赛，时间很短，<strong>满打满算可能也不超过5天的备赛时间</strong>。
+几乎是天天通宵，一口气都没歇过直奔重庆。好在线下的比赛难度不是很大，简单的完赛还是做到了，<strong>国二GET</strong>！也就顺理成章地正式进入完赛后的旅游环节！
 <img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBkaX.jpg" alt="OvBkaX.jpg" class="img_ev3q"></p>
 <p>来都来了，重庆火锅总得试试吧</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBxet.jpg" alt="OvBxet.jpg" class="img_ev3q"></p>
@@ -298,39 +477,40 @@
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBqRS.jpg" alt="OvBqRS.jpg" class="img_ev3q"></p>
 <p>顺带也去了一趟成都，四川的麻辣豆花，very nice！</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="旅游--比赛-2">旅游 + 比赛 2<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E6%97%85%E6%B8%B8--%E6%AF%94%E8%B5%9B-2" class="hash-link" aria-label="旅游 + 比赛 2的直接链接" title="旅游 + 比赛 2的直接链接">​</a></h3>
-<p>最意想不到的事情是又进了国赛···原本打算放暑假了，卓大发的推文出来，卡线华南最后一名进国赛了。所以又加上一段智能车国赛·天津之旅。
+<p><strong>最意想不到的事情是又进了国赛</strong>···原本打算放暑假了，卓大发的推文出来，卡线华南最后一名进国赛了。所以又加上一段<strong>智能车国赛·天津之旅</strong>。
 <img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBzGx.jpg" alt="OvBzGx.jpg" class="img_ev3q"></p>
 <p>天津工业大学</p>
-<p>但是由于中途的一些小插曲————百度飞桨的夏季峰会wave summit正好在比赛前一天的北京举行，而之前大疆组又碰巧要开一个开发者会议，在比赛结束3天后的深圳天空之城举行。
+<p>但是由于中途的一些小插曲————百度飞桨的<strong>夏季峰会wave summit</strong>正好在比赛前一天的北京举行，而之前大疆组又碰巧要开一个<strong>开发者会议</strong>，在比赛结束3天后的深圳<strong>天空之城</strong>举行。
 <img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBoha.jpg" alt="OvBoha.jpg" class="img_ev3q"></p>
 <p>峰会现场</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBihp.jpg" alt="OvBihp.jpg" class="img_ev3q"></p>
 <p>大疆天空之城</p>
-<p>所以这段就变成北京-天津-深圳之旅。总而言之就是通过比赛，我几乎跑遍全国主要的东西南北——南京 成都 深圳 北京。最后旅途结束时收获满满一把车票!!</p>
+<p>所以这段就变成北京-天津-深圳之旅。总而言之就是通过比赛，我几乎跑遍全国主要的东西南北——<strong>南京 成都 深圳 北京</strong>。最后旅途结束时收获满满一把车票!!</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBFIj.jpg" alt="OvBFIj.jpg" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="上半年总结">上半年总结<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%80%BB%E7%BB%93" class="hash-link" aria-label="上半年总结的直接链接" title="上半年总结的直接链接">​</a></h2>
-<p>上半年其实并不只是展现在这里的风光，也有很多七七八八的烦心事或者说觉得做的很差的地方。为什么这么说呢？因为我上半年几乎都没有认真的学习过。</p>
-<p>当然我指的是技术方面，学校的课程我还是有认真准备复习的😅。比赛几个月中途用到的许多东西都是在已有的基础上进行二次开发或者只是繁琐的PID调参，对我个人来说并没有真正学习到有用的技术，或者说思想上有什么很大的突破。</p>
+<p>上半年其实并不只是展现在这里的风光，也有很多七七八八的烦心事或者说觉得做的很差的地方。为什么这么说呢？<strong>因为我上半年几乎都没有认真的学习过</strong>。</p>
+<p>当然我指的是技术方面，学校的课程我还是有认真准备复习的😅。比赛几个月中途用到的许多东西都是在已有的<strong>基础上进行二次开发或者只是繁琐的PID调参</strong>，对我个人来说并没有真正学习到有用的技术，或者说思想上有什么很大的突破。</p>
 <p>加上去年年底出来的chatgpt，我就变得更懒惰了，反而不会像以前一样认认真真去看他人的博客，长期性不加思考的cv大法让我觉得相当空虚，有一种仿佛什么都学了但是什么都没有学到的感觉。虽然在没出现gpt之前我也有过类似的行为，但有一些遇到的问题还是会自己思考，去想办法搞懂。但是现在就算是出现了什么问题我也只是把问题再抛给gpt，让他去思考。仿佛成了一个只会复制粘贴的工具人···
 <img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/Ov5cvc.jpg" alt="20.jpg" class="img_ev3q"></p>
 <p>我不得不承认gpt的出现大幅度提升了我的工作效率，借着gpt的力量今年我才能在很多地方领先一步其他快一年还有人不知道gpt的人。我也喜欢借着一些类似的语言麻痹自己，让自己心安：这种东西只能算是工具罢了，我使用的工具产生的生产结果为什么不能算我的个人所获呢？举个例子，我用gpt生产的论文为什么不算我自己的呢？</p>
 <p>这样一番话看似冠冕堂皇，但是也存在一些悖论在其中，就是关于gpt的定义是否真的只是工具？一旦他的生产效益过大，超过了简单的工具定义，例如现在github上一些利用gpt生成大型项目的开源项目，这样庞大的生产效益，但是你只需要提供几个关键词prompt说的详细，总感觉有些过于玄乎。</p>
 <p>不下于哈利波特中的魔咒一般，10个字母不到就能变得如此神奇。而需要的只不过是想象力罢了——很相像对吧？就是这么神奇，对现在的我来说感觉到相当恐惧，仿佛以后只需要人们会写prompt去生产代码，根据效果再反馈给他改进，运行测试过程的bug就反复抛给他就行——而实际上我早已经开始这么做了···</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023终点站上海">2023·终点站·上海<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#2023%E7%BB%88%E7%82%B9%E7%AB%99%E4%B8%8A%E6%B5%B7" class="hash-link" aria-label="2023·终点站·上海的直接链接" title="2023·终点站·上海的直接链接">​</a></h2>
-<p>下半年可以理解为在上海的一段小实习经历，美其名曰在上交做科研助理，实际不过是在这边打点什么杂活。但是也有不少收获——对Linux系统，C++，实际Project的理解又进了一步。比起在校内，更多的扩宽了眼界——或者说是自己的行动力——开始自己主动搜索各种信息，对外界的认识又迈出了一步。</p>
-<p>大约在一年前，我的学长曾告诉过我很多工作要用的东西可以提前学习熟悉。例如git这种版本管理工具，在那种长期的比赛中是相当实用的，比起我一直以来的复制粘贴高效多了。例如叫我用一些前端框架搭建个人博客，只是我当时完全听不懂他在讲什么，太多东西都是我没听过的，差距太大宛如我上周在交大听毕业博士学姐的学术汇报，从题目开始就没听懂过——还是中文的，结果很多东西你越是想理解，你就越累越会犯困。</p>
+<p>下半年可以理解为在上海的一段小实习经历，美其名曰在上交做科研助理，实际不过是在这边打点什么杂活。但是也有不少收获——对<strong>Linux系统，C++，实际Project</strong>的理解又进了一步。比起在校内，更多的扩宽了眼界——或者说是自己的行动力——开始自己主动搜索各种信息，对外界的认识又迈出了一步。</p>
+<p>大约在一年前，我的学长曾告诉过我很多工作要用的东西可以提前学习熟悉。例如<strong>git这种版本管理工具</strong>，<strong>在那种长期的比赛中是相当实用的</strong>，比起我一直以来的复制粘贴高效多了。例如叫我用一些<strong>前端框架搭建个人博客</strong>，只是我当时完全听不懂他在讲什么，太多东西都是我没听过的，差距太大宛如我上周在交大听毕业博士学姐的学术汇报，从题目开始就没听懂过——还是中文的，结果很多东西你越是想理解，你就越累越会犯困。</p>
 <p>现在想想也挺后悔的。之前学长的好多意见我都没有采纳。想着靠学长，靠他人。自己却从没认真从头做起，导致对很多东西一知半解。问起来还是得百度或者gpt。</p>
 <p>学校自然也不会告诉你目前这个专业工作环境中常用的一些技术，很多人学个C语言到if for while就结束了，其他的什么底层，单片机的各种函数都只是死记硬背，为考试混个好分数罢了。</p>
-<p>当然，我也不例外。好在本次上海之旅还是有不少收获的。首先是正式开始使用github，git和gitlab。熟悉了常规小项目的管理形式，虽然有一些地方还不熟悉。其次是了解有关库移植，交叉编译——真是让人非常烦恼的事情。docker——稍有接触。从某种意义上算是打开了新世界的大门，发现了更多的信息。</p>
-<p>这是我在学校里打两年比赛所不能及的。虽然我认为这样的基础知识去实习大概率还是可以学到，但是我的原计划中暂时还没有包括这一段。很多新鲜的想法。各种新鲜工具的使用，都是来这里之后才有的。真不戳，虽然在人与人日常交流和生活中也有一些让人不愉快的地方，但是勉强还可以接受。下面是一点点小记录：</p>
+<p>当然，我也不例外。好在本次上海之旅还是有不少收获的。首先是<strong>正式开始使用github，git和gitlab</strong>。熟悉了<strong>常规小项目的管理形式</strong>，虽然有一些地方还不熟悉。其次是了解有关<strong>库移植，交叉编译</strong>——真是让人非常烦恼的事情。<strong>docker——稍有接触</strong>。从某种意义上算是打开了新世界的大门，发现了更多的信息。</p>
+<p>这是我在学校里打两年比赛所不能及的。虽然我认为这样的基础知识去实习大概率还是可以学到，但是我的原计划中暂时还没有包括这一段。很多新鲜的想法。各种新鲜工具的使用，都是来这里之后才有的。真不戳，虽然在人与人日常交流和生活中也有一些让人不愉快的地方，但是勉强还可以接受。</p>
+<p>下面是一点点小记录：</p>
 <iframe src="//player.bilibili.com/player.html?aid=705508583&amp;bvid=BV1PQ4y1n7ih&amp;cid=1323057440&amp;p=1" width="100%" height="500px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024设想">2024·设想<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#2024%E8%AE%BE%E6%83%B3" class="hash-link" aria-label="2024·设想的直接链接" title="2024·设想的直接链接">​</a></h2>
 <p>这一段实际上是24年3月再补上的：
 24年即将开启我的研一生活：我希望能对互联网上各种技术都能有所了解，至少不要像去年下半年别人聊天我听都听不懂。。。
 我还在Notion中给自己订下了20项挑战：有技术上的，有生活上的，对我而言，恐怕很难全部实现——尤其是找对象的事情...当然，这个不急。对我来说，今年更多的任务是学习，对之前所有涉及的东西进行一个回顾和沉淀。学的东西太杂，有意思的东西太多，空闲的时间太少，遗憾太多，愿望太少。因此，今年的笔记部分应该会很多，项目上应该也有部分更新。争取在2024再创下几件能让自己认可自己的事情吧！</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="后谈">后谈<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E5%90%8E%E8%B0%88" class="hash-link" aria-label="后谈的直接链接" title="后谈的直接链接">​</a></h2>
-<p>很多时候我自己认为的坏事可能不一定是坏事，不能总是局限于当下私认为。等过了半年，一年以一个事后的角度来看，貌似也没那么差。以我自己的经历来看，我们无时不刻不在做着各种各样的选择，时好时坏，但是是好是坏并不是当时就能看出来的。一旦做出了抉择，就不要后悔。做好当下之事，以待转机并且牢牢抓住它。这也是我这一年总结下来的经验。</p>
-<p>很喜欢这句话，看似安身守命，以待天时。实则以不变应万变，韬光养晦，厚积而薄发。望与诸君共勉！</p>
+<p><strong>很多时候我自己认为的坏事可能不一定是坏事，不能总是局限于当下私认为。等过了半年，一年以一个事后的角度来看，貌似也没那么差。以我自己的经历来看，我们无时不刻不在做着各种各样的选择，时好时坏，但是是好是坏并不是当时就能看出来的。一旦做出了抉择，就不要后悔。做好当下之事，以待转机并且牢牢抓住它。这也是我这一年总结下来的经验。</strong></p>
+<p>很喜欢这句话，<strong>看似安身守命，以待天时。实则以不变应万变，韬光养晦，厚积而薄发。望与诸君共勉</strong>！</p>
 <blockquote>
 <p>大丈夫行于乱世，当光明磊落，即使处于逆境，也当屈身守分，以待天时，不可与命抗争也。</p>
 </blockquote>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkseekyou_blog=self.webpackChunkseekyou_blog||[]).push([[2100],{3899:e=>{e.exports=JSON.parse('{"label":"competition","permalink":"/blog/tags/competition","allTagsPath":"/blog/tags","count":3,"unlisted":false}')}}]);

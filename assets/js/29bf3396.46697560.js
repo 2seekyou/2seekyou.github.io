@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkseekyou_blog=self.webpackChunkseekyou_blog||[]).push([[2691],{3033:e=>{e.exports=JSON.parse('{"label":"seekyou","permalink":"/blog/tags/seekyou","allTagsPath":"/blog/tags","count":7,"unlisted":false}')}}]);
