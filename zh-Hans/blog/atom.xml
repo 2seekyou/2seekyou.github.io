@@ -532,8 +532,94 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
         <id>https://2seekyou.github.io/zh-Hans/blog/wuhan</id>
         <link href="https://2seekyou.github.io/zh-Hans/blog/wuhan"/>
         <updated>2024-08-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[待更新]]></summary>
-        <content type="html"><![CDATA[<p>待更新</p>]]></content>
+        <summary type="html"><![CDATA[对研究生电赛企业赛（地平线赛题）和第十九届地平线智能车赛的总结]]></summary>
+        <content type="html"><![CDATA[<p>对研究生电赛企业赛（地平线赛题）和第十九届地平线智能车赛的总结</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="起因">起因<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E8%B5%B7%E5%9B%A0" class="hash-link" aria-label="起因的直接链接" title="起因的直接链接">​</a></h3>
+<p>说来起因很巧，在保研后的24年4月时被一个师兄拉去打<strong>研究生电赛</strong>，看了一圈，感觉这个<strong>地平线</strong>的题目最为熟悉，便想着试试。</p>
+<p><a href="https://img.tg/image/O0uSuS" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/04/14/O0uSuS.md.png" alt="O0uSuS.md.png" class="img_ev3q"></a></p>
+<p>同时，在公众号<strong>智能车竞赛</strong>的题目中新增了<strong>地平线</strong>的智慧医疗组，感觉赛题有不少重复的地方，便找了四个个学弟让他们参加一下，想着一次打两个比赛，理论上拿个小奖不是问题。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="研究生电赛">研究生电赛<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E7%A0%94%E7%A9%B6%E7%94%9F%E7%94%B5%E8%B5%9B" class="hash-link" aria-label="研究生电赛的直接链接" title="研究生电赛的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="准备">准备<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E5%87%86%E5%A4%87" class="hash-link" aria-label="准备的直接链接" title="准备的直接链接">​</a></h3>
+<p>申请相应的硬件设备，感觉我的老板应该不太会出这个money，没什么办法，只能先自己申请一下。 （申请时需要提交一个类似于项目开发设计表的东西，没认真写，结果一个月都没有通过）此时也一边忙着学点点云分割入门的相关知识以及忙着毕设，所以也没有在比赛上过于用心。（主要这两个个比赛对我意义不大，只是试试水）</p>
+<p>就这样一直到了五月中旬，板子下来我才意识到这只是一块开发板，海需要自己加外设，搭平台。时间上来不及，而且校赛在六月初，初赛也在校赛后没几天。</p>
+<p>这时候我有点急了。但是没办法，临时找学弟问了问智能车搞得咋样，能不能临时借来用用————结果就是<code>history</code>里的指令历史记录只有几条，几乎是啥也没干。。。
+所以，我原本以为的6个人搞一个东西应该轻轻松松（智能车4人,研电赛2人），缺变成了这样子。此时，距离校赛的答辩只剩下3-4天</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="备赛">备赛<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E5%A4%87%E8%B5%9B" class="hash-link" aria-label="备赛的直接链接" title="备赛的直接链接">​</a></h3>
+<p>Tools：ROS2，Linux，Python，TogetherROS</p>
+<p>Background：对于ROS2并不熟悉，没有得到详细的相关资料。</p>
+<p>Progress：一共两天通宵。</p>
+<p>Result：省三</p>
+<p>Details：<strong>没有时间再重新开发，尽量把RDKx3派自带的各种demos都复现出来</strong>（目标检测，实时转发，手势识别，智能循迹，人体跟踪，远程遥控），且成功展示。在此基础上，若还有其他的时间再做加分项。当然，最后肯定是没多的时间的。因为只有我一个人，大约花了一天多的时间跟着官方的github技术文档复现全部功能+拍展示视频。剩下大半天用来PPT以及技术论文。</p>
+<p>Report：</p>
+<ol>
+<li>校赛的答辩上看着自己东拼西凑的东西我都不好意思讲。所幸，校赛只要去了就是二等奖，且无关晋级。</li>
+<li>省赛是线上答辩。同样被拷打，太多的东西都是围绕着本身所具备的功能去做的（甚至很多流程图都是用的他们手册上的），额外的开发应该微乎其微。跟赛方诉了下做成这样子的苦衷，最后拿了个省三（安慰奖）</li>
+</ol>
+<p>当时两次答辩都觉得挺丢人的，但是现在却没那感觉了。毕竟<strong>从头到最后只有我一个人在搞。</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="智能车">智能车<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E6%99%BA%E8%83%BD%E8%BD%A6" class="hash-link" aria-label="智能车的直接链接" title="智能车的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="准备-1">准备<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E5%87%86%E5%A4%87-1" class="hash-link" aria-label="准备的直接链接" title="准备的直接链接">​</a></h3>
+<p>此时，智能车那边的比赛时间确定在了7月下旬，还有一个月。但是看着我那可爱的学弟们一行指令都没敲过，我已经不报希望了，打算到比赛前一周再准备一下，也去混个省三就算了。</p>
+<p>于是：等我真的开始准备时，我才知道他们几乎把所有的时间都压在了完全模型组上，而且区赛比赛失误，地平线这边的赛题还是一团糟。而主力还在赛后被老师拉去北京做项目。</p>
+<p>所以，又是我一个人在搞。此时，距离区赛仅仅7天不到。（<strong>留个悬念，隔壁的ti实验室此时备赛了半年了且早已经完赛</strong>。）</p>
+<p>在了解清楚任务后，我花了一天基于开源的一个视觉方法实现循迹和实时二维码识别并转发到web端口显示。又经过一天的微调，大概能保证2分钟左右的完赛。这个给成绩区赛拿奖不成问题，进国赛自然不可能。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="转机">转机<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E8%BD%AC%E6%9C%BA" class="hash-link" aria-label="转机的直接链接" title="转机的直接链接">​</a></h3>
+<p>有个学弟在看到群里的大佬用纯惯导+摄像头的方法提出用惯导直接穿过去，不考虑撞锥桶的情况下，能在40s左右完赛。</p>
+<p>大约过了两天，惯导方案已经初步实现，但是由于图传太慢，人为控制的部分很难保证实时性。为了改进图传，我又去搜寻了许多压缩图像、视频流的方法，包括不限于改色彩通道，改格式，改摄像头参数甚至是改传输方式，然而影响都微乎其微。无奈下，我们只能是降低分辨率，从640x480到80x60，保证基本的图传速度。（后续换了好点的网卡，也进一步提升了帧率。）</p>
+<p>此时还剩下两天，如果不撞锥桶，这个速度进国赛应该没问题，但是一旦失误一次就可能没机会。</p>
+<p>为了能够保证成功率，我只能再通宵，写了多点的惯导方法，实现了以曲线形式避障，且准确识别二维码。在完成这段代码后，我们便踏上了前往武汉的高铁。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="比赛">比赛<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E6%AF%94%E8%B5%9B" class="hash-link" aria-label="比赛的直接链接" title="比赛的直接链接">​</a></h3>
+<p>现场无法带手机，只能给大家看看最后的成绩单了(因为之前校赛没有成绩，只能代表附属学院参赛了)
+初赛是27s左右，比隔壁Ti实验室的队伍还快了3秒.国赛失误了，撞了一个锥桶，罚了10s，40s完赛。最后也是侥幸拿下了第五个国奖。</p>
+<p><a href="https://img.tg/image/O0uIRv" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/04/14/O0uIRv.md.png" alt="O0uIRv.md.png" class="img_ev3q"></a></p>
+<p>区赛</p>
+<p><img loading="lazy" src="https://ooo.0x0.ooo/2025/04/14/O0u8IU.jpg" alt="O0u8IU.jpg" class="img_ev3q"></p>
+<p>国赛</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="commands">Commands<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#commands" class="hash-link" aria-label="Commands的直接链接" title="Commands的直接链接">​</a></h3>
+<p>记录一些比赛中用的相关指令</p>
+<ol>
+<li><code>alias</code>用于将指令重命名，编辑好后放到终端里的bash.rc自启动
+这样把很长的ros2指令都变为简单的11 22 33 或者根据需求采用不同的代码：即需要直走11 加速走22 曲线33 （虽然很笨拙的方法，但是效率高，在本次比赛中起到了奇策的效果）
+虽然说用launch也可以起到类似的效果，但是实测中并不好用 。因为有时候部分节点（一共启动六个）会出现莫名其妙的bug，而需要将那单独一个节点进行重启，而launch文件不利于调试。</li>
+<li><code>source /opt/ros/&lt;distro&gt;/setup.bash</code> 配置环境的指令，由于本次采用了多个ros环境，有时候需要切换。</li>
+<li><code>ros2 pkg list</code> 查找包</li>
+<li><code>ros2 node list</code>查看当前活跃节点</li>
+<li><code>ros2 node info &lt;node_name&gt;</code> 查看节点信息</li>
+<li><code>ros2 topic list</code>查看当前活跃节点：</li>
+<li><code>ros2 topic echo &lt;topic_name&gt;</code>打印某话题信息，可以加后缀表示频率</li>
+<li><code>ros2 service list /type &lt;service_name&gt;</code>查看服务列表,查看服务类型
+以上都是非常基础的内容 在查找时可添加<code>|grep xxx</code>实现快速搜寻xxx</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="旅游">旅游<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E6%97%85%E6%B8%B8" class="hash-link" aria-label="旅游的直接链接" title="旅游的直接链接">​</a></h3>
+<p>逛了蛮多地方的，走了几天腿都断了，还有天晚上下了好大的雨，根本寸步难行。</p>
+<p><a href="https://img.tg/image/O0I8qg" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/04/14/O0I8qg.md.jpg" alt="O0I8qg.md.jpg" class="img_ev3q"></a></p>
+<p>可达鸭小车（鸭鸭立大功）</p>
+<p><a href="https://img.tg/image/O0I2Vl" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/04/14/O0I2Vl.md.jpg" alt="O0I2Vl.md.jpg" class="img_ev3q"></a></p>
+<p>楚河汉街</p>
+<p><a href="https://img.tg/image/O0IXAB" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/04/14/O0IXAB.md.jpg" alt="O0IXAB.md.jpg" class="img_ev3q"></a></p>
+<p>远拍黄鹤楼</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接">​</a></h2>
+<p>我又一次把希望寄托在了别人的身上，又一次狠狠的失望了。感觉每次都希望好好干，比赛后开源，但是每一次都没能做到。到底是为什么呢？</p>
+<p>赛后找负责保管车的同学要份代码，过了半年都没给我（真的是半年），要么忘记了，要么在忙，永远是一堆理由。本来6个人搞一个比赛，每个人出点力不是很容易吗？</p>
+<p>结果到最后还是我一个人干大半，太失望了。。。</p>
+<p>25年的研究生电赛我估计也是只能靠自己了。说是锻炼，但是也没学些什么东西，就当作是毕业旅行了吧。。。</p>
+<p>不知道是因为这个地方的原因，感觉目前遇到的人不靠谱的还是居多。只能是自己从头到尾都参与，否则一个不注意真不知道这些人会多摆。</p>
+<p>就当作学了ros的基础吧，也是创下新纪录，7天拿下国一，上一次还是3天拿下国二和10天拿下国一。都有显著的侥幸在其中：</p>
+<hr>
+<blockquote>
+<p>并非是我多厉害，只是从选题开始的每一次选择都至关重要。</p>
+<blockquote>
+<p>每一次选择题都选对的基础上，以优先完赛为前提，先做完再做好。
+往往再做完的时候就知道有哪些地方存在不足，再往那个方向努力。不要畏惧，大胆去做，总有可乘之机，破局之道藏在其中。</p>
+<blockquote>
+<p>感觉每一次拿智能车国奖都挺意外的，完全没意识到我这种半吊子水平也能进国赛。
+完全没有基础，没有传承，没有指导的前提下：
+有着老师持续的资金支持，有着我个人永不放弃的信念，有着几个队友一路的陪伴</p>
+<blockquote>
+<p>一切的一切才造就了五智能车国奖的现在</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>]]></content>
         <author>
             <name>Cui quan</name>
             <uri>https://github.com/cowqer</uri>
