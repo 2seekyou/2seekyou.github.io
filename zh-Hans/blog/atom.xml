@@ -1,16 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://cq.seekyou.fun/zh-Hans/blog</id>
+    <id>https://2seekyou.github.io/zh-Hans/blog</id>
     <title>SeekYou Blog</title>
-    <updated>2025-05-30T00:00:00.000Z</updated>
+    <updated>2025-08-29T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://cq.seekyou.fun/zh-Hans/blog"/>
+    <link rel="alternate" href="https://2seekyou.github.io/zh-Hans/blog"/>
     <subtitle>SeekYou Blog</subtitle>
-    <icon>https://cq.seekyou.fun/zh-Hans/img/yanqing.ico</icon>
+    <icon>https://2seekyou.github.io/zh-Hans/img/yanqing.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[关于遥感检测/分割]]></title>
+        <id>https://2seekyou.github.io/zh-Hans/blog/intro_me</id>
+        <link href="https://2seekyou.github.io/zh-Hans/blog/intro_me"/>
+        <updated>2025-08-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[简要介绍一下自己的研究方向]]></summary>
+        <content type="html"><![CDATA[<p>简要介绍一下自己的研究方向</p>
+<p>Mainstream tasks of CV : Classification, Detection, Segmentation, Tracking .etc
+Application：人脸识别，智能驾驶，车辆监控。</p>
+<p>Mainstream tasks of CV in RS:</p>
+<ol>
+<li>
+<p>Image Classification: 判别整张遥感图像属于哪一类，比如：城市、农田、森林、水体等</p>
+</li>
+<li>
+<p>Scene Classification: 对遥感影像的某个 patch（区域）进行场景识别，比如机场、港口、居民区</p>
+</li>
+<li>
+<p><strong>Object Detection</strong>: 检测遥感图像中的目标物体，例如飞机、舰船、车辆、建筑等</p>
+</li>
+<li>
+<p><strong>Semantic Segmentation</strong>: 逐像素预测类别，例如道路提取、建筑物分割、水体分割</p>
+</li>
+<li>
+<p>Change Detection: 对比不同时期的遥感影像，检测地物变化, 如洪水/地震/火灾损毁评估</p>
+</li>
+<li>
+<p>Super-Resolution, Captioning ...</p>
+</li>
+</ol>
+<p>由于我目前主要接触的是检测和分割任务，所以下面着重描述这两个任务：</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="目标检测object-detection">目标检测（Object Detection）<a href="https://2seekyou.github.io/zh-Hans/blog/intro_me#%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8Bobject-detection" class="hash-link" aria-label="目标检测（Object Detection）的直接链接" title="目标检测（Object Detection）的直接链接">​</a></h2>
+<ul>
+<li>
+<p><strong>水平检测（Horizontal Detection）</strong><br>
+<!-- -->使用标准的轴对齐矩形框检测目标，适用于方向相对统一的目标，例如车辆、船只等。</p>
+</li>
+<li>
+<p><strong>倾斜检测（Oriented Detection）</strong><br>
+<!-- -->使用旋转矩形框检测目标，能够处理任意方向的物体，适合航拍影像中方向各异的目标，如飞机、船舶和建筑物等。</p>
+</li>
+</ul>
+<p><img loading="lazy" alt="alt text" src="https://2seekyou.github.io/zh-Hans/assets/images/Snipaste_2025-08-28_13-47-30-46c6bfbceb932ab6dd3aa08bcb6db98b.png" width="1536" height="365" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="challenges">Challenges<a href="https://2seekyou.github.io/zh-Hans/blog/intro_me#challenges" class="hash-link" aria-label="Challenges的直接链接" title="Challenges的直接链接">​</a></h3>
+<ul>
+<li>方向多样性</li>
+<li>目标尺寸变化</li>
+<li>极端长宽比</li>
+<li>目标密集</li>
+<li>标准成本高</li>
+</ul>
+<p>等等</p>
+<p>而我的研究任务则是针对这些相应的特性，改进现有的方法，从而得到更精准的检测结果。</p>
+<p><img loading="lazy" alt="alt text" src="https://2seekyou.github.io/zh-Hans/assets/images/compare-ef5f5952b6f5622ccf88684e159f40bb.png" width="4022" height="3173" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="语义分割semantic-segmentation">语义分割（Semantic Segmentation）<a href="https://2seekyou.github.io/zh-Hans/blog/intro_me#%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2semantic-segmentation" class="hash-link" aria-label="语义分割（Semantic Segmentation）的直接链接" title="语义分割（Semantic Segmentation）的直接链接">​</a></h2>
+<ul>
+<li>
+<p><strong>地物分类（Land-cover Classification）</strong><br>
+<!-- -->对每个像素进行地物类型分类，如水体、森林、城市建筑、农田等，用于地图制作和环境监测。</p>
+</li>
+<li>
+<p><strong>实例分割 / 目标轮廓提取（Instance Segmentation / Object Footprint Extraction）</strong><br>
+<!-- -->精确区分每个目标实例（如每栋建筑、每辆车）的像素区域，适用于城市规划、灾害评估和精细目标统计。</p>
+</li>
+</ul>
+<p><img loading="lazy" alt="txt" src="https://2seekyou.github.io/zh-Hans/assets/images/Snipaste_2025-08-28_14-04-56-1597c1a3a3693b8c9ea4f9f49184d194.png" width="861" height="676" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="challenges-1">Challenges<a href="https://2seekyou.github.io/zh-Hans/blog/intro_me#challenges-1" class="hash-link" aria-label="Challenges的直接链接" title="Challenges的直接链接">​</a></h3>
+<p>矿区的建设受矿种类型、矿石储量、开采方式等多方面因素的影响，导致矿区占地的结构化程度低。</p>
+<ul>
+<li>尺度不一</li>
+<li>分布稀疏</li>
+<li>现状不规则</li>
+<li>面积占比小</li>
+<li>数据少</li>
+</ul>
+<p>引入了少样本学习(Few Shot Learning) 针对数据少的特点</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="few-shot-learning-fsl">Few Shot Learning (FSL)<a href="https://2seekyou.github.io/zh-Hans/blog/intro_me#few-shot-learning-fsl" class="hash-link" aria-label="Few Shot Learning (FSL)的直接链接" title="Few Shot Learning (FSL)的直接链接">​</a></h2>
+<p>举一个简单的例子：下面的左边两张是犰狳(qiú yú)，右边两张是穿山甲。大家可能从未听说过这两种动物，但这并不重要。只需注意它们的不同之处，并试着区分这两种动物。</p>
+<p><img loading="lazy" src="https://picx.zhimg.com/v2-c59897e49c9e0957426a450ecfade6cb_r.jpg" alt="s" class="img_ev3q"></p>
+<p>现在给你另外一张图片，请回答：这是犰狳还是穿山甲？</p>
+<p><img loading="lazy" src="https://picx.zhimg.com/v2-943b8bdab22187ee87d97703e5f53c63_1440w.jpg" alt="q" class="img_ev3q"></p>
+<p>没错，这是穿山甲。你可能从未听说过这两种动物，但却能仅凭 4 张图片样本就将它们区分开来。</p>
+<p>作为人类，我们是天生的少样本学习高手。我们有能力根据这么少的数据做出预测。那么，这部分的关键问题就来了：计算机也能做到这一点吗？</p>
+<p>这种情况相比标准分类问题更难。我们拥有的样本数量太少，无法训练深度神经网络。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="核心概念">核心概念<a href="https://2seekyou.github.io/zh-Hans/blog/intro_me#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5" class="hash-link" aria-label="核心概念的直接链接" title="核心概念的直接链接">​</a></h3>
+<ol>
+<li>Support Set（支持集）</li>
+</ol>
+<p>一个非常小的样本集，提供每个类别的少量样本。</p>
+<p>模型需要基于这些样本理解类别间的相似性。</p>
+<ol start="2">
+<li>Query（查询集）</li>
+</ol>
+<p>用于测试模型在支持集提供的信息基础上，对未见过的样本进行分类。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fsl-vs-传统分类">FSL v.s. 传统分类<a href="https://2seekyou.github.io/zh-Hans/blog/intro_me#fsl-vs-%E4%BC%A0%E7%BB%9F%E5%88%86%E7%B1%BB" class="hash-link" aria-label="FSL v.s. 传统分类的直接链接" title="FSL v.s. 传统分类的直接链接">​</a></h3>
+<p><strong>传统分类问题</strong></p>
+<ul>
+<li>
+<p>训练样本丰富，模型直接学习类别边界。</p>
+</li>
+<li>
+<p>目标：在已知类别上进行泛化。</p>
+</li>
+</ul>
+<p>如下为标准图像分类示例。测试样本是已知类别中未见过的图像：</p>
+<p><img loading="lazy" src="https://pic2.zhimg.com/v2-a7249a887feeaa0a27912db7467d541b_1440w.jpg" alt="n" class="img_ev3q"></p>
+<p><strong>少样本学习</strong></p>
+<ul>
+<li>
+<p>样本数量极少，无法训练标准深度网络。</p>
+</li>
+<li>
+<p>目标：学会“学习”，即理解样本间的相似性，而非只记住类别。</p>
+</li>
+<li>
+<p>核心难点：有限样本下的泛化能力。</p>
+</li>
+</ul>
+<p><img loading="lazy" src="https://pic3.zhimg.com/v2-5c6ce99f13886fc9faa2880672b95e28_1440w.jpg" alt="n" class="img_ev3q"></p>
+<p>查询样本是以前从未见过的属于未知类别。上图中，查询样本是一只兔子。它不属于训练时使用的类别。因此，模型不知道查询样本的类别是什么。为了解决这个问题，我们为模型提供了额外的信息。我们向它展示了支持集，即一组带有图像和相应标签的数据。通过比较查询，模型可以找到与兔子最相似的查询。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="小结">小结<a href="https://2seekyou.github.io/zh-Hans/blog/intro_me#%E5%B0%8F%E7%BB%93" class="hash-link" aria-label="小结的直接链接" title="小结的直接链接">​</a></h3>
+<p>少样本学习的关键在于利用少量支持集信息，对新样本（Query）进行准确分类，而不是依赖大量训练数据。这种能力在实际应用中，如医疗影像诊断、遥感目标识别等场景尤为重.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="科研相关能力工具需求">科研相关能力、工具需求<a href="https://2seekyou.github.io/zh-Hans/blog/intro_me#%E7%A7%91%E7%A0%94%E7%9B%B8%E5%85%B3%E8%83%BD%E5%8A%9B%E5%B7%A5%E5%85%B7%E9%9C%80%E6%B1%82" class="hash-link" aria-label="科研相关能力、工具需求的直接链接" title="科研相关能力、工具需求的直接链接">​</a></h3>
+<p><strong>Research-related Skills and Tools</strong></p>
+<ul>
+<li>Python</li>
+<li>Pytorch/ tensorflow</li>
+<li>Jupyter</li>
+<li>Linux</li>
+<li>Git</li>
+<li>VSCode / PyCharm</li>
+<li>Latex</li>
+<li>English</li>
+<li>scholar.google.com / sci-hub / web of science / CNKI</li>
+<li>EndNote / 小绿鲸 / Zotero</li>
+<li>Drawio / Visio</li>
+<li>Chatgpt / AI</li>
+</ul>
+<p><strong>Research-related Soft Skills</strong></p>
+<ul>
+<li>Communication &amp; Collaboration</li>
+<li>Time Management</li>
+</ul>
+<p><a href="https://zhuanlan.zhihu.com/p/1929697395752572529" target="_blank" rel="noopener noreferrer">参考链接</a></p>]]></content>
+        <author>
+            <name>Cui quan</name>
+            <uri>https://github.com/cowqer</uri>
+        </author>
+        <category label="Note" term="Note"/>
+        <category label="seekyou" term="seekyou"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[有关视觉识别领域发展的观点]]></title>
-        <id>https://cq.seekyou.fun/zh-Hans/blog/CV-Talk</id>
-        <link href="https://cq.seekyou.fun/zh-Hans/blog/CV-Talk"/>
+        <id>https://2seekyou.github.io/zh-Hans/blog/CV-Talk</id>
+        <link href="https://2seekyou.github.io/zh-Hans/blog/CV-Talk"/>
         <updated>2025-05-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[先对24年华为天才少年谢凌曦的讨论再总结一下（文末括号表示个人的想法）， 后续或许更新自己的一些想法/ideas。]]></summary>
         <content type="html"><![CDATA[<p>先对24年华为天才少年谢凌曦的讨论再总结一下（文末括号表示个人的想法）， 后续或许更新自己的一些想法/ideas。</p>
@@ -18,7 +169,7 @@
 <p>在我看来其思路是很十分正确的，或许有些话会一语成谶。</p>
 <p>主要对分析计算机视觉领域，特别是<strong>视觉感知（即识别）方向所面临的困难和潜在的研究方向</strong>。</p>
 <p>相较于针对具体算法的细节改进，谢更希望探讨当前算法（尤其是基于深度学习的预训练+微调范式）的局限性和瓶颈，并且由此得出初步的发展性结论，包括<strong>哪些问题是重要的、哪些问题是不重要的、哪些方向值得推进、哪些方向的性价比较低等</strong>。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cv-和-nlp">CV 和 NLP<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Talk#cv-%E5%92%8C-nlp" class="hash-link" aria-label="CV ��和 NLP的直接链接" title="CV 和 NLP的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cv-和-nlp">CV 和 NLP<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Talk#cv-%E5%92%8C-nlp" class="hash-link" aria-label="CV 和 NLP的直接链接" title="CV 和 NLP的直接链接">​</a></h2>
 <p><a href="https://img.tg/image/Odjp3F" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/05/30/Odjp3F.md.webp" alt="Odjp3F.md.webp" class="img_ev3q"></a></p>
 <p>简单翻译一下：</p>
 <p>NLP：处理主观的文本数据</p>
@@ -33,7 +184,7 @@
 <li>较大域差异：（训练和测试）数据分布上的区别可能很大</li>
 <li>无尽的语义（细粒度）：仅仅靠人为的标签不足以表示清楚图片的全部信息</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cv的三大基本困难和对应研究方向">CV的三大基本困难和对应研究方向<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Talk#cv%E7%9A%84%E4%B8%89%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%9B%B0%E9%9A%BE%E5%92%8C%E5%AF%B9%E5%BA%94%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91" class="hash-link" aria-label="CV的三大基本困难和对应研究方向的直接链接" title="CV的三大基本困难和对应研究方向的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cv的三大基本困难和对应研究方向">CV的三大基本困难和对应研究方向<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Talk#cv%E7%9A%84%E4%B8%89%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%9B%B0%E9%9A%BE%E5%92%8C%E5%AF%B9%E5%BA%94%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91" class="hash-link" aria-label="CV的三大基本困难和对应研究方向的直接链接" title="CV的三大基本困难和对应研究方向的直接链接">​</a></h3>
 <p>一直以来，NLP都走在CV的前面。不论是深度神经网络超越手工方法，还是预训练大模型开始出现大一统的趋势，这些事情都先发生在NLP领域，并在不久之后被搬运到了CV领域。这里的本质原因是NLP的起点更高：自然语言的基础单元是单词，而图像的基础单元是像素；前者具有天然的语义信息，而后者未必能够表达语义。</p>
 <p>从根本上说，自然语言是人类创造出来，用于存储知识和交流信息的载体，所以必然具有高效和信息密度高的特性；而图像则是人类通过各种传感器捕捉的光学信号，它能够客观地反映真实情况，但相应地就不具有强语义，且信息密度可能很低。</p>
 <p>从另一个角度看，图像空间比文本空间要大得多，空间的结构也要复杂得多。这就意味着，如果希望在空间中采样大量样本，并且用这些数据来表征整个空间的分布，采样的图像数据就要比采样的文本数据大许多个数量级。顺带一提，这也是为什么自然语言预训练模型比视觉预训练模型用得更好的本质原因——我们在后面还会提到这一点。</p>
@@ -52,7 +203,7 @@
 </ul>
 <p>这里需要做一个补充说明。由于数据空间大小和结构复杂度的差异，至少到目前为止，CV领域还不能通过预训练模型直接解决域间差异的问题，但是NLP领域已经接近了这一点。因此，我们看到了NLP学者们利用prompt-based方法统一了几十上百种下游任务，但是同样的事情在CV领域并没有发生。另外，在NLP中提出来的scaling law，其本质在于使用更大的模型来过拟合预训练数据集。也就是说，对于NLP来说，过拟合已经不再是一个问题，因为预训练数据集配合小型prompt已经足以表征整个语义空间的分布。但是，CV领域还没有做到这一点，因此还需要考虑域迁移，而域迁移的核心在于避免过拟合。也就是说，在接下来2-3年，CV和NLP的研究重心会有很大的差异，因而将任何一个方向的思维模式生搬硬套在另一个方向上，都是很危险的。</p>
 <p>（的确没错，两者的研究中心已经开始偏移了。mamba的出现其实可以看出来，应用于NLP主要是为了隐式状态更新 + 时序结构的递推表达能力，而在CV中则更像是Tansformer的上位替代）</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cv的研究方向分析">CV的研究方向分析<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Talk#cv%E7%9A%84%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91%E5%88%86%E6%9E%90" class="hash-link" aria-label="CV的研究方向分析的直接链接" title="CV的研究方向分析的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cv的研究方向分析">CV的研究方向分析<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Talk#cv%E7%9A%84%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91%E5%88%86%E6%9E%90" class="hash-link" aria-label="CV的研究方向分析的直接链接" title="CV的研究方向分析的直接链接">​</a></h3>
 <ul>
 <li>
 <p>2012年的AlexNet，奠定了深度神经网络在CV领域的基础。随后10年（至今），神经网络架构设计，经历了从手工设计到自动设计，再回到手工设计（引入更复杂的计算模块）的过程：</p>
@@ -79,7 +230,7 @@
 <p>可解释性是一个很重要的研究方向，但是谢个人对于深度神经网络的可解释性持悲观态度。NLP的成功，也不是建立在可解释性上，而是建立在过拟合大规模语料库上。对于真正的AI来说，这可能不是太好的信号。</p>
 </li>
 </ol>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="方向1视觉预训练">方向1：视觉预训练<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Talk#%E6%96%B9%E5%90%911%E8%A7%86%E8%A7%89%E9%A2%84%E8%AE%AD%E7%BB%83" class="hash-link" aria-label="方向1：视觉预训练的直接链接" title="方向1：视觉预训练的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="方向1视觉预训练">方向1：视觉预训练<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Talk#%E6%96%B9%E5%90%911%E8%A7%86%E8%A7%89%E9%A2%84%E8%AE%AD%E7%BB%83" class="hash-link" aria-label="方向1：视觉预训练的直接链接" title="方向1：视觉预训练的直接链接">​</a></h4>
 <p>作为如今CV领域炙手可热的方向，预训练方法被寄予厚望。在深度学习时代，视觉预训练可以分为<strong>有监督、无监督、跨模态</strong>三类，大致叙述如下：</p>
 <p>有监督预训练的发展相对清晰。由于图像级分类数据最容易获取，因此早在深度学习爆发之前，就有了日后奠定深度学习基础的ImageNet数据集，并被沿用至今。ImageNet全集超过1500万的数据规模，至今没有被其他非分类数据集所超越，因此至今仍是有监督预训练上最常用的数据。另外一个原因，则是图像级分类数据引入了较少bias，因而对于下游迁移更加有利——进一步减少bias，就是无监督预训练。</p>
 <p>无监督预训练，则经历了曲折的发展历程。从2014年开始，出现了第一代基于几何的无监督预训练方法，如根据patch位置关系、根据图像旋转等进行判断，同时生成式方法也在不断发展（生成式方法可以追溯到更早的时期，此处不赘述）。此时的无监督预训练方法，还显著地弱于有监督预训练方法。到了2019年，<strong>对比学习</strong>方法经过技术改进，首次显现出在下游任务上超越有监督预训练方法的潜力，无监督学习真正成为CV界关注的焦点。而2021年开始，视觉transformer的兴起催生了一类特殊的<strong>生成式任务即MIM</strong>，它逐渐成为统治性方法。</p>
@@ -88,7 +239,7 @@
 <p>从实际应用上看，应该将不同的<strong>预训练任务结合起来</strong>。也就是说，应当收集混合数据集，其中包含少量有标签数据（甚至是检测、分割等更强的标签）、中量图文配对数据、大量无任何标签的图像数据，并且在这样的混合数据集上设计预训练方法。</p>
 <p>从CV领域看，<strong>无监督预训练是最能体现视觉本质的研究方向</strong>。即使跨模态预训练给整个方向带来了很大的冲击，谢依然认为无监督预训练非常重要，必须坚持下去。需要指出，视觉预训练的思路很大程度上受到了自然语言预训练的影响，但是两者性质不同，因而不能一概而论。尤其是，自然语言本身是人类创造出来的数据，其中每个单词、每个字符都是人类写下来的，天然带有语义，因此从严格意义上说，NLP的预训练任务不能被视为真正的无监督预训练，至多算是弱监督的预训练。但是视觉不同，图像信号是客观存在、未经人类处理的原始数据，在其中的无监督预训练任务一定更难。<strong>总之，即使跨模态预训练能够在工程上推进视觉算法，使其达到更好的识别效果，视觉的本质问题还是要靠视觉本身来解决</strong>。</p>
 <p>当前，<strong>纯视觉无监督预训练的本质在于从退化中学习</strong>。这里的退化，指的是从图像信号中去除某些已经存在的信息，要求算法复原这些信息：几何类方法去除的是几何分布信息（如patch的相对位置关系）；对比类方法去除的是图像的整体信息（通过抽取不同的view）；生成类方法如MIM去除的是图像的局部信息。这种基于退化的方法，都具有一个无法逾越的瓶颈，<strong>即退化强度和语义一致性的冲突</strong>。由于没有监督信号，视觉表征学习完全依赖于退化，因此退化必须足够强；而退化足够强时，就无法保证退化前后的图像具有语义一致性，从而导致病态的预训练目标。举例说，对比学习从一张图像中抽取的两个view如果毫无关系，拉近它们的特征就不合理；MIM任务如果去除了图像中的关键信息（如人脸），重建这些信息也不合理。强行完成这些任务，就会引入一定的bias，弱化模型的泛化能力。<strong>未来，应该会出现一种无需退化的学习任务，而其个人相信，通过压缩来学习是一条可行的路线</strong>。（压缩后再还原吗，有意思，可以试试）</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="方向2模型微调和终身学习">方向2：模型微调和终身学习<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Talk#%E6%96%B9%E5%90%912%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E5%92%8C%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0" class="hash-link" aria-label="方向2：模型微调和终身学习的直接链接" title="方向2：模型微调和终身学习的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="方向2模型微调和终身学习">方向2：模型微调和终身学习<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Talk#%E6%96%B9%E5%90%912%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E5%92%8C%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0" class="hash-link" aria-label="方向2：模型微调和终身学习的直接链接" title="方向2：模型微调和终身学习的直接链接">​</a></h4>
 <p>作为一个基础问题，模型微调已经发展出了大量的不同的setting。如果要把不同的setting统一起来，可以认为它们无非考虑三个数据集，即<strong>预训练数据集 Dpre （不可见）、目标训练集 Dtrain 、目标测试集 Dtest （不可见且不可预测）</strong>。根据对三者之间关系的假设不同，比较流行的setting可以概括如下：</p>
 <p>迁移学习：假设Dpre或者 Dtrain 和 Dtest 的数据分布大不相同；</p>
 <p>弱监督学习：假设Dtrain只提供了不完整的标注信息；</p>
@@ -100,7 +251,7 @@
 <p>关于这个方向，<strong>谢</strong>认为有两个重要问题：</p>
 <p>**从孤立的setting向终身学习的统一。**从学术界到工业界，必须抛弃“一次性交付模型”的思维，将交付内容理解为以模型为中心，配套有数据治理、模型维护、模型部署等多种功能的工具链。用工业界的话说，一个模型或者一套系统，在整个项目的生命周期中，必须得到完整的看护。必须考虑到，用户的需求是多变且不可预期的，今天可能会换个摄像头，明天可能会新增要检测的目标种类，等等。我们不追求AI能自主解决所有问题，但是AI算法应该有一个规范操作流程，让不懂AI的人能够遵循这个流程，新增他们想要的需求、解决平时遇到的问题，这样才能让AI真正平民化，解决实际问题。<strong>对于学术界，必须尽快定义出符合真实场景的终身学习setting，建立起相应的benchmark，推动这一方向的研究</strong>。（很有意思的一点：结合到了工业界。很前卫的思路，可以理解为目前的chatgpt和以往的搜素引擎的差异）</p>
 <p><strong>在域间差异明显的情况下，解决大数据和小样本的冲突</strong>。这又是CV和NLP的不同点：NLP已经基本不用考虑预训练和下游任务的域间差异性，因为语法结构和常见单词完全一样；而CV则必须假设上下游数据分布显著不同，以致于上游模型未经微调时，在下游数据中无法抽取底层特征（被ReLU等单元直接滤除）。因此，用小数据微调大模型，在NLP领域不是大问题（现在的主流是只微调prompt），但是在CV领域是个大问题。在这里，<strong>设计视觉友好的prompt也许是个好方向，但是目前的研究还没有切入核心问题</strong>。（什么是视觉友好的prompt，了解了解）</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="方向3无限细粒度视觉识别任务">方向3：无限细粒度视觉识别任务<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Talk#%E6%96%B9%E5%90%913%E6%97%A0%E9%99%90%E7%BB%86%E7%B2%92%E5%BA%A6%E8%A7%86%E8%A7%89%E8%AF%86%E5%88%AB%E4%BB%BB%E5%8A%A1" class="hash-link" aria-label="方向3：无限细粒度视觉识别任务的直接链接" title="方向3：无限细粒度视觉识别任务的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="方向3无限细粒度视觉识别任务">方向3：无限细粒度视觉识别任务<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Talk#%E6%96%B9%E5%90%913%E6%97%A0%E9%99%90%E7%BB%86%E7%B2%92%E5%BA%A6%E8%A7%86%E8%A7%89%E8%AF%86%E5%88%AB%E4%BB%BB%E5%8A%A1" class="hash-link" aria-label="方向3：无限细粒度视觉识别任务的直接链接" title="方向3：无限细粒度视觉识别任务的直接链接">​</a></h4>
 <p>关于无限细粒度视觉识别（以及类似的概念），目前还没有很多相关的研究。所以，谢以自己的思路来叙述这个问题。我在今年VALSE报告上，对已有方法和我们的proposal做了详细解读。以下我给出文字叙述，更详细的解读请参考我的专题文章或者我在VALSE上做的报告：</p>
 <p><a href="https://zhuanlan.zhihu.com/p/546510418" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/546510418</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/555377882" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/555377882</a></p>
@@ -124,7 +275,7 @@
 </ol>
 <p>在这三个条件的牵引下，我们设计出了<strong>按需视觉识别任务</strong>。与传统意义上的统一视觉识别不同，按需视觉识别以request为单位进行标注、学习和评测。当前，系统支持两类request，分别实现了从instance到semantic的分割、以及从semantic到instance的分割，因而两者结合起来，就能够实现任意精细程度的图像分割。按需视觉识别的另一个好处在于，在完成任意数量的request之后停止下来，都不会影响标注的精确性（即使大量信息没有被标注出来），这对于开放域的可扩展性（如新增语义类别）有很大的好处。具体细节，可以参看按需视觉识别的文章（链接见上文）。</p>
 <p><a href="https://img.tg/image/Odjt2b" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/05/30/Odjt2b.md.webp" alt="Odjt2b.md.webp" class="img_ev3q"></a></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="统一视觉识别和按需视觉识别的对比"><strong>统一视觉识别和按需视觉识别的对比</strong><a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Talk#%E7%BB%9F%E4%B8%80%E8%A7%86%E8%A7%89%E8%AF%86%E5%88%AB%E5%92%8C%E6%8C%89%E9%9C%80%E8%A7%86%E8%A7%89%E8%AF%86%E5%88%AB%E7%9A%84%E5%AF%B9%E6%AF%94" class="hash-link" aria-label="统一视觉识别和按需视觉识别的对比的直接链接" title="统一视觉识别和按需视觉识别的对比的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="统一视觉识别和按需视觉识别的对比"><strong>统一视觉识别和按需视觉识别的对比</strong><a href="https://2seekyou.github.io/zh-Hans/blog/CV-Talk#%E7%BB%9F%E4%B8%80%E8%A7%86%E8%A7%89%E8%AF%86%E5%88%AB%E5%92%8C%E6%8C%89%E9%9C%80%E8%A7%86%E8%A7%89%E8%AF%86%E5%88%AB%E7%9A%84%E5%AF%B9%E6%AF%94" class="hash-link" aria-label="统一视觉识别和按需视觉识别的对比的直接链接" title="统一视觉识别和按需视觉识别的对比的直接链接">​</a></h3>
 <p>在完成这篇文章之后，我还在不断思考，按需视觉识别对于其他方向的影响是什么。这里提供两个观点：</p>
 <p><strong>按需视觉识别中的request，本质上是一种视觉友好的prompt</strong>。它既能够达到询问视觉模型的目的，又避免了纯语言prompt带来的指代模糊性。随着更多类型的request被引入，这个体系有望更加成熟。</p>
 <p><strong>按需视觉识别，提供了在形式上统一各种视觉任务的可能性</strong>。例如，分类、检测、分割等任务，在这一框架下得到了统一。这一点可能对视觉预训练带来启发。目前，视觉预训练和下游微调的边界并不清楚，预训练模型究竟应该适用于不同任务，还是专注于提升特定任务，尚无定论。然而，如果出现了形式上统一的识别任务，那么这个争论也许就不再重要。顺便说，下游任务在形式上的统一，也是NLP领域享有的一大优势。</p>
@@ -134,7 +285,7 @@
 <p>生成是比识别更高级的能力。人类能够轻易地识别出各种常见物体，但是很少有人能够画出逼真的物体。从统计学习的语言上说，这是因为生成式模型需要对联合分布 p(x,y) 进行建模，而判别式模型只需要对条件分布 p(y|x) 进行建模：前者能够推导出后者，而后者不能推导出前者。从业界的发展看，虽然图像生成质量不断提升，但是生成内容的稳定性（不生成明显非真实的内容）和可控性仍有待提升。同时，生成内容对于识别算法的辅助还相对较弱，人们还难以完全利用虚拟数据、合成数据，达到和真实数据训练相媲美的效果。对于这两个问题，我们的观点都是，需要设计更好、更本质的评价指标，以替代现有的指标（生成任务上替代FID、IS等，而生成识别任务需要结合起来，定义统一的评价指标）。</p>
 <p>1978年，计算机视觉先驱David Marr设想，视觉的主要功能，在于建立环境的三维模型，并且在交互中学习知识。相比于识别和生成，交互更接近人类的学习方式，但是现在业界的研究相对较少。交互方向研究的主要困难，在于构建真实的交互环境——准确地说，当前视觉数据集的构建方式来源于对环境的稀疏采样，但交互需要连续采样。显然，要想解决视觉的本质问题，交互是本质。虽然业界已经有了许多相关研究（如具身智能），但是还没有出现通用的、任务驱动的学习目标。我们再次重复计算机视觉先驱David Marr提出的设想：<strong>视觉的主要功能，在于建立环境的三维模型，并且在交互中学习知识</strong>。计算机视觉，包括其他AI方向，都应该朝着这个方向发展，以走向真正的实用。</p>
 <p>总之，在不同子领域，<strong>单纯依靠统计学习（特别是深度学习）的强拟合能力的尝试，都已经走到了极限</strong>。未来的发展，一定建立在对CV更本质的理解上，而在各种任务上建立更合理的评价指标，则是我们需要迈出的第一步。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="结语">结语<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Talk#%E7%BB%93%E8%AF%AD" class="hash-link" aria-label="结语的直接链接" title="结语的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="结语">结语<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Talk#%E7%BB%93%E8%AF%AD" class="hash-link" aria-label="结语的直接链接" title="结语的直接链接">​</a></h2>
 <p>经过几次密集的学术交流，我能够明显地感受到业界的迷茫，至少对于视觉感知（识别）而言，有意思、有价值的研究问题越来越少，门槛也越来越高。这样发展下去，有可能在不久的将来，CV研究会走上NLP的道路，逐渐分化成两类：</p>
 <p>一类使用巨量计算资源进行预训练，不断空虚地刷新SOTA；一类则不断设计出新颖却没有实际意义的setting以强行创新。这对于CV领域显然不是好事。</p>
 <p>为了避免这种事情，除了不断探索视觉的本质、创造出更有价值的评测指标，还需要业界增加宽容性，特别是对于非主流方向的宽容性，不要一边抱怨着研究同质化，一边对于没有达到SOTA的投稿痛下杀手。当前的瓶颈是所有人共同面对的挑战，如果AI的发展陷入停滞，没有人能够独善其身。</p>
@@ -148,14 +299,14 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[计算机视觉报告]]></title>
-        <id>https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report</id>
-        <link href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report"/>
+        <id>https://2seekyou.github.io/zh-Hans/blog/CV-Class-report</id>
+        <link href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report"/>
         <updated>2025-03-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[传统图像特征提取方法及其应用]]></summary>
         <content type="html"><![CDATA[<p>传统图像特征提取方法及其应用</p>
 <p>计算机视觉课程报告</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="一特征提取方法原理">一、特征提取方法原理<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E4%B8%80%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95%E5%8E%9F%E7%90%86" class="hash-link" aria-label="一、特征提取方法原理的直接链接" title="一、特征提取方法原理的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sift尺度不变特征变换">SIFT（尺度不变特征变换）<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#sift%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2" class="hash-link" aria-label="SIFT（尺度不变特征变换）的直接链接" title="SIFT（尺度不变特征变换）的直接链接">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="一特征提取方法原理">一、特征提取方法原理<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E4%B8%80%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95%E5%8E%9F%E7%90%86" class="hash-link" aria-label="一、特征提取方法原理的直接链接" title="一、特征提取方法原理的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sift尺度不变特征变换">SIFT（尺度不变特征变换）<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#sift%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2" class="hash-link" aria-label="SIFT（尺度不变特征变换）的直接链接" title="SIFT（尺度不变特征变换）的直接链接">​</a></h3>
 <p>‌<strong>原理</strong>‌：</p>
 <ol>
 <li>‌<strong>尺度空间极值检测</strong>‌：通过高斯差分金字塔检测图像中的关键点</li>
@@ -178,7 +329,7 @@ c-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1
 s-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26
 c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z
 M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2561em"><span></span></span></span></span></span></span></span><span style="top:-2.7781em"><span class="pstrut" style="height:3.45em"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mop">arctan</span><span class="mspace" style="margin-right:0.1667em"></span><span class="minner"><span class="mopen delimcenter" style="top:0em"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal" style="margin-right:0.03588em">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal" style="margin-right:0.03588em">y</span><span class="mclose">)</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal" style="margin-right:0.03588em">y</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal" style="margin-right:0.03588em">y</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em"><span class="delimsizing size3">)</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.922em"><span></span></span></span></span></span></span></span></span></span></span></span>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lbp局部二值模式">LBP（局部二值模式）<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#lbp%E5%B1%80%E9%83%A8%E4%BA%8C%E5%80%BC%E6%A8%A1%E5%BC%8F" class="hash-link" aria-label="LBP（局部二值模式）的直接链接" title="LBP（局部二值模式）的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lbp局部二值模式">LBP（局部二值模式）<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#lbp%E5%B1%80%E9%83%A8%E4%BA%8C%E5%80%BC%E6%A8%A1%E5%BC%8F" class="hash-link" aria-label="LBP（局部二值模式）的直接链接" title="LBP（局部二值模式）的直接链接">​</a></h3>
 <p>‌<strong>原理</strong>‌：</p>
 <ol>
 <li>‌<strong>邻域比较</strong>‌：对每个像素的3x3邻域进行阈值处理</li>
@@ -186,14 +337,14 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <li>‌<strong>直方图统计</strong>‌：统计图像中不同LBP模式的分布</li>
 <li>‌<strong>改进方法</strong>‌：圆形邻域（扩展LBP）、均匀模式（Uniform LBP）</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hog方向梯度直方图">HOG（方向梯度直方图）<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#hog%E6%96%B9%E5%90%91%E6%A2%AF%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE" class="hash-link" aria-label="HOG（方向梯度直方图）的直接链接" title="HOG（方向梯度直方图）的直接链接">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="1-基本思想">1. 基本思想<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#1-%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3" class="hash-link" aria-label="1. 基本思想的直接链接" title="1. 基本思想的直接链接">​</a></h4>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hog方向梯度直方图">HOG（方向梯度直方图）<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#hog%E6%96%B9%E5%90%91%E6%A2%AF%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE" class="hash-link" aria-label="HOG（方向梯度直方图）的直接链接" title="HOG（方向梯度直方图）的直接链接">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="1-基本思想">1. 基本思想<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#1-%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3" class="hash-link" aria-label="1. 基本思想的直接链接" title="1. 基本思想的直接链接">​</a></h4>
 <p>HOG（Histogram of Oriented Gradients）通过统计图像局部区域的‌<strong>梯度方向分布</strong>‌来表征物体特征。其核心假设是：</p>
 <ul>
 <li>‌<strong>物体形状</strong>‌可由边缘和梯度分布描述</li>
 <li>‌<strong>局部梯度方向</strong>‌对光照变化具有鲁棒性</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-数学基础">2. 数学基础<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#2-%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80" class="hash-link" aria-label="2. 数学基础的直接链接" title="2. 数学基础的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-数学基础">2. 数学基础<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#2-%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80" class="hash-link" aria-label="2. 数学基础的直接链接" title="2. 数学基础的直接链接">​</a></h4>
 <p>（这里不清楚是什么原因导致的数学公式反复渲染 会存在一次数学公式和渲染前的文字）</p>
 <ul>
 <li>‌<strong>梯度计算</strong>‌：</li>
@@ -220,7 +371,7 @@ c-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1
 s-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26
 c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z
 M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2561em"><span></span></span></span></span></span></span></span><span style="top:-2.2781em"><span class="pstrut" style="height:3.45em"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mop">arctan</span><span class="mspace" style="margin-right:0.1667em"></span><span class="minner"><span class="mopen delimcenter" style="top:0em"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal" style="margin-right:0.03588em">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal" style="margin-right:0.03588em">y</span><span class="mclose">)</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal" style="margin-right:0.03588em">y</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal" style="margin-right:0.03588em">y</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em"><span class="delimsizing size3">)</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.422em"><span></span></span></span></span></span></span></span></span></span></span></span>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3-hog流程">3. HOG流程<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#3-hog%E6%B5%81%E7%A8%8B" class="hash-link" aria-label="3. HOG流程的直接链接" title="3. HOG流程的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3-hog流程">3. HOG流程<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#3-hog%E6%B5%81%E7%A8%8B" class="hash-link" aria-label="3. HOG流程的直接链接" title="3. HOG流程的直接链接">​</a></h4>
 <ul>
 <li>
 <p>‌<strong>图像预处理</strong>‌：</p>
@@ -239,16 +390,16 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 </li>
 <li>
 <p>下图为图片中的一个cell中的梯度
-<img loading="lazy" alt="alt text" src="https://cq.seekyou.fun/zh-Hans/assets/images/image-e059a42f0a7c0a611a10d057fe8f8816.png" width="826" height="511" class="img_ev3q"></p>
+<img loading="lazy" alt="alt text" src="https://2seekyou.github.io/zh-Hans/assets/images/image-e059a42f0a7c0a611a10d057fe8f8816.png" width="826" height="511" class="img_ev3q"></p>
 </li>
 <li>
 <p>左图是 8×8 的cell中表示梯度的原始数字，注意角度的范围介于0到180度之间，而不是0到360度， 这被称为“无符号”梯度，因为两个完全相反的方向被认为是相同的。
 现在我们来计算cell中像素的梯度直方图，先将角度范围分成9份，也就是9 bins，每20°为一个单元，也就是这些像素可以根据角度分为9组。将每一份中所有像素对应的梯度值进行累加，可以得到9个数值。直方图就是由这9个数值组成的数组，对应于角度0、20、40、60... 160。
-<img loading="lazy" alt="alt text" src="https://cq.seekyou.fun/zh-Hans/assets/images/image-1-a011b80aa8ba8aee46f4ef568bdf5d0c.png" width="855" height="605" class="img_ev3q"></p>
+<img loading="lazy" alt="alt text" src="https://2seekyou.github.io/zh-Hans/assets/images/image-1-a011b80aa8ba8aee46f4ef568bdf5d0c.png" width="855" height="605" class="img_ev3q"></p>
 </li>
 <li>
 <p>将这 8x8 的cell中所有像素的梯度值加到各自角度对应的bin中，就形成了长度为9的直方图，可以用这9个数的梯度直方图来代替原来很大的三维矩阵，即代替了8x8x2个值
-<img loading="lazy" alt="alt text" src="https://cq.seekyou.fun/zh-Hans/assets/images/image-2-3a890e97842abb71c42b6193e7c564de.png" width="875" height="505" class="img_ev3q"></p>
+<img loading="lazy" alt="alt text" src="https://2seekyou.github.io/zh-Hans/assets/images/image-2-3a890e97842abb71c42b6193e7c564de.png" width="875" height="505" class="img_ev3q"></p>
 </li>
 <li>
 <p>‌<strong>Block 归一化（L2-Hys）</strong>‌</p>
@@ -287,7 +438,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <ul>
 <li>HOG将8×8的一个区域作为一个cell，再以2×2个cell作为一组，称为block。由于每个cell有9个值，2×2个cell则有36个值，HOG是通过滑动窗口的方式来得到block的，如下图所示：</li>
 </ul>
-<p><img loading="lazy" alt="alt text" src="https://cq.seekyou.fun/zh-Hans/assets/images/image-3-a5fe924a52ac4db013b6e39bc5e2494c.png" width="254" height="497" class="img_ev3q"></p>
+<p><img loading="lazy" alt="alt text" src="https://2seekyou.github.io/zh-Hans/assets/images/image-3-a5fe924a52ac4db013b6e39bc5e2494c.png" width="254" height="497" class="img_ev3q"></p>
 <ul>
 <li>
 <p>block的梯度直方图进行归一化（注意不是cell），一个block有4个直方图，将这4个直方图拼接成长度为36的向量，然后对这个向量进行归一化。
@@ -305,85 +456,85 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 </li>
 </ul>
 <div class="language-mermaid codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-mermaid codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">graph TD</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    A[输入图像] --&gt; B(预处理:转为单通道灰度图（减少计算量）)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    B --&gt; C[梯度计算:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    计算水平和垂直梯度，再计算x和y方向梯度的合梯度，包括幅值和方向]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    C --&gt; D[计算梯度直方图:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    单元划分‌：将图像分为8×8像素的cell</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    加权投影‌：分配梯度幅值到相邻bin]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    D --&gt; E[块归一化</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ‌块构造‌：2×2 cell组成16×16像素的block（50%重叠滑动）</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    归一化方法‌（L2-Hys）:计算L2范数-&gt;初步归一化-&gt;截断限制-&gt;重新归一化]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    E --&gt; F[特征拼接:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ‌维度计算‌（64×128图像）:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    横向block数:（64/8）-1=7</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    纵向block数:（128/8）-1=15]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    F --&gt; G[输出特征向量]</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="二应用场景">二、应用场景<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E4%BA%8C%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF" class="hash-link" aria-label="二、应用场景的直接链接" title="二、应用场景的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="图像匹配sift">图像匹配（SIFT）<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E5%9B%BE%E5%83%8F%E5%8C%B9%E9%85%8Dsift" class="hash-link" aria-label="图像匹配（SIFT）的直接链接" title="图像匹配（SIFT）的直接链接">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="二应用场景">二、应用场景<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E4%BA%8C%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF" class="hash-link" aria-label="二、应用场景的直接链接" title="二、应用场景的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="图像匹配sift">图像匹配（SIFT）<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E5%9B%BE%E5%83%8F%E5%8C%B9%E9%85%8Dsift" class="hash-link" aria-label="图像匹配（SIFT）的直接链接" title="图像匹配（SIFT）的直接链接">​</a></h3>
 <ul>
 <li>特征点匹配：通过计算特征向量间的欧氏距离寻找匹配点对</li>
 <li>图像拼接：利用RANSAC算法消除误匹配，实现全景图拼接</li>
 <li>实例：无人机航拍图像配准、医学图像对齐</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="目标检测hog">目标检测（HOG）<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8Bhog" class="hash-link" aria-label="目标检测（HOG）的直接链接" title="目标检测（HOG）的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="目标检测hog">目标检测（HOG）<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8Bhog" class="hash-link" aria-label="目标检测（HOG）的直接链接" title="目标检测（HOG）的直接链接">​</a></h3>
 <ul>
 <li>滑动窗口检测：在不同尺度上提取HOG特征</li>
 <li>典型应用：行人检测、车辆检测</li>
 <li>优势：对几何和光学变化具有鲁棒性</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="纹理分类lbp">纹理分类（LBP）<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E7%BA%B9%E7%90%86%E5%88%86%E7%B1%BBlbp" class="hash-link" aria-label="纹理分类（LBP）的直接链接" title="纹理分类（LBP）的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="纹理分类lbp">纹理分类（LBP）<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E7%BA%B9%E7%90%86%E5%88%86%E7%B1%BBlbp" class="hash-link" aria-label="纹理分类（LBP）的直接链接" title="纹理分类（LBP）的直接链接">​</a></h3>
 <ul>
 <li>人脸识别：LBP特征+AdaBoost分类器</li>
 <li>工业检测：产品表面缺陷检测</li>
 <li>生物特征：指纹识别、虹膜识别</li>
 </ul>
 <h1>HOG（方向梯度直方图）原理详解</h1>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="一核心思想">一、核心思想<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E4%B8%80%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3" class="hash-link" aria-label="一、核心思想的直接链接" title="一、核心思想的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="一核心思想">一、核心思想<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E4%B8%80%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3" class="hash-link" aria-label="一、核心思想的直接链接" title="一、核心思想的直接链接">​</a></h2>
 <p>‌<strong>通过统计图像局部区域的梯度方向分布来表征物体形状特征</strong>‌，特别擅长捕捉‌<strong>边缘和轮廓信息</strong>‌，对光照变化和微小位移具有鲁棒性。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="二算法流程分解">二、算法流程分解<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E4%BA%8C%E7%AE%97%E6%B3%95%E6%B5%81%E7%A8%8B%E5%88%86%E8%A7%A3" class="hash-link" aria-label="二、算法流程分解的直接链接" title="二、算法流程分解的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-预处理与归一化">1. 预处理与归一化<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#1-%E9%A2%84%E5%A4%84%E7%90%86%E4%B8%8E%E5%BD%92%E4%B8%80%E5%8C%96" class="hash-link" aria-label="1. 预处理与归一化的直接链接" title="1. 预处理与归一化的直接链接">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="二算法流程分解">二、算法流程分解<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E4%BA%8C%E7%AE%97%E6%B3%95%E6%B5%81%E7%A8%8B%E5%88%86%E8%A7%A3" class="hash-link" aria-label="二、算法流程分解的直接链接" title="二、算法流程分解的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-预处理与归一化">1. 预处理与归一化<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#1-%E9%A2%84%E5%A4%84%E7%90%86%E4%B8%8E%E5%BD%92%E4%B8%80%E5%8C%96" class="hash-link" aria-label="1. 预处理与归一化的直接链接" title="1. 预处理与归一化的直接链接">​</a></h3>
 <div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># 典型输入参数</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">image </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> cv2</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">resize</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">img</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token number" style="color:#36acaa">64</span><span class="token punctuation" style="color:#393A34">,</span><span class="token number" style="color:#36acaa">128</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic"># 标准化图像尺寸</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">gamma </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">1.0</span><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic"># Gamma校正参数</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="三hogsvm行人检测实例">三、HOG+SVM行人检测实例<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E4%B8%89hogsvm%E8%A1%8C%E4%BA%BA%E6%A3%80%E6%B5%8B%E5%AE%9E%E4%BE%8B" class="hash-link" aria-label="三、HOG+SVM行人检测实例的直接链接" title="三、HOG+SVM行人检测实例的直接链接">​</a></h2>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="主要思想">主要思想：<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E4%B8%BB%E8%A6%81%E6%80%9D%E6%83%B3" class="hash-link" aria-label="主要思想：的直接链接" title="主要思想：的直接链接">​</a></h4>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="三hogsvm行人检测实例">三、HOG+SVM行人检测实例<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E4%B8%89hogsvm%E8%A1%8C%E4%BA%BA%E6%A3%80%E6%B5%8B%E5%AE%9E%E4%BE%8B" class="hash-link" aria-label="三、HOG+SVM行人检测实例的直接链接" title="三、HOG+SVM行人检测实例的直接链接">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="主要思想">主要思想：<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E4%B8%BB%E8%A6%81%E6%80%9D%E6%83%B3" class="hash-link" aria-label="主要思想：的直接链接" title="主要思想：的直接链接">​</a></h4>
 <ul>
 <li>在一幅图像中，局部目标的表象和形状能够利用梯度或边缘的方向密度分布来进行描述。其本质是梯度的统计信息，而梯度主要存在于边缘所在的地方，HOG通过计算和统计局部区域的梯度方向直方图来构成特征，结合SVM分类器，应用于图像识别中。</li>
 <li>由于HOG是在图像的局部方格单元上进行操作的，所以它对图像的几何和光学形变都能保持很好的不变性，这两种形变只会出现在更大的空间领域上。其次，在粗的空域抽样、精细的方向抽样以及较强的局部光学归一化等条件下，只要行人大体上能够保持直立的姿势，可以容许行人有一些细微的肢体动作，这些细微的动作可以被忽略而不影响检测效果。因此HOG特征特别适合于做图像中的人体检测。</li>
 </ul>
 <div class="language-mermaid codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-mermaid codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">graph TD</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    %% 训练阶段</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subgraph 训练流程</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        A[步骤1: 收集正样本块] --&gt; C[HOG特征提取]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        B[步骤2: 收集负样本块] --&gt; C</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        C --&gt; D[步骤3: 初始SVM训练]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        D --&gt; E[步骤4: Hard-Negative Mining]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        E --&gt; F{新误报样本?}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        F --&gt;|是| G[步骤5: 排序误报样本]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        G --&gt; H[更新训练集]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        H --&gt; D</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        F --&gt;|否| I[获得最终模型]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    %% 检测阶段</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subgraph 检测流程</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        J[步骤6: 测试图片预测] --&gt; K[多尺度滑动窗口]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        K --&gt; L[步骤7: NMS去重]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        L --&gt; M[输出检测结果]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    %% 流程连接</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    I --&gt; J</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    %% 交互提示（符合Mermaid语法）</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    click E "javascript:void(0)" "在负样本图像上执行：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    1. 多尺度滑动窗口</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    2. 提取误报样本</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    3. 记录概率值"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    click F "javascript:void(0)" "迭代终止条件：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    连续3次误报样本增量&lt;5%"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    click L "javascript:void(0)" "非极大值抑制算法：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    1. 按置信度排序</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    2. IOU阈值过滤</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    3. 保留最高分框"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-数据准备">1. 数据准备<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#1-%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87" class="hash-link" aria-label="1. 数据准备的直接链接" title="1. 数据准备的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-数据准备">1. 数据准备<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#1-%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87" class="hash-link" aria-label="1. 数据准备的直接链接" title="1. 数据准备的直接链接">​</a></h3>
 <div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># 加载INRIA行人数据集（示例）</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">pos_samples </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> load_pos_samples</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic"># 包含行人的图像</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">neg_samples </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> load_neg_samples</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic"># 不包含行人的图像</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">test_samples </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> load_test_samples</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic">#测试图像</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">pos_samples</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> neg_samples</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> test_samples </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> load_data_set</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-训练与测试流程">2. 训练与测试流程<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#2-%E8%AE%AD%E7%BB%83%E4%B8%8E%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B" class="hash-link" aria-label="2. 训练与测试流程的直接链接" title="2. 训练与测试流程的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-训练与测试流程">2. 训练与测试流程<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#2-%E8%AE%AD%E7%BB%83%E4%B8%8E%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B" class="hash-link" aria-label="2. 训练与测试流程的直接链接" title="2. 训练与测试流程的直接链接">​</a></h3>
 <div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">samples</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> labels </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> load_train_samples</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">pos</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> neg</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic">#载入训练图像</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">train </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> extract_hog</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">samples，winSize</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain">blockSize</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    blockStride</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain">cellSize</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain">nbins</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain">    </span><span class="token comment" style="color:#999988;font-style:italic">#提取HOG特征</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">svm_detector </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> train_svm</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">train</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> labels</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic">#训练SVM</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">test_hog_detect</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">test</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> svm_detector</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic">#测试</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h5 class="anchor anchorWithStickyNavbar_LWe7" id="测试实例-图片">测试实例: <img loading="lazy" alt="图片" src="https://cq.seekyou.fun/zh-Hans/assets/images/result1-51973e2f1af6327491494d1e469324e4.png" title="悬浮提示文本" width="682" height="1047" class="img_ev3q"><a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E6%B5%8B%E8%AF%95%E5%AE%9E%E4%BE%8B-%E5%9B%BE%E7%89%87" class="hash-link" aria-label="测试实例-图片的直接链接" title="测试实例-图片的直接链接">​</a></h5>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hog方法局限">HOG方法局限<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#hog%E6%96%B9%E6%B3%95%E5%B1%80%E9%99%90" class="hash-link" aria-label="HOG方法局限的直接链接" title="HOG方法局限的直接链接">​</a></h2>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="--特征表达能力局限">- 特征表达能力局限<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#--%E7%89%B9%E5%BE%81%E8%A1%A8%E8%BE%BE%E8%83%BD%E5%8A%9B%E5%B1%80%E9%99%90" class="hash-link" aria-label="- 特征表达能力局限的直接链接" title="- 特征表达能力局限的直接链接">​</a></h4>
-<h6 class="anchor anchorWithStickyNavbar_LWe7" id="旋转敏感性">旋转敏感性‌<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E6%97%8B%E8%BD%AC%E6%95%8F%E6%84%9F%E6%80%A7" class="hash-link" aria-label="旋转敏感性‌的直接链接" title="旋转敏感性‌的直接链接">​</a></h6>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="测试实例-图片">测试实例: <img loading="lazy" alt="图片" src="https://2seekyou.github.io/zh-Hans/assets/images/result1-51973e2f1af6327491494d1e469324e4.png" title="悬浮提示文本" width="682" height="1047" class="img_ev3q"><a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E6%B5%8B%E8%AF%95%E5%AE%9E%E4%BE%8B-%E5%9B%BE%E7%89%87" class="hash-link" aria-label="测试实例-图片的直接链接" title="测试实例-图片的直接链接">​</a></h5>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hog方法局限">HOG方法局限<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#hog%E6%96%B9%E6%B3%95%E5%B1%80%E9%99%90" class="hash-link" aria-label="HOG方法局限的直接链接" title="HOG方法局限的直接链接">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="--特征表达能力局限">- 特征表达能力局限<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#--%E7%89%B9%E5%BE%81%E8%A1%A8%E8%BE%BE%E8%83%BD%E5%8A%9B%E5%B1%80%E9%99%90" class="hash-link" aria-label="- 特征表达能力局限的直接链接" title="- 特征表达能力局限的直接链接">​</a></h4>
+<h6 class="anchor anchorWithStickyNavbar_LWe7" id="旋转敏感性">旋转敏感性‌<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E6%97%8B%E8%BD%AC%E6%95%8F%E6%84%9F%E6%80%A7" class="hash-link" aria-label="旋转敏感性‌的直接链接" title="旋转敏感性‌的直接链接">​</a></h6>
 <p>HOG特征本身不具备旋转不变性，需通过扩充不同旋转角度的训练样本来实现近似旋转鲁棒性‌26。当目标姿态变化超过训练样本覆盖范围时，检测准确率显著下降，尤其对肢体姿态大幅变化的目标（如舞蹈动作）适应性差‌</p>
-<h6 class="anchor anchorWithStickyNavbar_LWe7" id="尺度适应性差">‌尺度适应性差‌<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%EF%BF%BD%EF%BF%BD%E5%B0%BA%E5%BA%A6%E9%80%82%E5%BA%94%E6%80%A7%E5%B7%AE" class="hash-link" aria-label="‌尺度适应性差‌的直接链接" title="‌尺度适应性差‌的直接链接">​</a></h6>
+<h6 class="anchor anchorWithStickyNavbar_LWe7" id="尺度适应性差">‌尺度适应性差‌<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E5%B0%BA%E5%BA%A6%E9%80%82%E5%BA%94%E6%80%A7%E5%B7%AE" class="hash-link" aria-label="‌尺度适应性差‌的直接链接" title="‌尺度适应性差‌的直接链接">​</a></h6>
 <p>HOG特征缺乏内在的尺度不变性机制，需通过构建图像金字塔实现多尺度检测，导致计算复杂度呈指数级增长。对于小尺度目标（如远距离行人），特征分辨率不足易导致漏检‌</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="--二算法性能瓶颈">- 二、算法性能瓶颈<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#--%E4%BA%8C%E7%AE%97%E6%B3%95%E6%80%A7%E8%83%BD%E7%93%B6%E9%A2%88" class="hash-link" aria-label="- 二、算法性能瓶颈的直接链接" title="- 二、算法性能瓶颈的直接链接">​</a></h4>
-<h6 class="anchor anchorWithStickyNavbar_LWe7" id="实时性不足">‌实时性不足‌<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E5%AE%9E%E6%97%B6%E6%80%A7%E4%B8%8D%E8%B6%B3" class="hash-link" aria-label="‌实时性不足‌的直接链接" title="‌实时性不足‌的直接链接">​</a></h6>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="--二算法性能瓶颈">- 二、算法性能瓶颈<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#--%E4%BA%8C%E7%AE%97%E6%B3%95%E6%80%A7%E8%83%BD%E7%93%B6%E9%A2%88" class="hash-link" aria-label="- 二、算法性能瓶颈的直接链接" title="- 二、算法性能瓶颈的直接链接">​</a></h4>
+<h6 class="anchor anchorWithStickyNavbar_LWe7" id="实时性不足">‌实时性不足‌<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E5%AE%9E%E6%97%B6%E6%80%A7%E4%B8%8D%E8%B6%B3" class="hash-link" aria-label="‌实时性不足‌的直接链接" title="‌实时性不足‌的直接链接">​</a></h6>
 <p>滑动窗口检测机制需遍历所有可能位置和尺度，即使采用多线程优化也难以满足实时检测需求</p>
-<h6 class="anchor anchorWithStickyNavbar_LWe7" id="计算复杂度高">计算复杂度高‌<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E8%AE%A1%E7%AE%97%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%AB%98" class="hash-link" aria-label="计算复杂度高‌的直接链接" title="计算复杂度高‌的直接链接">​</a></h6>
+<h6 class="anchor anchorWithStickyNavbar_LWe7" id="计算复杂度高">计算复杂度高‌<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E8%AE%A1%E7%AE%97%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%AB%98" class="hash-link" aria-label="计算复杂度高‌的直接链接" title="计算复杂度高‌的直接链接">​</a></h6>
 <p>HOG特征维度通常高达3780维（64×128像素块），结合SVM分类器时，单次检测计算量达10^6次浮点运算，FPGA硬件加速也难以突破功耗限制‌</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="--三场景适应性局限">- 三、场景适应性局限<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#--%E4%B8%89%E5%9C%BA%E6%99%AF%E9%80%82%E5%BA%94%E6%80%A7%E5%B1%80%E9%99%90" class="hash-link" aria-label="- 三、场景适应性局限的直接链接" title="- 三、场景适应性局限的直接链接">​</a></h4>
-<h6 class="anchor anchorWithStickyNavbar_LWe7" id="遮挡处理缺陷">‌遮挡处理缺陷‌<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E9%81%AE%E6%8C%A1%E5%A4%84%E7%90%86%E7%BC%BA%E9%99%B7" class="hash-link" aria-label="‌遮挡处理缺陷‌的直接链接" title="‌遮挡处理缺陷‌的直接链接">​</a></h6>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="--三场景适应性局限">- 三、场景适应性局限<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#--%E4%B8%89%E5%9C%BA%E6%99%AF%E9%80%82%E5%BA%94%E6%80%A7%E5%B1%80%E9%99%90" class="hash-link" aria-label="- 三、场景适应性局限的直接链接" title="- 三、场景适应性局限的直接链接">​</a></h4>
+<h6 class="anchor anchorWithStickyNavbar_LWe7" id="遮挡处理缺陷">‌遮挡处理缺陷‌<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E9%81%AE%E6%8C%A1%E5%A4%84%E7%90%86%E7%BC%BA%E9%99%B7" class="hash-link" aria-label="‌遮挡处理缺陷‌的直接链接" title="‌遮挡处理缺陷‌的直接链接">​</a></h6>
 <p>HOG特征无法有效描述局部遮挡情况，当目标被遮挡超过30%时，检测准确率下降超50%。DPM方法虽引入可变形部件模型改进，但计算复杂度进一步增加‌</p>
-<h6 class="anchor anchorWithStickyNavbar_LWe7" id="抗干扰能力弱">‌抗干扰能力弱‌<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E6%8A%97%E5%B9%B2%E6%89%B0%E8%83%BD%E5%8A%9B%E5%BC%B1" class="hash-link" aria-label="‌抗干扰能力弱‌的直接链接" title="‌抗干扰能力弱‌的直接链接">​</a></h6>
+<h6 class="anchor anchorWithStickyNavbar_LWe7" id="抗干扰能力弱">‌抗干扰能力弱‌<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E6%8A%97%E5%B9%B2%E6%89%B0%E8%83%BD%E5%8A%9B%E5%BC%B1" class="hash-link" aria-label="‌抗干扰能力弱‌的直接链接" title="‌抗干扰能力弱‌的直接链接">​</a></h6>
 <p>梯度特征对光照突变、噪声敏感，需依赖高斯平滑预处理。在低光照或高噪声环境下（如雾天监控），误检率显著上升</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="q1传统方法与深度学习方法在特征提取上的本质区别是什么">Q1：传统方法与深度学习方法在特征提取上的本质区别是什么?<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#q1%E4%BC%A0%E7%BB%9F%E6%96%B9%E6%B3%95%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E5%9C%A8%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96%E4%B8%8A%E7%9A%84%E6%9C%AC%E8%B4%A8%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88" class="hash-link" aria-label="Q1：传统方法与深度学习方法在特征提取上的本质区别是什么?的直接链接" title="Q1：传统方法与深度学习方法在特征提取上的本质区别是什么?的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="什么是特征">什么是特征？<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E4%BB%80%E4%B9%88%E6%98%AF%E7%89%B9%E5%BE%81" class="hash-link" aria-label="什么是特征？的直接链接" title="什么是特征？的直接链接">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="q1传统方法与深度学习方法在特征提取上的本质区别是什么">Q1：传统方法与深度学习方法在特征提取上的本质区别是什么?<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#q1%E4%BC%A0%E7%BB%9F%E6%96%B9%E6%B3%95%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E5%9C%A8%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96%E4%B8%8A%E7%9A%84%E6%9C%AC%E8%B4%A8%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88" class="hash-link" aria-label="Q1：传统方法与深度学习方法在特征提取上的本质区别是什么?的直接链接" title="Q1：传统方法与深度学习方法在特征提取上的本质区别是什么?的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="什么是特征">什么是特征？<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E4%BB%80%E4%B9%88%E6%98%AF%E7%89%B9%E5%BE%81" class="hash-link" aria-label="什么是特征？的直接链接" title="什么是特征？的直接链接">​</a></h3>
 <p>传统手工特征（底层特征、中间特征）、深度特征：</p>
 <p><strong>底层特征</strong>： 主要指基于图像自身，通过简单操作就能得出的特征。如颜色、纹理、形状、梯度等属于底层特征，它们也是中间特征操作的基础特征。图像视频领域广为熟知的底层特征有：RGB、LAB、HSV、HOG、LBP、SIFT、SURF、SILTP（LBP改进）。特点：相对简单，无需学习与训练，仅需简单计算与统计。</p>
 <p><strong>中层特征</strong>： 在底层特征基础上进行多特征融合处理获得的特征，主要是颜色和纹理的多样性融合。例如：LOMO（HSV+SILTP）。也只特征提取方式进行改进与创新的一类特征，通常融入较为复杂的数据理论处理过程。特点：比较复杂，主要体现在提取策略与融合过程。</p>
 <p><strong>深度特征</strong>： 通常设计神经网络模型来挖掘图像更深、更为抽象的特征。特点：无需手工参与，受光照、姿态等影响较小，但特征表达方式取法明确知道。</p>
 <p>来自：储慧芳_《基于深度特征与传统特征融合的行人再识别研究》</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="什么是特征提取">什么是特征提取？<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E4%BB%80%E4%B9%88%E6%98%AF%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96" class="hash-link" aria-label="什么是特征提取？的直接链接" title="什么是特征提取？的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="什么是特征提取">什么是特征提取？<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E4%BB%80%E4%B9%88%E6%98%AF%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96" class="hash-link" aria-label="什么是特征提取？的直接链接" title="什么是特征提取？的直接链接">​</a></h3>
 <p><a href="https://zh.wikipedia.org/zh-hans/%E7%89%B9%E5%BE%B5%E6%8F%90%E5%8F%96" target="_blank" rel="noopener noreferrer">特征提取是从一个初始测量的资料集合中开始做，然后建构出富含资讯性而且不冗余的导出值，称为特征值（feature）。它可以帮助接续的学习过程和归纳的步骤，在某些情况下可以让人更容易对资料做出较好的诠释。特征提取是一个降低维度的步骤，初始的资料集合被降到更容易管理的族群（特征）以便于学习，同时保持描述原始资料集的精准性与完整性。</a>
 特征提取是从原始数据中提取出有意义的信息（特征），以便机器学习模型能够更好地理解和处理数据。例如，在图像处理中，特征可以是边缘、纹理、颜色等；在文本处理中，特征可以是词频、句子长度等。详情参考下图：</p>
-<p><img loading="lazy" src="https://cq.seekyou.fun/zh-Hans/assets/images/demo_vis-85338cd89100e8ca472069d509512c6b.png" width="845" height="369" class="img_ev3q"></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="概念解释">概念解释<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E6%A6%82%E5%BF%B5%E8%A7%A3%E9%87%8A" class="hash-link" aria-label="概念解释的直接链接" title="概念解释的直接链接">​</a></h3>
+<p><img loading="lazy" src="https://2seekyou.github.io/zh-Hans/assets/images/demo_vis-85338cd89100e8ca472069d509512c6b.png" width="845" height="369" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="概念解释">概念解释<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E6%A6%82%E5%BF%B5%E8%A7%A3%E9%87%8A" class="hash-link" aria-label="概念解释的直接链接" title="概念解释的直接链接">​</a></h3>
 <p>hand-crafted： 传统手工方法就是人工设计的一步步能够说出理由来的方法
 特征提取是CV领域核心问题之一，特征提取从思路上有两大类：一类是手动设计（hand-crafted）的方式，一类是深度学习的方式，这两种方式都是在某些生物神经理论的基础下进行的， 不同之处是hand-crafted的方式设计的是特征本身，而深度学习的方式设计的是特征提取的框架结构。换种方式来说，就好比是hand-crafted特征是模仿我们所知的人类视觉的流程得到特征，而深度学习的方式重点是学习这个流程本身。</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="传统方法vs深度学习">传统方法VS深度学习<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E4%BC%A0%E7%BB%9F%E6%96%B9%E6%B3%95vs%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0" class="hash-link" aria-label="传统方法VS深度学习的直接链接" title="传统方法VS深度学习的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="传统方法vs深度学习">传统方法VS深度学习<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E4%BC%A0%E7%BB%9F%E6%96%B9%E6%B3%95vs%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0" class="hash-link" aria-label="传统方法VS深度学习的直接链接" title="传统方法VS深度学习的直接链接">​</a></h4>
 <ol>
 <li>
 <p><strong>Hand-crafted特征</strong>： Hand-crafted特征是基于人类视觉系统设计的特征，如SIFT、SURF和HOG等，主要用于提取图像中具有区分能力的低层次特征（如边缘、角点、纹理和形状）。这些特征的设计依赖于人工选择和领域知识，因此其提取过程较为复杂且依赖于特定数据集。随着数据源的变化（如从RGB图像切换到Kinect深度图像），这些特征的效果可能会下降。此外，手工设计的特征通常不适应大规模数据处理，且处理速度较慢。总的来说，手工特征的可解释性较强，容易理解，但泛化能力较弱，无法轻松适应新的任务或数据分布变化。</p>
 </li>
 <li>
 <p><strong>深度学习方法</strong>： 深度学习通过神经网络自动学习图像或视频的特征，而不需要人工设计特征。网络通过层次化结构自动从低层次到高层次逐步提取特征，能够捕捉更加复杂的模式和抽象概念。与传统方法不同，深度学习方法对大量数据依赖较大，数据量越大，效果越好。这种方法的计算复杂度较高，通常需要较为强大的硬件支持。尽管深度学习的特征通常无法直观解释，像是“黑箱”，但其泛化能力强，能够适应各种任务和数据源的变化。参考下图深度学习模型训练中的特征图变化：
-<img loading="lazy" src="https://cq.seekyou.fun/zh-Hans/assets/images/dl-d2ca12c3d1aff045496a95cf6b0ce140.jpg" width="2345" height="3009" class="img_ev3q"></p>
+<img loading="lazy" src="https://2seekyou.github.io/zh-Hans/assets/images/dl-d2ca12c3d1aff045496a95cf6b0ce140.jpg" width="2345" height="3009" class="img_ev3q"></p>
 </li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="q2传统方法在特定场景如低光照低分辨率中的优势与局限性">Q2：传统方法在特定场景(如低光照低分辨率)中的优势与局限性<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#q2%E4%BC%A0%E7%BB%9F%E6%96%B9%E6%B3%95%E5%9C%A8%E7%89%B9%E5%AE%9A%E5%9C%BA%E6%99%AF%E5%A6%82%E4%BD%8E%E5%85%89%E7%85%A7%E4%BD%8E%E5%88%86%E8%BE%A8%E7%8E%87%E4%B8%AD%E7%9A%84%E4%BC%98%E5%8A%BF%E4%B8%8E%E5%B1%80%E9%99%90%E6%80%A7" class="hash-link" aria-label="Q2：传统方法在特定场景(如低光照低分辨率)中的优势与局限性的直接链接" title="Q2：传统方法在特定场景(如低光照低分辨率)中的优势与局限性的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="优势">优势<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E4%BC%98%E5%8A%BF" class="hash-link" aria-label="优势的直接链接" title="优势的直接链接">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="q2传统方法在特定场景如低光照低分辨率中的优势与局限性">Q2：传统方法在特定场景(如低光照低分辨率)中的优势与局限性<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#q2%E4%BC%A0%E7%BB%9F%E6%96%B9%E6%B3%95%E5%9C%A8%E7%89%B9%E5%AE%9A%E5%9C%BA%E6%99%AF%E5%A6%82%E4%BD%8E%E5%85%89%E7%85%A7%E4%BD%8E%E5%88%86%E8%BE%A8%E7%8E%87%E4%B8%AD%E7%9A%84%E4%BC%98%E5%8A%BF%E4%B8%8E%E5%B1%80%E9%99%90%E6%80%A7" class="hash-link" aria-label="Q2：传统方法在特定场景(如低光照低分辨率)中的优势与局限性的直接链接" title="Q2：传统方法在特定场景(如低光照低分辨率)中的优势与局限性的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="优势">优势<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E4%BC%98%E5%8A%BF" class="hash-link" aria-label="优势的直接链接" title="优势的直接链接">​</a></h3>
 <ol>
 <li>
 <p>较低的计算要求：传统方法（如SIFT、SURF、HOG等）通常计算复杂度较低，因此能够在硬件资源受限的环境中运行，适用于实时处理需求。即便在低光照或低分辨率的情况下，处理速度仍能保持较高。</p>
@@ -395,7 +546,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <p>不依赖大数据：与深度学习方法不同，传统方法不需要大量的数据来训练。即使是在数据量较小或缺乏标注的场景中，也能较好地提取有区分力的特征，特别是在一些简单或已知场景下（如固定环境的低光照场景）。</p>
 </li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="局限">局限<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E5%B1%80%E9%99%90" class="hash-link" aria-label="局限的直接链接" title="局限的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="局限">局限<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E5%B1%80%E9%99%90" class="hash-link" aria-label="局限的直接链接" title="局限的直接链接">​</a></h3>
 <ol>
 <li>
 <p>对低光照和低分辨率的敏感性：传统方法通常依赖于明显的图像特征（如边缘、角点等），在低光照或低分辨率的环境下，这些特征可能会变得不明显或丢失，导致特征提取困难，从而影响性能。</p>
@@ -410,9 +561,9 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <p>特征设计依赖人工经验：传统方法的特征设计依赖领域专家的经验，对于低光照或低分辨率图像，可能需要重新设计特征，这使得方法的适应性较差，缺乏通用性。</p>
 </li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接">​</a></h2>
 <table><thead><tr><th>对比项</th><th>传统方法</th><th>深度学习方法</th></tr></thead><tbody><tr><td><strong>特征提取方式</strong></td><td>依赖人工设计和选择特征</td><td>通过神经网络自动学习特征</td></tr><tr><td><strong>特征表示</strong></td><td>低层次特征（如边缘、角点等）</td><td>多层次特征（从低层次到高层次逐步抽象）</td></tr><tr><td><strong>数据依赖性</strong></td><td>对数据依赖较小，适合小数据集</td><td>依赖大量数据，数据越多效果越好</td></tr><tr><td><strong>计算复杂度</strong></td><td>计算简单，适合实时应用</td><td>计算复杂，需要高性能硬件</td></tr><tr><td><strong>泛化能力</strong></td><td>泛化能力较弱，难以适应新任务</td><td>泛化能力强，能适应不同任务和数据分布变化</td></tr><tr><td><strong>可解释性</strong></td><td>特征可解释性强，易于理解和分析</td><td>特征可解释性较弱，通常被视为“黑箱”</td></tr></tbody></table>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="结论">结论<a href="https://cq.seekyou.fun/zh-Hans/blog/CV-Class-report#%E7%BB%93%E8%AE%BA" class="hash-link" aria-label="结论的直接链接" title="结论的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="结论">结论<a href="https://2seekyou.github.io/zh-Hans/blog/CV-Class-report#%E7%BB%93%E8%AE%BA" class="hash-link" aria-label="结论的直接链接" title="结论的直接链接">​</a></h3>
 <p>传统计算机视觉方法在低光照、低分辨率场景下仍有一定的计算效率优势，但在适应性、鲁棒性、泛化能力方面不如深度学习方法。传统方法和深度学习方法应当是相辅相成的关系。经典的CV方法可以让我们更加深刻地理解任务本身，因为在经典的CV方法中，每一个参数都具有物理意义；当我们掌握了经典CV方法之后，再去学习深度学习方法，对于问题的理解才会更加深刻。未来趋势是结合传统方法与深度学习，取长补短。例如：</p>
 <p>自适应边缘检测 + CNN 纹理特征（提升低光照适应能力）
 ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力）</p>]]></content>
@@ -425,43 +576,43 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
     </entry>
     <entry>
         <title type="html"><![CDATA[竞赛经验分享]]></title>
-        <id>https://cq.seekyou.fun/zh-Hans/blog/shareing</id>
-        <link href="https://cq.seekyou.fun/zh-Hans/blog/shareing"/>
+        <id>https://2seekyou.github.io/zh-Hans/blog/shareing</id>
+        <link href="https://2seekyou.github.io/zh-Hans/blog/shareing"/>
         <updated>2025-01-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[实验室冬令营讲座--主题：竞赛经验分享]]></summary>
         <content type="html"><![CDATA[<p>实验室冬令营讲座--主题：<strong>竞赛经验分享</strong></p>
 <p>来自一名20级老学长（智能车复役选手）的一些竞赛经验分享</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="自我介绍">自我介绍<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="自我介绍的直接链接" title="自我介绍的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="自我介绍">自我介绍<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="自我介绍的直接链接" title="自我介绍的直接链接">​</a></h2>
 <p>先来个''<strong>简短</strong>''的自我介绍:</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="崔全">崔全<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E5%B4%94%E5%85%A8" class="hash-link" aria-label="崔全的直接链接" title="崔全的直接链接">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="中国自动化学会会员湘潭大学电工电子实验室负责人湘潭大学百度飞桨领航团团长">中国自动化学会会员、湘潭大学电工电子实验室负责人、湘潭大学百度飞桨领航团团长<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E4%B8%AD%E5%9B%BD%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E4%BC%9A%E4%BC%9A%E5%91%98%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A6%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E5%AE%9E%E9%AA%8C%E5%AE%A4%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A6%E7%99%BE%E5%BA%A6%E9%A3%9E%E6%A1%A8%E9%A2%86%E8%88%AA%E5%9B%A2%E5%9B%A2%E9%95%BF" class="hash-link" aria-label="中国自动化学会会员、湘潭大学电工电子实验室负�责人、湘潭大学百度飞桨领航团团长的直接链接" title="中国自动化学会会员、湘潭大学电工电子实验室负责人、湘潭大学百度飞桨领航团团长的直接链接">​</a></h4>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="参与国家级大学生创新训练项目已结题参与上海交通大学交换实习课题">参与国家级大学生创新训练项目，已结题；参与上海交通大学交换实习课题。<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E5%8F%82%E4%B8%8E%E5%9B%BD%E5%AE%B6%E7%BA%A7%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%88%9B%E6%96%B0%E8%AE%AD%E7%BB%83%E9%A1%B9%E7%9B%AE%E5%B7%B2%E7%BB%93%E9%A2%98%E5%8F%82%E4%B8%8E%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E4%BA%A4%E6%8D%A2%E5%AE%9E%E4%B9%A0%E8%AF%BE%E9%A2%98" class="hash-link" aria-label="参与国家级大学生创新训练项目，已结题；参与上海交通大学交换实习课题。的直接链接" title="参与国家级大学生创新训练项目，已结题；参与上海交通大学交换实习课题。的直接链接">​</a></h4>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="所获竞赛奖项">所获竞赛奖项：<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E6%89%80%E8%8E%B7%E7%AB%9E%E8%B5%9B%E5%A5%96%E9%A1%B9" class="hash-link" aria-label="所获竞赛奖项：的直接链接" title="所获竞赛奖项：的直接链接">​</a></h4>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2022年12月-十七届全国大学生智能汽车竞赛室外专项赛全国一等奖">· 2022年12月 十七届全国大学生智能汽车竞赛室外专项赛全国一等奖<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#-2022%E5%B9%B412%E6%9C%88-%E5%8D%81%E4%B8%83%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E5%AE%A4%E5%A4%96%E4%B8%93%E9%A1%B9%E8%B5%9B%E5%85%A8%E5%9B%BD%E4%B8%80%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2022年12月 十七届全国大学生智能汽车竞赛室外专项赛全国一等奖的直接链接" title="· 2022年12月 十七届全国大学生智能汽车竞赛室外专项赛全国一等奖的直接链接">​</a></h4>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2022年08月-十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖">· 2022年08月 十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#-2022%E5%B9%B408%E6%9C%88-%E5%8D%81%E4%B8%83%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E7%99%BE%E5%BA%A6%E5%AE%8C%E5%85%A8%E6%A8%A1%E5%9E%8B%E7%BB%84%E5%85%A8%E5%9B%BD%E4%BA%8C%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2022年08月 十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接" title="· 2022年08月 十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接">​</a></h4>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2023年07月-十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖">· 2023年07月 十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#-2023%E5%B9%B407%E6%9C%88-%E5%8D%81%E5%85%AB%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E5%A4%A7%E7%96%86%E5%A4%A9%E9%80%94%E5%88%9B%E6%84%8F%E7%BB%84%E5%85%A8%E5%9B%BD%E4%BA%8C%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2023年07月 十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖的直接链接" title="· 2023年07月 十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖的直接链接">​</a></h4>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2023年08月-十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖">· 2023年08月 十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#-2023%E5%B9%B408%E6%9C%88-%E5%8D%81%E5%85%AB%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E7%99%BE%E5%BA%A6%E5%AE%8C%E5%85%A8%E6%A8%A1%E5%9E%8B%E7%BB%84%E5%85%A8%E5%9B%BD%E4%BA%8C%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2023年08月 十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接" title="· 2023年08月 十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接">​</a></h4>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2024年07月-十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖">· 2024年07月 十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#-2024%E5%B9%B407%E6%9C%88-%E5%8D%81%E4%B9%9D%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E5%9C%B0%E5%B9%B3%E7%BA%BF%E6%99%BA%E6%85%A7%E5%8C%BB%E7%96%97%E7%BB%84%E5%85%A8%E5%9B%BD%E4%B8%80%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2024年07月 十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖的直接链接" title="· 2024年07月 十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖的直接链接">​</a></h4>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2022年08月-2022全球智能自主机器人比赛优秀奖">· 2022年08月 2022全球智能自主机器人比赛优秀奖<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#-2022%E5%B9%B408%E6%9C%88-2022%E5%85%A8%E7%90%83%E6%99%BA%E8%83%BD%E8%87%AA%E4%B8%BB%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%AF%94%E8%B5%9B%E4%BC%98%E7%A7%80%E5%A5%96" class="hash-link" aria-label="· 2022年08月 2022全球智能自主机器人比赛优秀奖的直接链接" title="· 2022年08月 2022全球智能自主机器人比赛优秀奖的直接链接">​</a></h4>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-挑战杯人工智能大赛研电赛等省级校级奖项近20项">· 挑战杯，人工智能大赛，研电赛等省级，校级奖项近20项<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#-%E6%8C%91%E6%88%98%E6%9D%AF%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%A7%E8%B5%9B%E7%A0%94%E7%94%B5%E8%B5%9B%E7%AD%89%E7%9C%81%E7%BA%A7%E6%A0%A1%E7%BA%A7%E5%A5%96%E9%A1%B9%E8%BF%9120%E9%A1%B9" class="hash-link" aria-label="· 挑战杯，人工智能大赛，研电赛等省级，校级奖项近20项的直接链接" title="· 挑战杯，人工智能大赛，研电赛等省级，校级奖项近20项的直接链接">​</a></h4>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="荣誉证书">荣誉证书：<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E8%8D%A3%E8%AA%89%E8%AF%81%E4%B9%A6" class="hash-link" aria-label="荣誉证书：的直接链接" title="荣誉证书：的直接链接">​</a></h4>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="崔全">崔全<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%B4%94%E5%85%A8" class="hash-link" aria-label="崔全的直接链接" title="崔全的直接链接">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="中国自动化学会会员湘潭大学电工电子实验室负责人湘潭大学百度飞桨领航团团长">中国自动化学会会员、湘潭大学电工电子实验室负责人、湘潭大学百度飞桨领航团团长<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%B8%AD%E5%9B%BD%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E4%BC%9A%E4%BC%9A%E5%91%98%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A6%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E5%AE%9E%E9%AA%8C%E5%AE%A4%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A6%E7%99%BE%E5%BA%A6%E9%A3%9E%E6%A1%A8%E9%A2%86%E8%88%AA%E5%9B%A2%E5%9B%A2%E9%95%BF" class="hash-link" aria-label="中国自动化学会会员、湘潭大学电工电子实验室负责人、湘潭大学百度飞桨领航团团长的直接链接" title="中国自动化学会会员、湘潭大学电工电子实验室负责人、湘潭大学百度飞桨领航团团长的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="参与国家级大学生创新训练项目已结题参与上海交通大学交换实习课题">参与国家级大学生创新训练项目，已结题；参与上海交通大学交换实习课题。<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%8F%82%E4%B8%8E%E5%9B%BD%E5%AE%B6%E7%BA%A7%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%88%9B%E6%96%B0%E8%AE%AD%E7%BB%83%E9%A1%B9%E7%9B%AE%E5%B7%B2%E7%BB%93%E9%A2%98%E5%8F%82%E4%B8%8E%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E4%BA%A4%E6%8D%A2%E5%AE%9E%E4%B9%A0%E8%AF%BE%E9%A2%98" class="hash-link" aria-label="参与国家级大学生创新训练项目，已结题；参与上海交通大学交换实习课题。的直接链接" title="参与国家级大学生创新训练项目，已结题；参与上海交通大学交换实习课题。的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="所获竞赛奖项">所获竞赛奖项：<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%89%80%E8%8E%B7%E7%AB%9E%E8%B5%9B%E5%A5%96%E9%A1%B9" class="hash-link" aria-label="所获竞赛奖项：的直接链接" title="所获竞赛奖项：的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2022年12月-十七届全国大学生智能汽车竞赛室外专项赛全国一等奖">· 2022年12月 十七届全国大学生智能汽车竞赛室外专项赛全国一等奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2022%E5%B9%B412%E6%9C%88-%E5%8D%81%E4%B8%83%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E5%AE%A4%E5%A4%96%E4%B8%93%E9%A1%B9%E8%B5%9B%E5%85%A8%E5%9B%BD%E4%B8%80%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2022年12月 十七届全国大学生智能汽车竞赛室外专项赛全国一等奖的直接链接" title="· 2022年12月 十七届全国大学生智能汽车竞赛室外专项赛全国一等奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2022年08月-十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖">· 2022年08月 十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2022%E5%B9%B408%E6%9C%88-%E5%8D%81%E4%B8%83%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E7%99%BE%E5%BA%A6%E5%AE%8C%E5%85%A8%E6%A8%A1%E5%9E%8B%E7%BB%84%E5%85%A8%E5%9B%BD%E4%BA%8C%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2022年08月 十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接" title="· 2022年08月 十七届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2023年07月-十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖">· 2023年07月 十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2023%E5%B9%B407%E6%9C%88-%E5%8D%81%E5%85%AB%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E5%A4%A7%E7%96%86%E5%A4%A9%E9%80%94%E5%88%9B%E6%84%8F%E7%BB%84%E5%85%A8%E5%9B%BD%E4%BA%8C%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2023年07月 十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖的直接链接" title="· 2023年07月 十八届全国大学生智能汽车竞赛大疆天途创意组全国二等奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2023年08月-十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖">· 2023年08月 十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2023%E5%B9%B408%E6%9C%88-%E5%8D%81%E5%85%AB%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E7%99%BE%E5%BA%A6%E5%AE%8C%E5%85%A8%E6%A8%A1%E5%9E%8B%E7%BB%84%E5%85%A8%E5%9B%BD%E4%BA%8C%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2023年08月 十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接" title="· 2023年08月 十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2024年07月-十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖">· 2024年07月 十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2024%E5%B9%B407%E6%9C%88-%E5%8D%81%E4%B9%9D%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B%E5%9C%B0%E5%B9%B3%E7%BA%BF%E6%99%BA%E6%85%A7%E5%8C%BB%E7%96%97%E7%BB%84%E5%85%A8%E5%9B%BD%E4%B8%80%E7%AD%89%E5%A5%96" class="hash-link" aria-label="· 2024年07月 十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖的直接链接" title="· 2024年07月 十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2022年08月-2022全球智能自主机器人比赛优秀奖">· 2022年08月 2022全球智能自主机器人比赛优秀奖<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-2022%E5%B9%B408%E6%9C%88-2022%E5%85%A8%E7%90%83%E6%99%BA%E8%83%BD%E8%87%AA%E4%B8%BB%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%AF%94%E8%B5%9B%E4%BC%98%E7%A7%80%E5%A5%96" class="hash-link" aria-label="· 2022年08月 2022全球智能自主机器人比赛优秀奖的直接链接" title="· 2022年08月 2022全球智能自主机器人比赛优秀奖的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-挑战杯人工智能大赛研电赛等省级校级奖项近20项">· 挑战杯，人工智能大赛，研电赛等省级，校级奖项近20项<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#-%E6%8C%91%E6%88%98%E6%9D%AF%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%A7%E8%B5%9B%E7%A0%94%E7%94%B5%E8%B5%9B%E7%AD%89%E7%9C%81%E7%BA%A7%E6%A0%A1%E7%BA%A7%E5%A5%96%E9%A1%B9%E8%BF%9120%E9%A1%B9" class="hash-link" aria-label="· 挑战杯，人工智能大赛，研电赛等省级，校级奖项近20项的直接链接" title="· 挑战杯，人工智能大赛，研电赛等省级，校级奖项近20项的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="荣誉证书">荣誉证书：<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%8D%A3%E8%AA%89%E8%AF%81%E4%B9%A6" class="hash-link" aria-label="荣誉证书：的直接链接" title="荣誉证书：的直接链接">​</a></h4>
 <p>湖南省优秀志愿者、湘潭大学甲等奖学金，三好学生、优秀竞赛团队，优秀毕业生等10余项</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="擅长方向">擅长方向<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E6%93%85%E9%95%BF%E6%96%B9%E5%90%91" class="hash-link" aria-label="擅长方向的直接链接" title="擅长方向的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="擅长方向">擅长方向<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%93%85%E9%95%BF%E6%96%B9%E5%90%91" class="hash-link" aria-label="擅长方向的直接链接" title="擅长方向的直接链接">​</a></h4>
 <p><strong>Linux / Python / ROS / Git / Deep Learning</strong></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="竞赛历程">竞赛历程<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E7%AB%9E%E8%B5%9B%E5%8E%86%E7%A8%8B" class="hash-link" aria-label="竞赛历程的直接链接" title="竞赛历程的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="主要竞赛介绍">主要竞赛介绍<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E4%B8%BB%E8%A6%81%E7%AB%9E%E8%B5%9B%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="主要竞赛介绍的直接链接" title="主要竞赛介绍的直接链接">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="智能车竞赛">智能车竞赛<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E6%99%BA%E8%83%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B" class="hash-link" aria-label="智能车竞赛的直接链接" title="智能车竞赛的直接链接">​</a></h4>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="竞赛历程">竞赛历程<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E7%AB%9E%E8%B5%9B%E5%8E%86%E7%A8%8B" class="hash-link" aria-label="竞赛历程的直接链接" title="竞赛历程的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="主要竞赛介绍">主要竞赛介绍<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%B8%BB%E8%A6%81%E7%AB%9E%E8%B5%9B%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="主要竞赛介绍的直接链接" title="主要竞赛介绍的直接链接">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="智能车竞赛">智能车竞赛<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%99%BA%E8%83%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B" class="hash-link" aria-label="智能车竞赛的直接链接" title="智能车竞赛的直接链接">​</a></h4>
 <p>全称全国大学生智能汽车竞赛。要求在规定的模型汽车平台上，基于赛题要求的微控制器作为核心控制模块，通过增加NXP摄像头模块、北斗-GPS 模块、RTK模块、超声波模块、UWB模块等模块以及编写相应软件程序，制作一个能够自主识别道路的模型汽车，按照规定路线行进，以完成时间最短者为优胜。</p>
 <p>竞速比赛共分为八（十）个组别，每个组别在比赛环境、比赛任务、单片机平台、车模等方面有不同的要求。</p>
 <p>核心任务：自制硬件，基于设计好的车模开发相应的程序完成赛题任务（以竞速为主）。因此常常分工为软件和硬件。</p>
 <p>特点：备赛时间通常较长，约周期3-7个月；含金量高；难度较大；竞赛场地通常不定；赛题各式各样</p>
 <p><a href="https://img.tg/image/OEfMPU" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/10/OEfMPU.md.jpg" alt="OEfMPU.md.jpg" class="img_ev3q"></a></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="电子设计大赛">电子设计大赛<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B" class="hash-link" aria-label="电子设计大赛的直接链接" title="电子设计大赛的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="电子设计大赛">电子设计大赛<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B" class="hash-link" aria-label="电子设计大赛的直接链接" title="电子设计大赛的直接链接">​</a></h4>
 <p>全称全国大学生电子设计大赛。</p>
 <p>试题类型基本以电源类，信号源类，高频类，放大类，仪器仪表类，控制类为主，题目将会在比赛开始当天公布，每个队伍只能选其中一道题目，然后开始为期<strong>四天三夜</strong>的作品制作，<strong>首次比赛地点在自己学校实验室</strong>内，比赛期间学生可以查阅有关纸质或网络技术资料，队内学生可以集体商讨设计思想，确定设计方案，分工负责、团结协作，以队为基本单位独立完成竞赛任务；</p>
 <p>特点：四天三夜；难度大；含金量高</p>
 <p><a href="https://img.tg/image/OEfOlY" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/10/OEfOlY.md.jpg" alt="OEfOlY.md.jpg" class="img_ev3q"></a></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="挑战杯">挑战杯<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E6%8C%91%E6%88%98%E6%9D%AF" class="hash-link" aria-label="挑战杯的直接链接" title="挑战杯的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="挑战杯">挑战杯<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%8C%91%E6%88%98%E6%9D%AF" class="hash-link" aria-label="挑战杯的直接链接" title="挑战杯的直接链接">​</a></h4>
 <p>挑战杯是“挑战杯”全国大学生系列科技学术竞赛的简称，是由共青团中央、中国科协、教育部和全国学联、举办地人民政府共同主办的全国性的大学生课外学术实践竞赛。“挑战杯”竞赛在中国共有两个并列项目，一个是“挑战杯”中国大学生创业计划竞赛；另一个则是“挑战杯”全国大学生课外学术科技作品竞赛。也称“大挑”“小挑”。是国内大学生最关注最热门的全国性竞赛。</p>
 <ul>
 <li>比赛时间：校内竞赛3-5月，省级复赛5-6月，全国大赛7-11月</li>
@@ -469,13 +620,13 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <li>评审侧重：侧重技术创新、科技成果转化情况、形成专利技术或产品等。</li>
 </ul>
 <p>特点：覆盖专业广；难度极大；含金量“很高”；PPT+（实物）+报告；团队人员较多</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="互联网">互联网+<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E4%BA%92%E8%81%94%E7%BD%91" class="hash-link" aria-label="互联网+的直接链接" title="互联网+的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="互联网">互联网+<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%BA%92%E8%81%94%E7%BD%91" class="hash-link" aria-label="互联网+的直接链接" title="互联网+的直接链接">​</a></h4>
 <ul>
 <li>参赛报名6月，高校初赛6月-9月中旬，省市复赛6月-9月中旬，全国总决赛11月上旬</li>
 <li>评审侧重：技术创新性、可落地、商业化强的项目</li>
 </ul>
 <p>特点：覆盖专业广；难度极大；含金量“很高”；PPT+（实物）+报告团队人员较多</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="其他竞赛介绍">其他竞赛介绍<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E5%85%B6%E4%BB%96%E7%AB%9E%E8%B5%9B%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="其他竞赛介绍的直接链接" title="其他竞赛介绍的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="其他竞赛介绍">其他竞赛介绍<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%85%B6%E4%BB%96%E7%AB%9E%E8%B5%9B%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="其他竞赛介绍的直接链接" title="其他竞赛介绍的直接链接">​</a></h3>
 <ol>
 <li>
 <p><a href="https://sxxy.njts.edu.cn/2024/0913/c3721a84943/page.htm" target="_blank" rel="noopener noreferrer">大学生赛事榜单上的比赛84项</a></p>
@@ -493,13 +644,13 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <li>研究生竞赛</li>
 </ol>
 <p>共18项赛题，限<strong>保研或导师推荐的优秀本科生</strong>参与，但每组最多一名</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="我的竞赛经历">我的竞赛经历<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E6%88%91%E7%9A%84%E7%AB%9E%E8%B5%9B%E7%BB%8F%E5%8E%86" class="hash-link" aria-label="我的竞赛经历的直接链接" title="我的竞赛经历的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="我的竞赛经历">我的竞赛经历<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%88%91%E7%9A%84%E7%AB%9E%E8%B5%9B%E7%BB%8F%E5%8E%86" class="hash-link" aria-label="我的竞赛经历的直接链接" title="我的竞赛经历的直接链接">​</a></h3>
 <p>很多人问过我，或者觉得我一开始就什么都会，所以才能到处拿奖————<strong>实则不然</strong>。</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="起源">起源<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E8%B5%B7%E6%BA%90" class="hash-link" aria-label="起源的直接链接" title="起源的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="起源">起源<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%B5%B7%E6%BA%90" class="hash-link" aria-label="起源的直接链接" title="起源的直接链接">​</a></h4>
 <p>我是大二才开始参赛，大一主要在实验室学习（打杂）。打杂期间也只参加过一个小小的比赛————心形灯设计，但是却成为我一切的起点：</p>
 <p><a href="https://img.tg/image/OEf1db" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/11/OEf1db.md.png" alt="OEf1db.md.png" class="img_ev3q"></a></p>
 <p>**甚至当时循环都不会写，点灯都是手动一个个IO口设置的。**用的51，硬件上也是是否简陋。</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="小白参赛">小白参赛<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E5%B0%8F%E7%99%BD%E5%8F%82%E8%B5%9B" class="hash-link" aria-label="小白参赛的直接链接" title="小白参赛的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="小白参赛">小白参赛<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%B0%8F%E7%99%BD%E5%8F%82%E8%B5%9B" class="hash-link" aria-label="小白参赛的直接链接" title="小白参赛的直接链接">​</a></h4>
 <p>21年12月出规则：没认真看规则的我连硬件设备是什么都不知道，拿着单片机熟悉例程就花了将近半个月，剩下做的<strong>基本都是无用功</strong>。</p>
 <p>22年4月拿到车模：这时候硬件设备（类似于树莓派的边缘计算设备）到了两个月，却常常报错，要么开机没反应，要么卡死。</p>
 <p>22年5-6月下地，开环跑基本完赛。
@@ -512,14 +663,14 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p>甚至车模接线都接的乱七八糟 对比一下上一届的车模</p>
 <p><a href="https://img.tg/image/OEfvRa" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/11/OEfvRa.th.jpg" alt="OEfvRa.th.jpg" class="img_ev3q"></a></p>
 <p>比赛中途顺便接了个机器人的比赛，两个的时间安排上我没能很好的权衡，导致最后只能拿到优秀奖</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="二次参赛"><a href="https://cq.seekyou.fun/blog/2023-sum-up-1" target="_blank" rel="noopener noreferrer">二次参赛</a><a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E4%BA%8C%E6%AC%A1%E5%8F%82%E8%B5%9B" class="hash-link" aria-label="二次参赛的直接链接" title="二次参赛的直接链接">​</a></h4>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="三次参赛"><a href="https://cq.seekyou.fun/blog/wuhan" target="_blank" rel="noopener noreferrer">三次参赛</a><a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E4%B8%89%E6%AC%A1%E5%8F%82%E8%B5%9B" class="hash-link" aria-label="三次参赛的直接链接" title="三次参赛的直接链接">​</a></h4>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="智能车备赛经验">智能车备赛经验<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E6%99%BA%E8%83%BD%E8%BD%A6%E5%A4%87%E8%B5%9B%E7%BB%8F%E9%AA%8C" class="hash-link" aria-label="智能车备赛经验的直接链接" title="智能车备赛经验的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="入门">入门<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E5%85%A5%E9%97%A8" class="hash-link" aria-label="入门的直接链接" title="入门的直接链接">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="二次参赛"><a href="https://cq.seekyou.fun/blog/2023-sum-up-1" target="_blank" rel="noopener noreferrer">二次参赛</a><a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%BA%8C%E6%AC%A1%E5%8F%82%E8%B5%9B" class="hash-link" aria-label="二次参赛的直接链接" title="二次参赛的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="三次参赛"><a href="https://cq.seekyou.fun/blog/wuhan" target="_blank" rel="noopener noreferrer">三次参赛</a><a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%B8%89%E6%AC%A1%E5%8F%82%E8%B5%9B" class="hash-link" aria-label="三次参赛的直接链接" title="三次参赛的直接链接">​</a></h4>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="智能车备赛经验">智能车备赛经验<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%99%BA%E8%83%BD%E8%BD%A6%E5%A4%87%E8%B5%9B%E7%BB%8F%E9%AA%8C" class="hash-link" aria-label="智能车备赛经验的直接链接" title="智能车备赛经验的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="入门">入门<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%85%A5%E9%97%A8" class="hash-link" aria-label="入门的直接链接" title="入门的直接链接">​</a></h3>
 <p>过程大体上是，学C语言，安软件，买零件，跟着视频尝试调用模块，然后搭车写代码，让车动起来，接着让车跑起来。具体要了解的大概有 ：
 <strong>C语言、AD画板、单片机、 使用电机舵机等器件 、PWM、ADC、中断、UART</strong>......上面会了就能勉强做出个能动的车。诸如此类的任务在冬令营中能得到很好的实践。</p>
 <p>然后就是 <strong>丰富功能来提高车模能力或者提高调车效率</strong>，比如增加显示模块、按键调参、匿名上位机传参、数据存储”记忆大法“、使用其他软件分析数据、优化算法。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="个人经验">个人经验<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E4%B8%AA%E4%BA%BA%E7%BB%8F%E9%AA%8C" class="hash-link" aria-label="个人经验的直接链接" title="个人经验的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="个人经验">个人经验<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E4%B8%AA%E4%BA%BA%E7%BB%8F%E9%AA%8C" class="hash-link" aria-label="个人经验的直接链接" title="个人经验的直接链接">​</a></h3>
 <ol>
 <li>
 <p><strong>多交流</strong>，竞争关系不妨碍合作，合作有时候反而是一种双赢。<strong>不管是队友还是学长老师</strong>，抑或是同校的竞争对手，都应该积极交流。</p>
@@ -546,7 +697,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p><strong>勇敢的人先享受世界（先拿国奖）</strong>。不要觉得自己低人一等，不要畏难，积极发现问题，解决问题。在压力下冷静思考，在失败中总结经验。<strong>大胆去想，大胆去选，大胆去做，大胆去卷</strong>。</p>
 </li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="电赛备赛经验">电赛备赛经验<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E7%94%B5%E8%B5%9B%E5%A4%87%E8%B5%9B%E7%BB%8F%E9%AA%8C" class="hash-link" aria-label="电赛备赛经验的直接链接" title="电赛备赛经验的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="电赛备赛经验">电赛备赛经验<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E7%94%B5%E8%B5%9B%E5%A4%87%E8%B5%9B%E7%BB%8F%E9%AA%8C" class="hash-link" aria-label="电赛备赛经验的直接链接" title="电赛备赛经验的直接链接">​</a></h2>
 <ol>
 <li><strong>具备良好的基础</strong></li>
 </ol>
@@ -560,7 +711,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 </ol>
 <p>赛前有一段比较长的时间备赛，在这段时间里，最好能跟队友与指导老师商议自己队伍的做题方向，然后寻找往年的题目进行练习，在<strong>开赛前一周公布器件清单时，就要做好器件购买</strong>，不然比赛四天三夜紧迫的时间，根本来不及再购买新的比赛器件，而且那段时间比赛专用芯片可能会涨价，缺货等。</p>
 <p>我当年做过控制题，在赛前做了平衡小车，倒立摆，风力摆，板球控制系统等往年控制类赛题，那段时间了对<strong>单片机编程，机械结构搭建，PID算法</strong>都有了很大程度的熟悉，为了减少开发时配置中遇到的坑，在电赛中使用了arduino单片机，arduino的性能也很强，具有大量的库，相比于C51，STM32等，arduino硬件平台更加亲民，完全脱离了寄存器的配置，几乎所有功能都已经有了上层库调用，透明掉了大部分与硬件相关的操作，对于不熟悉程序底层配置的的人来说，简直是电赛利器，所以使用arduino单片机在电赛中也是有一定优势的，另外，目前的电赛是德州仪器（TI）买断了赞助，所以在所有题目中会有一道题目必须限定TI的处理器，很大概率会是控制类型题中的一道，所以学有余力的同学也可以学习一下TI的板子，比如MSP430等，而且在比赛中使用TI处理器，测评同等分数下会更有优势，还有，目前的赛题是不能使用树莓派等高端处理器来做题，不然会当做违规处理。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="关于问问题">关于<strong>问问题</strong>：<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E5%85%B3%E4%BA%8E%E9%97%AE%E9%97%AE%E9%A2%98" class="hash-link" aria-label="关于问问题的直接链接" title="关于问问题的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="关于问问题">关于<strong>问问题</strong>：<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%85%B3%E4%BA%8E%E9%97%AE%E9%97%AE%E9%A2%98" class="hash-link" aria-label="关于问问题的直接链接" title="关于问问题的直接链接">​</a></h2>
 <p>在不确定对方是否有空的时候建议大家问问题时尽量按照下列格式来（<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way" target="_blank" rel="noopener noreferrer">参考How-To-Ask-Questions-The-Smart-Way</a>）：</p>
 <ol>
 <li><strong>仔細、清楚</strong>地描述你的問題</li>
@@ -570,22 +721,22 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <li>描述最近做過什麼可能相關的<strong>硬件改动或软件改动</strong>。</li>
 <li>尽可能的提供一個可以<strong>重现這個問題的既定環境</strong>的方法。</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="话不在多而在精">话不在多而在精<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E8%AF%9D%E4%B8%8D%E5%9C%A8%E5%A4%9A%E8%80%8C%E5%9C%A8%E7%B2%BE" class="hash-link" aria-label="话不在多而在精的直接链接" title="话不在多而在精的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="话不在多而在精">话不在多而在精<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%AF%9D%E4%B8%8D%E5%9C%A8%E5%A4%9A%E8%80%8C%E5%9C%A8%E7%B2%BE" class="hash-link" aria-label="话不在多而在精的直接链接" title="话不在多而在精的直接链接">​</a></h3>
 <p>你需要提供精确有内容的信息。 这并不是要求你简单的把成堆的出错代码或者数据完全转录到你的提问中。 如果你有庞大而复杂的测试样例能重现程序当时的情境，尽量将它剪裁得越小越好。</p>
 <p>这样做的用处至少有三点。 第一，<strong>表现出你为简化问题付出了努力</strong>，这可以使你得到回答的机会增加; 第二，简化问题使你更有<strong>可能得到有用的答案</strong>; 第三，在精炼你的bug报告的过程中，你很可能就<strong>自己找到</strong>了解决方法或权宜之计。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="別用低聲下氣取代你真正該做的事">別用低聲下氣取代你真正該做的事<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E5%88%A5%E7%94%A8%E4%BD%8E%E8%81%B2%E4%B8%8B%E6%B0%A3%E5%8F%96%E4%BB%A3%E4%BD%A0%E7%9C%9F%E6%AD%A3%E8%A9%B2%E5%81%9A%E7%9A%84%E4%BA%8B" class="hash-link" aria-label="別用低聲下氣取代你真正該做的事的直接链接" title="別用低聲下氣取代你真正該做的事的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="別用低聲下氣取代你真正該做的事">別用低聲下氣取代你真正該做的事<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E5%88%A5%E7%94%A8%E4%BD%8E%E8%81%B2%E4%B8%8B%E6%B0%A3%E5%8F%96%E4%BB%A3%E4%BD%A0%E7%9C%9F%E6%AD%A3%E8%A9%B2%E5%81%9A%E7%9A%84%E4%BA%8B" class="hash-link" aria-label="別用低聲下氣取代你真正該做的事的直接链接" title="別用低聲下氣取代你真正該做的事的直接链接">​</a></h3>
 <p>有些人明白他们不该粗鲁或傲慢的提问并要求得到答复，但他们选择另一个极端 -- 低声下气：<em>“我是个新手小白，xxx废物，碰到xx问题，有大佬解答、帮我看看吗“</em>...。 这既使人困扰，也没有用，尤其是伴随着与实际问题含糊不清的描述时更令人反感。</p>
 <p>别用原始灵长类动物的把戏来浪费你我的时间。 取而代之的是，尽可能清楚地描述背景条件和你的问题情况。 这比低声下气更好地定位了你的位置。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="描述問題症狀而非猜測">描述問題症狀而非猜測<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E6%8F%8F%E8%BF%B0%E5%95%8F%E9%A1%8C%E7%97%87%E7%8B%80%E8%80%8C%E9%9D%9E%E7%8C%9C%E6%B8%AC" class="hash-link" aria-label="描述問題症狀而非猜測的直接链接" title="描述問題症狀而非猜測的直接链接">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="蠢問題">蠢問題<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E8%A0%A2%E5%95%8F%E9%A1%8C" class="hash-link" aria-label="蠢問題的直接链接" title="蠢問題的直接链接">​</a></h4>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="描述問題症狀而非猜測">描述問題症狀而非猜測<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%8F%8F%E8%BF%B0%E5%95%8F%E9%A1%8C%E7%97%87%E7%8B%80%E8%80%8C%E9%9D%9E%E7%8C%9C%E6%B8%AC" class="hash-link" aria-label="描述問題症狀而非猜測的直接链接" title="描述問題症狀而非猜測的直接链接">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="蠢問題">蠢問題<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%A0%A2%E5%95%8F%E9%A1%8C" class="hash-link" aria-label="蠢問題的直接链接" title="蠢問題的直接链接">​</a></h4>
 <blockquote>
 <p>我在运行以前能运行的代码时，我的小车无法正常运行跑不起来，我怀疑是昨天有β射线、γ射线射到车上了，怎么办？</p>
 </blockquote>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="聪明問題">聪明問題<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E8%81%AA%E6%98%8E%E5%95%8F%E9%A1%8C" class="hash-link" aria-label="聪明問題的直接链接" title="聪明問題的直接链接">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="聪明問題">聪明問題<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E8%81%AA%E6%98%8E%E5%95%8F%E9%A1%8C" class="hash-link" aria-label="聪明問題的直接链接" title="聪明問題的直接链接">​</a></h4>
 <blockquote>
 <p>我采用的是ubuntu18.04，C++，运行的代码内容如下：，运行后的<strong>输出</strong>有：（），有没有报错其中摄像头采集（正常打开/），串口（正常打开/），下位机接受的数据（正常/丢失？），车模的电机/舵机是否正常。车在跑（某个路段）的的时候出现···状况，尝试过调pid参数，<strong>更改代码</strong>的哪些地方，但是都没有效果。在基础路段（直道，弯道）正常。</p>
 </blockquote>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="礼多人不怪">礼多人不怪<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E7%A4%BC%E5%A4%9A%E4%BA%BA%E4%B8%8D%E6%80%AA" class="hash-link" aria-label="礼多人不怪的直接链接" title="礼多人不怪的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="礼多人不怪">礼多人不怪<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E7%A4%BC%E5%A4%9A%E4%BA%BA%E4%B8%8D%E6%80%AA" class="hash-link" aria-label="礼多人不怪的直接链接" title="礼多人不怪的直接链接">​</a></h3>
 <p>彬彬有礼，多用<strong>请</strong>和<strong>谢谢您的关注，或谢谢你的关照</strong>。让大家都知道你对他们花时间免费提供帮助心存感激。</p>
 <p>坦白说，这一点其实并没有比使用清晰、正确、精准且合乎语法和避免使用专用格式重要（也不能取而代之）。帮助者们一般宁可读有点<strong>唐突但技术上鲜明</strong>的 Bug 报告，而不是那种有礼但含糊的报告。</p>
 <p>然而，如果你有一串的问题待解决，客气一点肯定会增加你得到有用回应的机会。</p>
@@ -593,7 +744,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <blockquote>
 <p>更多内容请参考原文 How-To-Ask-Questions-The-Smart-Way</p>
 </blockquote>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://cq.seekyou.fun/zh-Hans/blog/shareing#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://2seekyou.github.io/zh-Hans/blog/shareing#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接">​</a></h2>
 <p>希望学弟学妹们保持好奇心，勇于挑战自己，持之以恒地努力。在大学生活中不断成长，不怕失败，勇于尝试，不断积累经验，迎接未来的每一个挑战！</p>
 <p><a href="https://img.tg/image/OEfNOl" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/01/11/OEfNOl.png" alt="OEfNOl.png" class="img_ev3q"></a></p>
 <p>QQ:<strong>(seekyou)</strong> 1625629469</p>
@@ -608,17 +759,17 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
     </entry>
     <entry>
         <title type="html"><![CDATA[天智杯比赛]]></title>
-        <id>https://cq.seekyou.fun/zh-Hans/blog/beijing</id>
-        <link href="https://cq.seekyou.fun/zh-Hans/blog/beijing"/>
+        <id>https://2seekyou.github.io/zh-Hans/blog/beijing</id>
+        <link href="https://2seekyou.github.io/zh-Hans/blog/beijing"/>
         <updated>2024-10-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[算是比较失败的一次赛后总结]]></summary>
         <content type="html"><![CDATA[<p>算是比较失败的一次赛后总结</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="赛事介绍">赛事介绍<a href="https://cq.seekyou.fun/zh-Hans/blog/beijing#%E8%B5%9B%E4%BA%8B%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="赛事介绍的直接链接" title="赛事介绍的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="赛事介绍">赛事介绍<a href="https://2seekyou.github.io/zh-Hans/blog/beijing#%E8%B5%9B%E4%BA%8B%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="赛事介绍的直接链接" title="赛事介绍的直接链接">​</a></h2>
 <p>比赛内容：SAR目标检测，可以参考之前SAR100k的博客，大概做这样一件事情。我也看了十来二十篇文章。浮现的代码也有数个。但是并没能起到什么作用···</p>
 <p>具体是什么情况呢···原先只是想着借着比赛为由整出一篇论文的，但是吧···几乎一直是在复现他人做的各种内容，看的论文也很杂，也没想清楚应该怎么做。
 但是确实是挺想去看看的。但是事后事情的发展多少有点出乎意料了。</p>
 <p><a href="https://img.tg/image/OEKHVl" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKHVl.th.jpg" alt="OEKHVl.th.jpg" class="img_ev3q"></a></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="出发之前">出发之前<a href="https://cq.seekyou.fun/zh-Hans/blog/beijing#%E5%87%BA%E5%8F%91%E4%B9%8B%E5%89%8D" class="hash-link" aria-label="出发之前的直接链接" title="出发之前的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="出发之前">出发之前<a href="https://2seekyou.github.io/zh-Hans/blog/beijing#%E5%87%BA%E5%8F%91%E4%B9%8B%E5%89%8D" class="hash-link" aria-label="出发之前的直��接链接" title="出发之前的直接链接">​</a></h2>
 <p>其实出发之前10天左右有确定下大概的比赛时间，但是我们没有特别注意。而且当时我并没有过分关注比赛信息。直到大约只有一周的时候我才注意到一些关键信息：</p>
 <ul>
 <li>比赛全程（可能）没有网络</li>
@@ -632,7 +783,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <li>资料只进不出，所以相应的安装包环境只能用光驱拷贝，而且环境不能当场下意味着只能打包为docker，但是当时我还不会</li>
 <li>数据集格式未知，可能要针对算法转换为相应的格式</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="应对措施">应对措施<a href="https://cq.seekyou.fun/zh-Hans/blog/beijing#%E5%BA%94%E5%AF%B9%E6%8E%AA%E6%96%BD" class="hash-link" aria-label="应对措施的直接链接" title="应对措施的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="应对措施">应对措施<a href="https://2seekyou.github.io/zh-Hans/blog/beijing#%E5%BA%94%E5%AF%B9%E6%8E%AA%E6%96%BD" class="hash-link" aria-label="应对措施的直接链接" title="应对措施的直接链接">​</a></h3>
 <p>针对以上三个问题我也做了相应的准备：</p>
 <ol>
 <li>copy相关各种教程到txt，然后拷贝到光驱里。</li>
@@ -641,7 +792,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 </ol>
 <p><em><strong>因此，自认为做好充足准备的我觉得拿个成绩至少不成问题，乘上了前往北京的飞机</strong></em></p>
 <p><a href="https://img.tg/image/OEZt1j" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/29/OEZt1j.md.jpg" alt="OEZt1j.md.jpg" class="img_ev3q"></a></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="比赛途中">比赛途中<a href="https://cq.seekyou.fun/zh-Hans/blog/beijing#%E6%AF%94%E8%B5%9B%E9%80%94%E4%B8%AD" class="hash-link" aria-label="比赛途中的直接链接" title="比赛途中的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="比赛途中">比赛途中<a href="https://2seekyou.github.io/zh-Hans/blog/beijing#%E6%AF%94%E8%B5%9B%E9%80%94%E4%B8%AD" class="hash-link" aria-label="比赛途中的直接链接" title="比赛途中的直接链接">​</a></h2>
 <p>回过头来看，其实还是自身实力不足，太依赖gpt了，导致我现在的纯手撕代码能力相较于两年前似乎还下降了..话说回来我也不知道为什么要我带上三个大三的本科生打这种比赛，不如我自己去摇人。三个人几乎什么都不会，我几乎全程一个人做每一项工作。而问题也是多到数不胜数。当然在一些策略安排上也出了非常多的问题。</p>
 <p>首先，数据集格式是xml格式的。当时的我还没处理过几次xml文件，因此写的脚本针对性太强（至于本科生写的都不能用，他们连python都没学，我也不能要求太多。。），且它标注的方式似乎有点不一样。我所需要的是转txt后再转yolo。现在回头看看其实我应该能猜到的。自己标注的这类型的数据集源一般都是xml的，我是当时使用过的都是别人合成修改过的数据集，因此没有意识到这一点。针对数据集的格式转换上就花费了不少的时间——<strong>问题1</strong></p>
 <p>其次，在战略上：官方是允许查资料的，不过要在楼外才能用电脑。我当时想着报错的都是小问题，应该自己改改就能解决···
@@ -649,12 +800,12 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p>意外情况：赛程只有两天的上午+下午。而光驱拷贝资料的速度是慢的离谱，加上电脑本身的一些问题几乎就把第一个上午占满了。我没想到我们后续的光驱拷贝过去都用不了，赛方的ubuntu系统识别不了我的光驱盘。在反复耗了2h才找到解决方案——先拷贝到双系统的windows共享文件夹，再重进入到ubuntu里。但是这无疑又耗时增加了数倍调试时间——<strong>问题3</strong></p>
 <p>毫无疑问，在前期对这些东西的准备上太差了，导致试错成本过高，甚至没到训练的步骤，在前期配置上就已经彻头彻尾的输了。</p>
 <p>至于其他的本科生，我也不能求全责备（他们至少还是起到了陪伴的作用），归根结底还是自己实力不够，怪不得别人。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="弃赛">弃赛<a href="https://cq.seekyou.fun/zh-Hans/blog/beijing#%E5%BC%83%E8%B5%9B" class="hash-link" aria-label="弃赛的直接链接" title="弃赛的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="弃赛">弃赛<a href="https://2seekyou.github.io/zh-Hans/blog/beijing#%E5%BC%83%E8%B5%9B" class="hash-link" aria-label="弃赛的直接链接" title="弃赛的直接链接">​</a></h2>
 <p>到第二天上午，我依然没能开始训练，卡在各种各样的地方，且已经疲惫的不行了。在下午前往赛场的路上，我甚至开始畏惧，逃避了。在赛场门前徘徊了很久很久。
 我在想一个说服自己去的理由，想能不能坚持到最后的理由。但是做不到，我觉得光是在里面坐着都觉得丢脸，什么都做不到。加上那三人也不想，不如出去溜达溜达。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="散步">散步<a href="https://cq.seekyou.fun/zh-Hans/blog/beijing#%E6%95%A3%E6%AD%A5" class="hash-link" aria-label="散步的直接链接" title="散步的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="散步">散步<a href="https://2seekyou.github.io/zh-Hans/blog/beijing#%E6%95%A3%E6%AD%A5" class="hash-link" aria-label="散步的直接链接" title="散步的直接链接">​</a></h2>
 <p>我都不敢把这段称为旅游，因为从始至终都抱着忐忑不安的心，或者说还没缓过来。在清北附近，但是忘记找之前在北大读博后的学姐打个招呼了，有点笨。脑子里不知道想啥呢。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://cq.seekyou.fun/zh-Hans/blog/beijing#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://2seekyou.github.io/zh-Hans/blog/beijing#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接">​</a></h2>
 <p>时至如今，我依然没想明白能输成这样的根本原因在哪，虽然实力上确实存在不足，但是不至于。我只能归结于我遗漏了某一个关键点，且到最后也没能发现。</p>
 <p>用比赛后回来发的朋友圈总结吧，总之是相当失败的一次经历，除了自身的实力问题，没有遇到什么其他的指的学习的地方。可能只是前者占比过大，后续的许多小问题也被忽视了。</p>
 <p><a href="https://img.tg/image/OEZ4Hp" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/29/OEZ4Hp.md.jpg" alt="OEZ4Hp.md.jpg" class="img_ev3q"></a></p>]]></content>
@@ -668,22 +819,22 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
     </entry>
     <entry>
         <title type="html"><![CDATA[地平线智能车赛]]></title>
-        <id>https://cq.seekyou.fun/zh-Hans/blog/wuhan</id>
-        <link href="https://cq.seekyou.fun/zh-Hans/blog/wuhan"/>
+        <id>https://2seekyou.github.io/zh-Hans/blog/wuhan</id>
+        <link href="https://2seekyou.github.io/zh-Hans/blog/wuhan"/>
         <updated>2024-08-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[对研究生电赛企业赛（地平线赛题）和第十九届地平线智能车赛的总结]]></summary>
         <content type="html"><![CDATA[<p>对研究生电赛企业赛（地平线赛题）和第十九届地平线智能车赛的总结</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="起因">起因<a href="https://cq.seekyou.fun/zh-Hans/blog/wuhan#%E8%B5%B7%E5%9B%A0" class="hash-link" aria-label="起因的直接链接" title="起因的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="起因">起因<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E8%B5%B7%E5%9B%A0" class="hash-link" aria-label="起因的直接链接" title="起因的直接链接">​</a></h3>
 <p>说来起因很巧，在保研后的24年4月时被一个师兄拉去打<strong>研究生电赛</strong>，看了一圈，感觉这个<strong>地平线</strong>的题目最为熟悉，便想着试试。</p>
 <p><a href="https://img.tg/image/O0uSuS" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/04/14/O0uSuS.md.png" alt="O0uSuS.md.png" class="img_ev3q"></a></p>
 <p>同时，在公众号<strong>智能车竞赛</strong>的题目中新增了<strong>地平线</strong>的智慧医疗组，感觉赛题有不少重复的地方，便找了四个个学弟让他们参加一下，想着一次打两个比赛，理论上拿个小奖不是问题。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="研究生电赛">研究生电赛<a href="https://cq.seekyou.fun/zh-Hans/blog/wuhan#%E7%A0%94%E7%A9%B6%E7%94%9F%E7%94%B5%E8%B5%9B" class="hash-link" aria-label="研究生电赛的直接链接" title="研究生电赛的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="准备">准备<a href="https://cq.seekyou.fun/zh-Hans/blog/wuhan#%E5%87%86%E5%A4%87" class="hash-link" aria-label="准备的直接链接" title="准备的直接链接">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="研究生电赛">研究生电赛<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E7%A0%94%E7%A9%B6%E7%94%9F%E7%94%B5%E8%B5%9B" class="hash-link" aria-label="研究生��电赛的直接链接" title="研究生电赛的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="准备">准备<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E5%87%86%E5%A4%87" class="hash-link" aria-label="准备的直接链接" title="准备的直接链接">​</a></h3>
 <p>申请相应的硬件设备，感觉我的老板应该不太会出这个money，没什么办法，只能先自己申请一下。 （申请时需要提交一个类似于项目开发设计表的东西，没认真写，结果一个月都没有通过）此时也一边忙着学点点云分割入门的相关知识以及忙着毕设，所以也没有在比赛上过于用心。（主要这两个个比赛对我意义不大，只是试试水）</p>
 <p>就这样一直到了五月中旬，板子下来我才意识到这只是一块开发板，海需要自己加外设，搭平台。时间上来不及，而且校赛在六月初，初赛也在校赛后没几天。</p>
 <p>这时候我有点急了。但是没办法，临时找学弟问了问智能车搞得咋样，能不能临时借来用用————结果就是<code>history</code>里的指令历史记录只有几条，几乎是啥也没干。。。
 所以，我原本以为的6个人搞一个东西应该轻轻松松（智能车4人,研电赛2人），缺变成了这样子。此时，距离校赛的答辩只剩下3-4天</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="备赛">备赛<a href="https://cq.seekyou.fun/zh-Hans/blog/wuhan#%E5%A4%87%E8%B5%9B" class="hash-link" aria-label="备赛的直接链接" title="备赛的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="备赛">备赛<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E5%A4%87%E8%B5%9B" class="hash-link" aria-label="备赛的直接链接" title="备赛的直接链接">​</a></h3>
 <p>Tools：ROS2，Linux，Python，TogetherROS</p>
 <p>Background：对于ROS2并不熟悉，没有得到详细的相关资料。</p>
 <p>Progress：一共两天通宵。</p>
@@ -695,25 +846,25 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <li>省赛是线上答辩。同样被拷打，太多的东西都是围绕着本身所具备的功能去做的（甚至很多流程图都是用的他们手册上的），额外的开发应该微乎其微。跟赛方诉了下做成这样子的苦衷，最后拿了个省三（安慰奖）</li>
 </ol>
 <p>当时两次答辩都觉得挺丢人的，但是现在却没那感觉了。毕竟<strong>从头到最后只有我一个人在搞。</strong></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="智能车">智能车<a href="https://cq.seekyou.fun/zh-Hans/blog/wuhan#%E6%99%BA%E8%83%BD%E8%BD%A6" class="hash-link" aria-label="智能车的直接链接" title="智能车的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="准备-1">准备<a href="https://cq.seekyou.fun/zh-Hans/blog/wuhan#%E5%87%86%E5%A4%87-1" class="hash-link" aria-label="准备的直接链接" title="准备的直接链接">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="智能车">智能车<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E6%99%BA%E8%83%BD%E8%BD%A6" class="hash-link" aria-label="智能车的直接链接" title="智能车的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="准备-1">准备<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E5%87%86%E5%A4%87-1" class="hash-link" aria-label="准备的直接链接" title="准备的直接链接">​</a></h3>
 <p>此时，智能车那边的比赛时间确定在了7月下旬，还有一个月。但是看着我那可爱的学弟们一行指令都没敲过，我已经不报希望了，打算到比赛前一周再准备一下，也去混个省三就算了。</p>
 <p>于是：等我真的开始准备时，我才知道他们几乎把所有的时间都压在了完全模型组上，而且区赛比赛失误，地平线这边的赛题还是一团糟。而主力还在赛后被老师拉去北京做项目。</p>
 <p>所以，又是我一个人在搞。此时，距离区赛仅仅7天不到。（<strong>留个悬念，隔壁的ti实验室此时备赛了半年了且早已经完赛</strong>。）</p>
 <p>在了解清楚任务后，我花了一天基于开源的一个视觉方法实现循迹和实时二维码识别并转发到web端口显示。又经过一天的微调，大概能保证2分钟左右的完赛。这个给成绩区赛拿奖不成问题，进国赛自然不可能。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="转机">转机<a href="https://cq.seekyou.fun/zh-Hans/blog/wuhan#%E8%BD%AC%E6%9C%BA" class="hash-link" aria-label="转机的直接链接" title="转机的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="转机">转机<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E8%BD%AC%E6%9C%BA" class="hash-link" aria-label="转机的直接链接" title="转机的直接链接">​</a></h3>
 <p>有个学弟在看到群里的大佬用纯惯导+摄像头的方法提出用惯导直接穿过去，不考虑撞锥桶的情况下，能在40s左右完赛。</p>
 <p>大约过了两天，惯导方案已经初步实现，但是由于图传太慢，人为控制的部分很难保证实时性。为了改进图传，我又去搜寻了许多压缩图像、视频流的方法，包括不限于改色彩通道，改格式，改摄像头参数甚至是改传输方式，然而影响都微乎其微。无奈下，我们只能是降低分辨率，从640x480到80x60，保证基本的图传速度。（后续换了好点的网卡，也进一步提升了帧率。）</p>
 <p>此时还剩下两天，如果不撞锥桶，这个速度进国赛应该没问题，但是一旦失误一次就可能没机会。</p>
 <p>为了能够保证成功率，我只能再通宵，写了多点的惯导方法，实现了以曲线形式避障，且准确识别二维码。在完成这段代码后，我们便踏上了前往武汉的高铁。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="比赛">比赛<a href="https://cq.seekyou.fun/zh-Hans/blog/wuhan#%E6%AF%94%E8%B5%9B" class="hash-link" aria-label="比赛的直接链接" title="比赛的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="比赛">比赛<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E6%AF%94%E8%B5%9B" class="hash-link" aria-label="比赛的直接链接" title="比赛的直接链接">​</a></h3>
 <p>现场无法带手机，只能给大家看看最后的成绩单了(因为之前校赛没有成绩，只能代表附属学院参赛了)
 初赛是27s左右，比隔壁Ti实验室的队伍还快了3秒.国赛失误了，撞了一个锥桶，罚了10s，40s完赛。最后也是侥幸拿下了第五个国奖。</p>
 <p><a href="https://img.tg/image/O0uIRv" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/04/14/O0uIRv.md.png" alt="O0uIRv.md.png" class="img_ev3q"></a></p>
 <p>区赛</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2025/04/14/O0u8IU.jpg" alt="O0u8IU.jpg" class="img_ev3q"></p>
 <p>国赛</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="commands">Commands<a href="https://cq.seekyou.fun/zh-Hans/blog/wuhan#commands" class="hash-link" aria-label="Commands的直接链接" title="Commands的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="commands">Commands<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#commands" class="hash-link" aria-label="Commands的直接链接" title="Commands的直接链接">​</a></h3>
 <p>记录一些比赛中用的相关指令</p>
 <ol>
 <li><code>alias</code>用于将指令重命名，编辑好后放到终端里的bash.rc自启动
@@ -728,7 +879,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <li><code>ros2 service list /type &lt;service_name&gt;</code>查看服务列表,查看服务类型
 以上都是非常基础的内容 在查找时可添加<code>|grep xxx</code>实现快速搜寻xxx</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="旅游">旅游<a href="https://cq.seekyou.fun/zh-Hans/blog/wuhan#%E6%97%85%E6%B8%B8" class="hash-link" aria-label="旅游的直接链接" title="旅游的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="旅游">旅游<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E6%97%85%E6%B8%B8" class="hash-link" aria-label="旅游的直接链接" title="旅游的直接链接">​</a></h3>
 <p>逛了蛮多地方的，走了几天腿都断了，还有天晚上下了好大的雨，根本寸步难行。</p>
 <p><a href="https://img.tg/image/O0I8qg" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/04/14/O0I8qg.md.jpg" alt="O0I8qg.md.jpg" class="img_ev3q"></a></p>
 <p>可达鸭小车（鸭鸭立大功）</p>
@@ -736,7 +887,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p>楚河汉街</p>
 <p><a href="https://img.tg/image/O0IXAB" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2025/04/14/O0IXAB.md.jpg" alt="O0IXAB.md.jpg" class="img_ev3q"></a></p>
 <p>远拍黄鹤楼</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://cq.seekyou.fun/zh-Hans/blog/wuhan#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="总结">总结<a href="https://2seekyou.github.io/zh-Hans/blog/wuhan#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接">​</a></h2>
 <p>我又一次把希望寄托在了别人的身上，又一次狠狠的失望了。感觉每次都希望好好干，比赛后开源，但是每一次都没能做到。到底是为什么呢？</p>
 <p>赛后找负责保管车的同学要份代码，过了半年都没给我（真的是半年），要么忘记了，要么在忙，永远是一堆理由。本来6个人搞一个比赛，每个人出点力不是很容易吗？</p>
 <p>结果到最后还是我一个人干大半，太失望了。。。</p>
@@ -769,8 +920,8 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
     </entry>
     <entry>
         <title type="html"><![CDATA[SARDET-100K数据集]]></title>
-        <id>https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K</id>
-        <link href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K"/>
+        <id>https://2seekyou.github.io/zh-Hans/blog/SARDET-100K</id>
+        <link href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K"/>
         <updated>2024-07-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[记录一下最近准备用于比赛的数据集：SARDET-100K]]></summary>
         <content type="html"><![CDATA[<p>记录一下最近准备用于比赛的数据集：SARDET-100K</p>
@@ -778,23 +929,23 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <!-- -->仓库地址：<a href="https://github.com/zcablii/SARDet_100K" target="_blank" rel="noopener noreferrer">GitHub</a></p>
 <p>作者：李宇轩，李翔*，李玮杰，侯淇彬，刘丽，程明明，杨健*</p>
 <p>数据集下载链接我放在<a href="https://blog.csdn.net/qq_57906525/article/details/140043441?spm=1001.2014.3001.5502" target="_blank" rel="noopener noreferrer">CSDN的博客</a>中了（免费）</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="基本特点">基本特点<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#%E5%9F%BA%E6%9C%AC%E7%89%B9%E7%82%B9" class="hash-link" aria-label="基本特点的直接链接" title="基本特点的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="基本特点">基本特点<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#%E5%9F%BA%E6%9C%AC%E7%89%B9%E7%82%B9" class="hash-link" aria-label="基本特点的直接链接" title="基本特点的直接链接">​</a></h2>
 <ul>
 <li>融合了一共十种开源可用的高质量数据集，并按照8:1:1的比例划分训练集，验证集，测试集。</li>
 <li>保安一共116598张图片和245653个实例，包含飞机，船舶，港口，汽车，桥梁，坦克一共六个类别。</li>
 <li>将各种类型的数据集统一重新切片并且转换注释格式为COCO格式。</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="论文提要">论文提要<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#%E8%AE%BA%E6%96%87%E6%8F%90%E8%A6%81" class="hash-link" aria-label="论文提要的直接链接" title="论文提要的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="摘要">摘要<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#%E6%91%98%E8%A6%81" class="hash-link" aria-label="摘要的直接链接" title="摘要的直接链接">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="论文提要">论文提要<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#%E8%AE%BA%E6%96%87%E6%8F%90%E8%A6%81" class="hash-link" aria-label="论文提要的直接链接" title="论文提要的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="摘要">摘要<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#%E6%91%98%E8%A6%81" class="hash-link" aria-label="摘要的直接链接" title="摘要的直接链接">​</a></h3>
 <p>合成孔径雷达（SAR）目标检测因其不可替代的全天候成像能力近年来受到广泛关注。然而，该研究领域面临着有限的公共数据集和无法访问的源代码。为了应对这些挑战，该团队建立了一个新的基准数据集和一种用于大规模 SAR 物体检测的开源方法。该团队的数据集 SARDet-100K 是对 10 个现有 SAR 检测数据集进行大量调查、收集和标准化的结果，为研究目的提供了大规模且多样化的数据集。该团队基于该数据集进行了全面的实验，发现了 SAR 目标检测的一个关键挑战：RGB 数据集的预训练和 SAR 数据集的微调在数据域和模型结构方面存在巨大差异。为了弥补这些差距，该团队提出了一种新颖的多阶段过滤器增强（MSFA）预训练框架，该框架从数据输入、域转换和模型迁移的角度解决了问题。所提出的 MSFA 方法显着增强了 SAR 目标检测模型的性能，同时在不同模型中展示了卓越的通用性和灵活性。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="本文的贡献">本文的贡献<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#%E6%9C%AC%E6%96%87%E7%9A%84%E8%B4%A1%E7%8C%AE" class="hash-link" aria-label="本文的贡献的直接链接" title="本文的贡献的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="本文的贡献">本文的贡献<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#%E6%9C%AC%E6%96%87%E7%9A%84%E8%B4%A1%E7%8C%AE" class="hash-link" aria-label="本文的贡献的直接链接" title="本文的贡献的直接链接">​</a></h3>
 <ul>
 <li>引入第一个用于 SAR 多类别目标检测的 COCO 级大规模数据集。</li>
 <li>发现了 SAR 目标检测传统模型预训练和微调方法中的关键差距。</li>
 <li>提出了带有滤波器增强（MSFA）的多阶段预训练框架，该框架在各种深度网络模型中表现出显着的有效性以及出色的通用性和灵活性。</li>
 <li>通过发布与我们研究相关的数据集和代码，建立 SAR 物体检测的新基准。</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sardet_100k数据集">SARDet_100K数据集<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#sardet_100k%E6%95%B0%E6%8D%AE%E9%9B%86" class="hash-link" aria-label="SARDet_100K数据集的直接链接" title="SARDet_100K数据集的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sardet_100k数据集">SARDet_100K数据集<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#sardet_100k%E6%95%B0%E6%8D%AE%E9%9B%86" class="hash-link" aria-label="SARDet_100K数据集的直接链接" title="SARDet_100K数据集的直接链接">​</a></h2>
 <p>目前现存的SAR数据集相对有限，低分辨率的数据集往往局限于宏观视图上的场景分类，高分辨率的数据集虽能更好描述例如船，车这类的小目标，但是获取条件苛刻，且往往缺乏多样性（例如波段，偏振，分辨率等方面）。</p>
 <p>而该团队提出的SARDet_100K融合的十种数据集不仅各类参数多样化，没有冲突的对象类别，数据来源也不同。下图为数据集预览：</p>
 <p><a href="https://img.tg/image/OEKDmb" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKDmb.md.png" alt="OEKDmb.md.png" class="img_ev3q"></a></p>
@@ -804,7 +955,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p><a href="https://img.tg/image/OEKR26" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKR26.md.png" alt="OEKR26.md.png" class="img_ev3q"></a></p>
 <p>（下面为笔者仅针对训练集进行的简单数据分析，可能有所偏差，仅供参考。）</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKP4F.png" alt="OEKP4F.png" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="msfa">MSFA<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#msfa" class="hash-link" aria-label="MSFA的直接链接" title="MSFA的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="msfa">MSFA<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#msfa" class="hash-link" aria-label="MSFA的直接链接" title="MSFA的直接链接">​</a></h2>
 <p>(Multi-Stage with Filter Augmentation Pretraining Framework)——滤波增强的多阶段预训练框架</p>
 <p>目前近期的研究主要依赖于默认的ImageNet预训练方法提出网络设计等提高SAR目标检测的性能，而忽略了从用于预训练的自然数据集和用于微调的SAR数据集之间的显著域差异，以及主干网络和整个检测框架之间的模型差异。</p>
 <p>该团队提出的MSFA预训练框架则从数据输入，域转换以及模型迁移三个角度解决这些问题。MSFA包含两个核心设计：</p>
@@ -812,20 +963,20 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <li>滤波增强输入</li>
 <li>多级预训练框架</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="滤波增强输入">滤波增强输入<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#%E6%BB%A4%E6%B3%A2%E5%A2%9E%E5%BC%BA%E8%BE%93%E5%85%A5" class="hash-link" aria-label="滤波增强输入的直接链接" title="滤波增强输入的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="滤波增强输入">滤波增强输入<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#%E6%BB%A4%E6%B3%A2%E5%A2%9E%E5%BC%BA%E8%BE%93%E5%85%A5" class="hash-link" aria-label="滤波增强输入的直接链接" title="滤波增强输入的直接链接">​</a></h3>
 <p>本文采用一些手工制作的滤波算子，例如HOG，Canny，Haar，WST，GRE等，将原本输入与相应滤波变换后的数据串联作为新的输入。这样通过把数据从像素空间投射到滤波增强特征空间，从而显著减少自然RGB图像和SAR图像之间的域差异。如下图4(a)所示：</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKJiD.png" alt="OEKJiD.png" class="img_ev3q"></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="多级预训练框架">多级预训练框架<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#%E5%A4%9A%E7%BA%A7%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A1%86%E6%9E%B6" class="hash-link" aria-label="多级预训练框架的直接链接" title="多级预训练框架的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="多级预训练框架">多级预训练框架<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#%E5%A4%9A%E7%BA%A7%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A1%86%E6%9E%B6" class="hash-link" aria-label="多级预训练框架的直接链接" title="多级预训练框架的直接链接">​</a></h3>
 <p>在传统的预训练模式中：</p>
 <p>预训练阶段首先在 ImageNet（IN）数据集上随机初始化并训练骨干网络 ，然后在 SAR 数据集上使用预训练好的的检测模型进行微调。如下列公式：</p>
 <p><a href="https://img.tg/image/OEKm3I" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKm3I.png" alt="OEKm3I.png" class="img_ev3q"></a></p>
 <p>本文提出的方法相当于是在第一步完成后添加了一步：用大规模遥感数据集作为域迁移的检测预训练，该数据集域下游SAR数据集也有着相似的对象形状，大小。如上图图4(b)所示，这种方式在自然RGB图像在ImageNet上的光学分别和SAR上的目标分布间搭起了一座桥梁。</p>
 <p>公式也变成了：</p>
 <p><a href="https://img.tg/image/OEKgQ1" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKgQ1.png" alt="OEKgQ1.png" class="img_ev3q"></a></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="msfa-1">MSFA<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#msfa-1" class="hash-link" aria-label="MSFA的直接链接" title="MSFA的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="msfa-1">MSFA<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#msfa-1" class="hash-link" aria-label="MSFA的直接链接" title="MSFA的直接链接">​</a></h3>
 <p>MSFA融合以上两者后的框架与传统方法的框架对比如下所示：</p>
 <p><a href="https://img.tg/image/OEKrbq" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKrbq.png" alt="OEKrbq.png" class="img_ev3q"></a></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="实验分析">实验分析<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#%E5%AE%9E%E9%AA%8C%E5%88%86%E6%9E%90" class="hash-link" aria-label="实验分析的直接链接" title="实验分析的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="实验分析">实验分析<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#%E5%AE%9E%E9%AA%8C%E5%88%86%E6%9E%90" class="hash-link" aria-label="实验分析的直接链接" title="实验分析的直接链接">​</a></h2>
 <p>下图主要是添加不同滤波增强输入算子后的mAP比较以及ImageNet 和 SARDet-100k 在 RGB 和手工特征空间上的皮尔逊相关系数 (PCC)。</p>
 <p>可以发现：自然图像与SAR图像之间的域差异较大，但是经过滤波增强后的图像域差异显著减小。</p>
 <p><a href="https://img.tg/image/OEKAgc" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKAgc.png" alt="OEKAgc.png" class="img_ev3q"></a></p>
@@ -836,14 +987,14 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p><a href="https://img.tg/image/OEKyrG" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKyrG.png" alt="OEKyrG.png" class="img_ev3q"></a></p>
 <p>最后是MSFA与以前的SOTA方法比对。如下图所示，该文提出的方法明显优于之前所有的方法，在SSDD数据集的mAP@50指标达到了97.9%，在HRSID上达到了83.7%。</p>
 <p><a href="https://img.tg/image/OEKvqM" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/12/28/OEKvqM.png" alt="OEKvqM.png" class="img_ev3q"></a></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="局限性">局限性<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#%E5%B1%80%E9%99%90%E6%80%A7" class="hash-link" aria-label="局限性的直接链接" title="局限性的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="局限性">局限性<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#%E5%B1%80%E9%99%90%E6%80%A7" class="hash-link" aria-label="局限性的直接链接" title="局限性的直接链接">​</a></h2>
 <ul>
 <li>考虑到存在大量无注释的SAR数据集（例如最经典的MSTAR，FARAD等等），可以尝试探索半监督，弱监督或者无监督的方法。</li>
 <li>本文的设计方向偏向简单实用，通用性高，但未深入讨论设计细节。可以尝试引入更复杂专业的设计提高性能。</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="杂谈">杂谈<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#%E6%9D%82%E8%B0%88" class="hash-link" aria-label="杂谈的直接链接" title="杂谈的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="杂谈">杂谈<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#%E6%9D%82%E8%B0%88" class="hash-link" aria-label="杂谈的直接链接" title="杂谈的直接链接">​</a></h2>
 <p>目前有关SAR图像目标检测的大型数据集实在是少之又少，该团队所搭建的这一数据集——SARDet 100K确实是第一个大规模 SAR 物体检测数据集，其大小甚至可以与广泛使用的 COCO数据集（118K张 图像）相当，解决该领域了缺少数据集的痛点。该团队在主要工作包括：提出了一种新的SAR目标检测数据集基准；在数据输入上采用手工特征描述算子WST等；在域转换上采用了一种分层预训练方法等。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="参考文献">参考文献<a href="https://cq.seekyou.fun/zh-Hans/blog/SARDET-100K#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE" class="hash-link" aria-label="参考文献的直接链接" title="参考文献的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="参考文献">参考文献<a href="https://2seekyou.github.io/zh-Hans/blog/SARDET-100K#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE" class="hash-link" aria-label="参考文献的直接链接" title="参考文献的直接链接">​</a></h2>
 <ol>
 <li>Li, Yuxuan, Xiang Li, Weijie Li, Qibin Hou, Li Liu, Ming-Ming Cheng, and Jian Yang. "SARDet-100K: Towards Open-Source Benchmark and ToolKit for Large-Scale SAR Object Detection." arXiv preprint arXiv:2403.06534, 2024.</li>
 <li>Deng, Jia, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li Fei-Fei. "Imagenet: A large-scale hierarchical image database." In CVPR, 2009.</li>
@@ -860,18 +1011,18 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
     </entry>
     <entry>
         <title type="html"><![CDATA[记录DBSCAN]]></title>
-        <id>https://cq.seekyou.fun/zh-Hans/blog/DBSCAN</id>
-        <link href="https://cq.seekyou.fun/zh-Hans/blog/DBSCAN"/>
+        <id>https://2seekyou.github.io/zh-Hans/blog/DBSCAN</id>
+        <link href="https://2seekyou.github.io/zh-Hans/blog/DBSCAN"/>
         <updated>2024-02-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[记录一下最近了解的聚类算法：DBSCAN]]></summary>
         <content type="html"><![CDATA[<p>记录一下最近了解的聚类算法：DBSCAN</p>
 <p>DBSCAN is a density-based clustering algorithm that groups together data points that are closely packed, while marking points that lie alone in low-density regions as outliers.</p>
 <p>Unlike K-means, DBSCAN doesn't require specifying the number of clusters beforehand and is robust to noise and outliers. Along with its hierarchical extensions HDBSCAN, it is applied mostly in Automotive Radar Data.</p>
 <p>最近对有关雷达数据的聚类方法做了些调研，主要看的一些评估指标和有关DBSCAN的方法，于此重新复习一下DBSCAN。文件附上：
-<a href="https://cq.seekyou.fun/zh-Hans/blog/RESEARCH-ON-RADAR-DATA-CLUSTERING.pdf">pdf文件</a></p>
+<a href="https://2seekyou.github.io/zh-Hans/blog/RESEARCH-ON-RADAR-DATA-CLUSTERING.pdf">pdf文件</a></p>
 <p>和K-Means，BIRCH这些一般只适用于凸样本集的聚类相比，DBSCAN既可以适用于凸样本集，也可以适用于非凸样本集。下面我们就对DBSCAN算法的原理做一个总结。</p>
 <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">凸集 (Convex Set):对于该集合中的任意两点，连接它们的线段上的所有点也都包含在该集合中。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">凹集 (Concave Set):对于该集合中的任意两点，连接它们的线段上的所有点也都不在该集合中。</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="clustering">Clustering<a href="https://cq.seekyou.fun/zh-Hans/blog/DBSCAN#clustering" class="hash-link" aria-label="Clustering的直接链接" title="Clustering的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="clustering">Clustering<a href="https://2seekyou.github.io/zh-Hans/blog/DBSCAN#clustering" class="hash-link" aria-label="Clustering的直接链接" title="Clustering的直接链接">​</a></h2>
 <p>聚类算法主要有 4 大类：</p>
 <ul>
 <li>Centroid-based Clustering<br>
@@ -883,7 +1034,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <li>Hierarchical Clustering<br>
 <!-- -->很多情况下的簇并不像我们看到的示例那样清晰地分开。它们通常由较小的组组成，这些组可以组合在一起形成一个更大的簇，最终得到一个包罗万象的簇。</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbscan基本概念">DBSCAN基本概念<a href="https://cq.seekyou.fun/zh-Hans/blog/DBSCAN#dbscan%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" class="hash-link" aria-label="DBSCAN基本概念的直接链接" title="DBSCAN基本概念的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbscan基本概念">DBSCAN基本概念<a href="https://2seekyou.github.io/zh-Hans/blog/DBSCAN#dbscan%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" class="hash-link" aria-label="DBSCAN基本概念的直接链接" title="DBSCAN基本概念的直接链接">​</a></h2>
 <p>DBSCAN的基本概念可以用1，2，3，4来总结。</p>
 <ul>
 <li>
@@ -906,7 +1057,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p><a href="https://img.tg/image/OyvgJF" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://ooo.0x0.ooo/2024/02/28/OyvgJF.md.png" alt="OyvgJF.md.png" class="img_ev3q"></a></p>
 <p>如果存在核心点S，使得S到P和Q都密度可达，则P和Pn(n=1,2...),Q密度相连。密度相连具有对称性，如果P和Q密度相连，那么Q和P也一定密度相连。密度相连的两个点属于同一个聚类簇。</p>
 <p>如果两个点不属于密度相连关系，则两个点非密度相连。非密度相连的两个点属于不同的聚类簇，或者其中存在噪声点</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbscan聚类思想">DBSCAN聚类思想<a href="https://cq.seekyou.fun/zh-Hans/blog/DBSCAN#dbscan%E8%81%9A%E7%B1%BB%E6%80%9D%E6%83%B3" class="hash-link" aria-label="DBSCAN聚类思想的直接链接" title="DBSCAN聚类思想的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbscan聚类思想">DBSCAN聚类思想<a href="https://2seekyou.github.io/zh-Hans/blog/DBSCAN#dbscan%E8%81%9A%E7%B1%BB%E6%80%9D%E6%83%B3" class="hash-link" aria-label="DBSCAN聚类思想的直接链接" title="DBSCAN聚类思想的直接链接">​</a></h2>
 <p>DBSCAN的聚类定义很简单：由密度可达关系导出的最大密度相连的样本集合，即为我们最终聚类的一个类别，或者说一个簇。</p>
 <p>这个DBSCAN的簇里面可以有一个或者多个核心对象。如果只有一个核心对象，则簇里其他的非核心对象样本都在这个核心对象的ϵϵ-邻域里；如果有多个核心对象，则簇里的任意一个核心对象的ϵϵ-邻域中一定有一个其他的核心对象，否则这两个核心对象无法密度可达。这些核心对象的ϵϵ-邻域里所有的样本的集合组成的一个DBSCAN聚类簇。</p>
 <p>那么怎么才能找到这样的簇样本集合呢？DBSCAN使用的方法很简单，它任意选择一个没有类别的核心对象作为种子，然后找到所有这个核心对象能够密度可达的样本集合，即为一个聚类簇。接着继续选择另一个没有类别的核心对象去寻找密度可达的样本集合，这样就得到另一个聚类簇。一直运行到所有核心对象都有类别为止。</p>
@@ -915,9 +1066,9 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p>第二个是距离的度量问题，即如何计算某样本和核心对象样本的距离。在DBSCAN中，一般采用最近邻思想，采用某一种距离度量来衡量样本距离，比如欧式距离。这和KNN分类算法的最近邻思想完全相同。对应少量的样本，寻找最近邻可以直接去计算所有样本的距离，如果样本量较大，则一般采用KD树或者球树来快速的搜索最近邻。</p>
 <p>第三种问题比较特殊，某些样本可能到两个核心对象的距离都小于ϵϵ，但是这两个核心对象由于不是密度直达，又不属于同一个聚类簇，那么如果界定这个样本的类别呢？
 一般来说，此时DBSCAN采用先来后到，先进行聚类的类别簇会标记这个样本为它的类别。也就是说BDSCAN的算法不是完全稳定的算法。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbscan算法设计">DBSCAN算法设计<a href="https://cq.seekyou.fun/zh-Hans/blog/DBSCAN#dbscan%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1" class="hash-link" aria-label="DBSCAN算法设计的直接链接" title="DBSCAN算法设计的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbscan算法设计">DBSCAN算法设计<a href="https://2seekyou.github.io/zh-Hans/blog/DBSCAN#dbscan%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1" class="hash-link" aria-label="DBSCAN算法设计的直接链接" title="DBSCAN算法设计的直接链接">​</a></h2>
 <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">DBSCAN(DB, distFunc, eps, minPts) {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    C := 0                                                  /* Cluster counter */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    for each point P in database DB {                       /*对数据集中的每个点处理*/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        if label(P) ≠ undefined then continue               /* Previously processed in inner loop */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        Neighbors N := RangeQuery(DB, distFunc, P, eps)     /* Find neighbors */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        if |N| &lt; minPts then {                              /* Density check */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            label(P) := Noise                               /* Label as Noise */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            continue</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        C := C + 1                                          /* 若满足簇数+1 */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        label(P) := C                                       /* 用集群标签`C`标记当前点`P`。 */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        SeedSet S := N \ {P}                                /* 我们初始化一个种子集 S ，其中包含 P 除其自身之外 P 的所有邻居。 */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        for each point Q in S {                             /* Process every seed point Q */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            if label(Q) = Noise then label(Q) := C          /* Change Noise to border point */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            if label(Q) ≠ undefined then continue           /* Previously processed (e.g., 如果是边界点) */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            label(Q) := C                                   /* 用集群标签C标记当前邻居点 */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            Neighbors N := RangeQuery(DB, distFunc, Q, eps) /* Find point Q's neighbors */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            if |N| ≥ minPts then {                          /* 如果点Q的邻居数|N|大于或等于minPts，则表示它是核心点 minPts*/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                S := S ∪ N                                  /* Add new neighbors to seed set */</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbscan小结">DBSCAN小结<a href="https://cq.seekyou.fun/zh-Hans/blog/DBSCAN#dbscan%E5%B0%8F%E7%BB%93" class="hash-link" aria-label="DBSCAN小结的直接链接" title="DBSCAN小结的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbscan小结">DBSCAN小结<a href="https://2seekyou.github.io/zh-Hans/blog/DBSCAN#dbscan%E5%B0%8F%E7%BB%93" class="hash-link" aria-label="DBSCAN小结的直接链接" title="DBSCAN小结的直接链接">​</a></h2>
 <p><strong>优点</strong></p>
 <ul>
 <li>不需要先验地指定数据中的簇数。</li>
@@ -932,7 +1083,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <li>在最坏的情况下,DBSCAN的时间复杂度O(n^2)，即数据点的数量。对于大型数据集，可能很费时间，难以保证实时性。</li>
 <li>DBSCAN 无法很好地聚类密度差异较大的数据集，因为无法为所有聚类适当选择 <code>minPts-ε</code> 组合</li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbscan扩展">DBSCAN扩展<a href="https://cq.seekyou.fun/zh-Hans/blog/DBSCAN#dbscan%E6%89%A9%E5%B1%95" class="hash-link" aria-label="DBSCAN扩展的直接链接" title="DBSCAN扩展的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbscan扩展">DBSCAN扩展<a href="https://2seekyou.github.io/zh-Hans/blog/DBSCAN#dbscan%E6%89%A9%E5%B1%95" class="hash-link" aria-label="DBSCAN扩展的直接链接" title="DBSCAN扩展的直接链接">​</a></h2>
 <p>Generalized DBSCAN (GDBSCAN) is a generalization by the same authors to arbitrary "neighborhood" and "dense" predicates.</p>
 <p>The <code>ε</code> and <code>minPts</code> parameters are removed from the original algorithm and moved to the predicates. For example, on polygon data, the "neighborhood" could be any intersecting polygon, whereas the density predicate uses the polygon areas instead of just the object count.</p>
 <p>Various extensions to the DBSCAN algorithm have been proposed, including methods for parallelization, parameter estimation, and support for uncertain data. The basic idea has been extended to hierarchical clustering by the OPTICS algorithm. DBSCAN is also used as part of subspace clustering algorithms like PreDeCon and SUBCLU.</p>
@@ -948,27 +1099,27 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
     </entry>
     <entry>
         <title type="html"><![CDATA[2023·年度总结]]></title>
-        <id>https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1</id>
-        <link href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1"/>
+        <id>https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1</id>
+        <link href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1"/>
         <updated>2023-12-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[2023年即将接近尾声，在此写下20年人生中的第一次年度总结。]]></summary>
         <content type="html"><![CDATA[<p>2023年即将接近尾声，在此写下20年人生中的第一次年度总结。</p>
 <p>自来上海以来，近期算是我最闲暇的时光，正好可以搭自己的博客，做自己想做的一些事情，顺便记录一下我的2023年。（多图警告！）</p>
 <p>自从上大学以来已经有三年半载了。如果不算大四这年（实习，找工作，考研，保研），相当于我大学的主要生涯也确实是结束了。突然感觉时间过的好快，一下我就成学长了，我也快毕业了，我也20出头了。</p>
 <p>因此在此做下我2023年度的总结，顺带设想一下2024的一年。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023起点还是终点">2023·起点还是终点<a href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1#2023%E8%B5%B7%E7%82%B9%E8%BF%98%E6%98%AF%E7%BB%88%E7%82%B9" class="hash-link" aria-label="2023·起点还是终点的直接链接" title="2023·起点还是终点的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="比赛--保研的选择">比赛 + 保研的选择<a href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1#%E6%AF%94%E8%B5%9B--%E4%BF%9D%E7%A0%94%E7%9A%84%E9%80%89%E6%8B%A9" class="hash-link" aria-label="比赛 + 保研的选择的直接链接" title="比赛 + 保研的选��择的直接链接">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023起点还是终点">2023·起点还是终点<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#2023%E8%B5%B7%E7%82%B9%E8%BF%98%E6%98%AF%E7%BB%88%E7%82%B9" class="hash-link" aria-label="2023·起点还是终点的直接链接" title="2023·起点还是终点的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="比赛--保研的选择">比赛 + 保研的选择<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E6%AF%94%E8%B5%9B--%E4%BF%9D%E7%A0%94%E7%9A%84%E9%80%89%E6%8B%A9" class="hash-link" aria-label="比赛 + 保研的选择的直接链接" title="比赛 + 保研�的选择的直接链接">​</a></h3>
 <p>对于今年的参赛安排，我个人也是相当矛盾的。一方面是由<strong>于去年的A类国一和国二使我已经获得了保研资格</strong>，只是绩点太低，并不能确定我是保内还是保外。另一方面是要不要尝试争取一下国特，如果能拿到绩点对我就没有影响了，但是难度嘛。。。</p>
 <p>上半年也算是我比较迷茫的时期。一方面绩点摆在这里，今年就算全部的科目满绩点也大概不能保证达到保外的要求，因此我大概率是保本校的。但是我自己又不太想留在本校，但是面对考研我没有做好足够的心理准备，这件事情属实令我困扰了很久，<strong>甚至萌生了要不要降级去刷一年绩点的想法</strong>。当然这个想法遭到除了同学以外所有人的反对。原因各式各样，就不细说了。</p>
 <p>同时期父母唠叨不停，希望我边把本学期绩点搞好，边参加比赛，边准备考研的复习。显然是不太可能的。唯独最后者我不太上心，因为时间的问题，我<strong>此时的计划只准备线上赛，线下全权交给学弟和组长</strong>。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="全模型线上赛">全模型线上赛<a href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1#%E5%85%A8%E6%A8%A1%E5%9E%8B%E7%BA%BF%E4%B8%8A%E8%B5%9B" class="hash-link" aria-label="全模型线上赛的直接链接" title="全模型线上赛的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="全模型线上赛">全模型线上赛<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E5%85%A8%E6%A8%A1%E5%9E%8B%E7%BA%BF%E4%B8%8A%E8%B5%9B" class="hash-link" aria-label="全模型线上赛的直接链接" title="全模型线上赛的直接链接">​</a></h3>
 <p>因此，虽然此时我有打算考研考出去，但是没有做好足够的心理准备，也是借着竞赛的理由奔波在实验室，甚至就把实验室当宿舍。</p>
 <p>每日三点一线般的准备着：<strong>1比赛2绩点3考研</strong>。显然最后一者是我相当排斥的，所以准备也就最少。而比赛上打算想我之前的学长学习，就一口气报了好几个，大疆天途无人机组，百度完全模型组，智能机器人啥的几乎能报的都报了个遍。</p>
 <p>而前期的准备对我来说也是一种别样的学习。由于去年的线上赛全程都是我的学长在做，所有我几乎是从零开始学习用aistudio调参，怎么训练模型，怎么用脚本后台任务挂机。所幸在跑了大概1个多月后，也查看了很多大佬的一些项目baseline讲解，加上各种多尺度，调阈值，换模型，数据增强，模型的score达到了排行榜的<strong>第十名</strong>。除去最上面的一些重复的账号，应该排在第五了。</p>
 <p>或许我也没想到，自从这之后，模型的F1-score就再也没能提上去了。最终定格在74名。但是在整个华南赛区大概是前5，也还算比较满意了哈哈。（实际也只有区赛会算一点线上赛的分数）</p>
 <p>报这些组别其实有一个很吸引我的点，因为我对单片机并没有那么熟悉，大多数时候都是用的一些基本功能，而用ubuntu系统和各式各样的边缘计算设备总给我一种很高级的感觉（因为贵）。这段时间也算是更加熟悉了一些有意思的东西，<strong>例如用贝叶斯曲线做曲线拟合，用霍夫检测视频帧里的固定形状，多线程去同时运行目标检测和姿态控制。</strong></p>
 <p>虽说原理还不是很理解，就像哪些自动控制原理或者现代控制原理书上那些苦涩难懂的公式一样，我并不打算去深入理解其含义，也不需要去理解那么深入，只要代码能运行，车子能跑，对比赛来说跑的好就行。<strong>这样的唯结果论是我目前最赞同的。</strong></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="设备租借备赛">设备租借备赛<a href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1#%E8%AE%BE%E5%A4%87%E7%A7%9F%E5%80%9F%E5%A4%87%E8%B5%9B" class="hash-link" aria-label="设备租借备赛的直接链接" title="设备租借备赛的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="设备租借备赛">设备租借备赛<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E8%AE%BE%E5%A4%87%E7%A7%9F%E5%80%9F%E5%A4%87%E8%B5%9B" class="hash-link" aria-label="设备租借备赛的直接链接" title="设备租借备赛的直接链接">​</a></h3>
 <p>我其实非常疑惑，这种技术性的竞赛，免费租借的名额竟然是靠一个赛季规划文档来决定的，对我来说的就像是自动化专业天天学ppt怎么做，怎么好看怎么拿奖。这种行为还被学校的大多数人校所支持，一堆人搞着哪些所谓的大创，不知道用着多少年前的项目，不断得增添各种花里胡哨的功能，甚至原封不动上交，拿个优秀结题，或者什么大创的奖，然后综测和保研嘎嘎加分。</p>
 <p>在我看来这种行为需要的只是机灵而已，根本就不需要具体做些什么东西，即使我也做过类似的大创，但是也并不觉得光彩，只是一些学长赚钱的工具罢了。<strong>我承认这些项目中确实有那种有些技术性的东西在，但是甚至比不过滥竽充数的大多数。</strong></p>
 <p>所幸借助着学弟和Chatgpt的力量，线上文档成绩在<strong>前30直接免费get大疆无人机和rm小车租借资格</strong>！</p>
@@ -978,17 +1129,17 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBTUC.jpg" alt="OvBTUC.jpg" class="img_ev3q"></p>
 <p>正好机器人线上赛去年也是我的学长做的，今年开始自己学着用python写几个简单的图像处理demo，拿个60分还是不算太难。也上传了github <a href="https://github.com/cowqer/2023international-online-competition-of-auto-running-robots" target="_blank" rel="noopener noreferrer">here！</a> 因为写的比较简单，所以也没在意细节，反正也只是反复提交和刷分。</p>
 <p>题目的内容几乎都是对赛道上的一些简单图像做元素识别，输出目标图形的圆心和半径，或者是多边形的中心点坐标和长宽。并不算太复杂，但是要多提交比对，因为参考数据比较少，验证集大概也只有20多个吧,大多数的图像学和边缘检测加上多边形检测就基本够用了。</p>
-<p><img loading="lazy" alt="7.jpg" src="https://cq.seekyou.fun/zh-Hans/assets/images/7-96960957eb31be429b47e4eb77f6a738.jpg" width="505" height="364" class="img_ev3q"></p>
+<p><img loading="lazy" alt="7.jpg" src="https://2seekyou.github.io/zh-Hans/assets/images/7-96960957eb31be429b47e4eb77f6a738.jpg" width="505" height="364" class="img_ev3q"></p>
 <p>两台小机器人</p>
 <p>上文说到我此时的计划只准备线上赛，线下全权交给学弟和组长。但是事实是组长直接开头到结尾没来过，硬件也差不多，几乎就学弟一个人在搞。我自己也想以比赛为借口逃避考研，也有想借着无人机大赛冲刺国特，直接保外的想法。虽然我知道我自己的任务已经完成了，<strong>但是整个组毕竟在这里，我做不出来半途而废的举动，也不想整个组就此解散，我也没有办法，我也不是这种性格。</strong></p>
 <p>或许比赛对我的意义已经不打了，但是在我看来，这是我的提议才有的组别，这是我起初识人有误才导致的结果，我应该要负起这个责任。总而言之就是依旧在比赛上又花了不少心思，自己又重新成了组长开始一点点接手，重新拉人一起做硬件，帮着和学弟一起调车一起熬夜。</p>
 <p>顺便还看到隔壁计网院的考研上岸率···我看着就感觉到害怕，也更不想去复习了。
 （只存在了一天，怀疑是觉得不太光荣就被撕掉了）</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBWsi.jpg" alt="OvBWsi.jpg" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="确定保研之后">确定保研之后<a href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1#%E7%A1%AE%E5%AE%9A%E4%BF%9D%E7%A0%94%E4%B9%8B%E5%90%8E" class="hash-link" aria-label="确定保研之后的直接链接" title="确定保研之后的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="确定保研之后">确定保研之后<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E7%A1%AE%E5%AE%9A%E4%BF%9D%E7%A0%94%E4%B9%8B%E5%90%8E" class="hash-link" aria-label="确定保研之后的直接链接" title="确定保研之后的直接链接">​</a></h2>
 <p>即使这学期的绩点几乎满绩，但最终排名定格还差10名左右。<strong>没能保送外校</strong>。但是我也做好了心理准备，也接受了事实，还安慰自己没事，反正本校老师啥都熟，以后出去读博什么的也方便。
 而且这个时候的比赛还在继续，要达到89月份的话也没什么备考时间留给我了，我也就顺利成章成功地逃避考研继续之后的比赛。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="旅游--比赛-1">旅游 + 比赛 1<a href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1#%E6%97%85%E6%B8%B8--%E6%AF%94%E8%B5%9B-1" class="hash-link" aria-label="旅游 + 比赛 1的直接链接" title="旅游 + 比赛 1的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="旅游--比赛-1">旅游 + 比赛 1<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E6%97%85%E6%B8%B8--%E6%AF%94%E8%B5%9B-1" class="hash-link" aria-label="旅游 + 比赛 1的直接链接" title="旅游 + 比赛 1的直接链接">​</a></h3>
 <p>在完全模型的华南区赛结束后，我们马上开始准备了无人机组的重庆西部赛区比赛，时间很短，<strong>满打满算可能也不超过5天的备赛时间</strong>。
 几乎是天天通宵，一口气都没歇过直奔重庆。好在线下的比赛难度不是很大，简单的完赛还是做到了，<strong>国二GET</strong>！也就顺理成章地正式进入完赛后的旅游环节！
 <img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBkaX.jpg" alt="OvBkaX.jpg" class="img_ev3q"></p>
@@ -997,7 +1148,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p>重庆最高点的夜景</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBqRS.jpg" alt="OvBqRS.jpg" class="img_ev3q"></p>
 <p>顺带也去了一趟成都，四川的麻辣豆花，very nice！</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="旅游--比赛-2">旅游 + 比赛 2<a href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1#%E6%97%85%E6%B8%B8--%E6%AF%94%E8%B5%9B-2" class="hash-link" aria-label="旅游 + 比赛 2的直接链接" title="旅游 + 比赛 2的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="旅游--比赛-2">旅游 + 比赛 2<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E6%97%85%E6%B8%B8--%E6%AF%94%E8%B5%9B-2" class="hash-link" aria-label="旅游 + 比赛 2的直接链接" title="旅游 + 比赛 2的直接链接">​</a></h3>
 <p><strong>最意想不到的事情是又进了国赛</strong>···原本打算放暑假了，卓大发的推文出来，卡线华南最后一名进国赛了。所以又加上一段<strong>智能车国赛·天津之旅</strong>。
 <img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBzGx.jpg" alt="OvBzGx.jpg" class="img_ev3q"></p>
 <p>天津工业大学</p>
@@ -1008,7 +1159,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p>大疆天空之城</p>
 <p>所以这段就变成北京-天津-深圳之旅。总而言之就是通过比赛，我几乎跑遍全国主要的东西南北——<strong>南京 成都 深圳 北京</strong>。最后旅途结束时收获满满一把车票!!</p>
 <p><img loading="lazy" src="https://ooo.0x0.ooo/2024/01/16/OvBFIj.jpg" alt="OvBFIj.jpg" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="上半年总结">上半年总结<a href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1#%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%80%BB%E7%BB%93" class="hash-link" aria-label="上半年总结的直接链接" title="上半年总结的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="上半年总结">上半年总结<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%80%BB%E7%BB%93" class="hash-link" aria-label="上半年总结的直接链接" title="上半年总结的直接链接">​</a></h2>
 <p>上半年其实并不只是展现在这里的风光，也有很多七七八八的烦心事或者说觉得做的很差的地方。为什么这么说呢？<strong>因为我上半年几乎都没有认真的学习过</strong>。</p>
 <p>当然我指的是技术方面，学校的课程我还是有认真准备复习的😅。比赛几个月中途用到的许多东西都是在已有的<strong>基础上进行二次开发或者只是繁琐的PID调参</strong>，对我个人来说并没有真正学习到有用的技术，或者说思想上有什么很大的突破。</p>
 <p>加上去年年底出来的chatgpt，我就变得更懒惰了，反而不会像以前一样认认真真去看他人的博客，长期性不加思考的cv大法让我觉得相当空虚，有一种仿佛什么都学了但是什么都没有学到的感觉。虽然在没出现gpt之前我也有过类似的行为，但有一些遇到的问题还是会自己思考，去想办法搞懂。但是现在就算是出现了什么问题我也只是把问题再抛给gpt，让他去思考。仿佛成了一个只会复制粘贴的工具人···
@@ -1016,7 +1167,7 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p>我不得不承认gpt的出现大幅度提升了我的工作效率，借着gpt的力量今年我才能在很多地方领先一步其他快一年还有人不知道gpt的人。我也喜欢借着一些类似的语言麻痹自己，让自己心安：这种东西只能算是工具罢了，我使用的工具产生的生产结果为什么不能算我的个人所获呢？举个例子，我用gpt生产的论文为什么不算我自己的呢？</p>
 <p>这样一番话看似冠冕堂皇，但是也存在一些悖论在其中，就是关于gpt的定义是否真的只是工具？一旦他的生产效益过大，超过了简单的工具定义，例如现在github上一些利用gpt生成大型项目的开源项目，这样庞大的生产效益，但是你只需要提供几个关键词prompt说的详细，总感觉有些过于玄乎。</p>
 <p>不下于哈利波特中的魔咒一般，10个字母不到就能变得如此神奇。而需要的只不过是想象力罢了——很相像对吧？就是这么神奇，对现在的我来说感觉到相当恐惧，仿佛以后只需要人们会写prompt去生产代码，根据效果再反馈给他改进，运行测试过程的bug就反复抛给他就行——而实际上我早已经开始这么做了···</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023终点站上海">2023·终点站·上海<a href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1#2023%E7%BB%88%E7%82%B9%E7%AB%99%E4%B8%8A%E6%B5%B7" class="hash-link" aria-label="2023·终点站·上海的直接链接" title="2023·终点站·上海的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023终点站上海">2023·终点站·上海<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#2023%E7%BB%88%E7%82%B9%E7%AB%99%E4%B8%8A%E6%B5%B7" class="hash-link" aria-label="2023·终点站·上海的直接链接" title="2023·终点站·上海的直接链接">​</a></h2>
 <p>下半年可以理解为在上海的一段小实习经历，美其名曰在上交做科研助理，实际不过是在这边打点什么杂活。但是也有不少收获——对<strong>Linux系统，C++，实际Project</strong>的理解又进了一步。比起在校内，更多的扩宽了眼界——或者说是自己的行动力——开始自己主动搜索各种信息，对外界的认识又迈出了一步。</p>
 <p>大约在一年前，我的学长曾告诉过我很多工作要用的东西可以提前学习熟悉。例如<strong>git这种版本管理工具</strong>，<strong>在那种长期的比赛中是相当实用的</strong>，比起我一直以来的复制粘贴高效多了。例如叫我用一些<strong>前端框架搭建个人博客</strong>，只是我当时完全听不懂他在讲什么，太多东西都是我没听过的，差距太大宛如我上周在交大听毕业博士学姐的学术汇报，从题目开始就没听懂过——还是中文的，结果很多东西你越是想理解，你就越累越会犯困。</p>
 <p>现在想想也挺后悔的。之前学长的好多意见我都没有采纳。想着靠学长，靠他人。自己却从没认真从头做起，导致对很多东西一知半解。问起来还是得百度或者gpt。</p>
@@ -1025,11 +1176,11 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
 <p>这是我在学校里打两年比赛所不能及的。虽然我认为这样的基础知识去实习大概率还是可以学到，但是我的原计划中暂时还没有包括这一段。很多新鲜的想法。各种新鲜工具的使用，都是来这里之后才有的。真不戳，虽然在人与人日常交流和生活中也有一些让人不愉快的地方，但是勉强还可以接受。</p>
 <p>下面是一点点小记录：</p>
 <iframe src="//player.bilibili.com/player.html?aid=705508583&amp;bvid=BV1PQ4y1n7ih&amp;cid=1323057440&amp;p=1" width="100%" height="500px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024设想">2024·设想<a href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1#2024%E8%AE%BE%E6%83%B3" class="hash-link" aria-label="2024·设想的直接链接" title="2024·设想的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024设想">2024·设想<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#2024%E8%AE%BE%E6%83%B3" class="hash-link" aria-label="2024·设想的直接链接" title="2024·设想的直接链接">​</a></h2>
 <p>这一段实际上是24年3月再补上的：
 24年即将开启我的研一生活：我希望能对互联网上各种技术都能有所了解，至少不要像去年下半年别人聊天我听都听不懂。。。
 我还在Notion中给自己订下了20项挑战：有技术上的，有生活上的，对我而言，恐怕很难全部实现——尤其是找对象的事情...当然，这个不急。对我来说，今年更多的任务是学习，对之前所有涉及的东西进行一个回顾和沉淀。学的东西太杂，有意思的东西太多，空闲的时间太少，遗憾太多，愿望太少。因此，今年的笔记部分应该会很多，项目上应该也有部分更新。争取在2024再创下几件能让自己认可自己的事情吧！</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="后谈">后谈<a href="https://cq.seekyou.fun/zh-Hans/blog/2023-sum-up-1#%E5%90%8E%E8%B0%88" class="hash-link" aria-label="后谈的直接链接" title="后谈的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="后谈">后谈<a href="https://2seekyou.github.io/zh-Hans/blog/2023-sum-up-1#%E5%90%8E%E8%B0%88" class="hash-link" aria-label="后谈的直接链接" title="后谈的直接链接">​</a></h2>
 <p><strong>很多时候我自己认为的坏事可能不一定是坏事，不能总是局限于当下私认为。等过了半年，一年以一个事后的角度来看，貌似也没那么差。以我自己的经历来看，我们无时不刻不在做着各种各样的选择，时好时坏，但是是好是坏并不是当时就能看出来的。一旦做出了抉择，就不要后悔。做好当下之事，以待转机并且牢牢抓住它。这也是我这一年总结下来的经验。</strong></p>
 <p>很喜欢这句话，<strong>看似安身守命，以待天时。实则以不变应万变，韬光养晦，厚积而薄发。望与诸君共勉</strong>！</p>
 <blockquote>
@@ -1046,8 +1197,8 @@ ORB/SIFT 关键点 + 深度学习特征匹配（提升低分辨率检测能力�
     </entry>
     <entry>
         <title type="html"><![CDATA[欢迎来到SeekYou！]]></title>
-        <id>https://cq.seekyou.fun/zh-Hans/blog/Welcome-to-seekyous-blog</id>
-        <link href="https://cq.seekyou.fun/zh-Hans/blog/Welcome-to-seekyous-blog"/>
+        <id>https://2seekyou.github.io/zh-Hans/blog/Welcome-to-seekyous-blog</id>
+        <link href="https://2seekyou.github.io/zh-Hans/blog/Welcome-to-seekyous-blog"/>
         <updated>2023-12-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[欢迎来到崔的小站]]></summary>
         <content type="html"><![CDATA[<p><strong>欢迎来到崔的小站</strong></p>]]></content>
