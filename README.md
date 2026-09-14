@@ -25,6 +25,7 @@ pnpm serve
 - `profile`：姓名、身份、邮箱、个人简介。
 - `researchInterests`：研究兴趣。
 - `publications`：已发表或已录用论文，页面会按年份倒序排列。
+- `worksInReview`：二审、在投等尚未正式发表的成果，与正式成果分区展示。
 - `projects`：研究与工程项目。
 - `experiences`：教育及研究经历。
 - `awards`：代表性荣誉。
@@ -39,6 +40,7 @@ pnpm serve
 
 - `/`：学术首页
 - `/scholar`：研究方向、论文、项目与荣誉
+- `/awards`：奖学金、荣誉称号与竞赛获奖记录
 - `/introduce`：个人介绍
 - `/blog`：原创文章与随笔
 - `/docs/all-skill-intro`：研究与技术笔记

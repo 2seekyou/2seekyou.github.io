@@ -40,6 +40,7 @@ export const publications = [
     year: 2026,
     type: 'Journal',
     status: 'Published',
+    statusLabel: '已发表',
     title: 'Multidirectional Rotation-Aware Network for Oriented Ship Detection From Remote Sensing Imagery',
     authors: 'Quan Cui, Yan Zhou, Gaodian Zhou, Jianxun Li, Xiaolin Zhu, Richard Irampaye',
     venue: 'IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, Vol. 19, pp. 190–208',
@@ -55,11 +56,52 @@ export const publications = [
     year: 2026,
     type: 'Conference',
     status: 'Accepted',
+    statusLabel: '已录用 · Oral',
     title: 'Few-Shot Segmentation of Mining Areas via Adaptive Prior Enhancement and Selective Edge Attention',
     authors: 'Quan Cui, Longzhou Hu, Yan Zhou, Gaodian Zhou',
     venue: '2026 IEEE International Geoscience and Remote Sensing Symposium (IGARSS)',
     note: 'Oral presentation · First author',
     links: [{label: 'Program', url: 'https://2026.ieeeigarss.org/search.php?show=search'}],
+  },
+  {
+    id: 'mining-multimodal-big-earth-data',
+    type: 'Journal',
+    status: 'Published',
+    statusLabel: '见刊',
+    yearLabel: '年份待补充',
+    title: 'Multimodal Information Fusion and Multi-Scale Edge Enhancement Method for Open-Pit Mining Land Cover Segmentation',
+    authors: '作者列表待补充；Quan Cui（第 4 作者）',
+    venue: 'Big Earth Data',
+    note: '第 4 作者 · 二区',
+    links: [],
+  },
+];
+
+/** 审稿状态可能变化，更新时请同步核对日期与投稿状态。 @type {import('../types/academic').Publication[]} */
+export const worksInReview = [
+  {
+    id: 's2am-net-isprs-under-review',
+    type: 'Journal',
+    status: 'Second Review',
+    statusLabel: '二审',
+    yearLabel: 'Under Review',
+    title: 'S²AM-Net: Structure-Semantic SAM-Guided Network for Few-Shot Segmentation in Mining Areas',
+    authors: 'Quan Cui et al.',
+    venue: 'ISPRS Journal of Photogrammetry and Remote Sensing',
+    note: 'First author · 一区 TOP',
+    links: [],
+  },
+  {
+    id: 'reliable-memory-sam2-under-review',
+    type: 'Conference',
+    status: 'Submitted',
+    statusLabel: '在投',
+    yearLabel: 'Under Review',
+    title: 'Learning Reliable Memory Refinement for Few-Shot Remote Sensing Segmentation via SAM2',
+    authors: 'Quan Cui et al.',
+    venue: 'AAAI Conference on Artificial Intelligence',
+    note: 'First author · CCF A',
+    links: [],
   },
 ];
 
@@ -90,11 +132,17 @@ export const experiences = [
 
 /** @type {import('../types/academic').Award[]} */
 export const awards = [
-  {year: '2024', title: '第十九届全国大学生智能汽车竞赛地平线智慧医疗组', level: '全国一等奖'},
-  {year: '2023', title: '第十八届全国大学生智能汽车竞赛百度完全模型组', level: '全国二等奖'},
-  {year: '2023', title: '第十八届全国大学生智能汽车竞赛大疆天途创意组', level: '全国二等奖'},
-  {year: '2022', title: '第十七届全国大学生智能汽车竞赛室外专项赛', level: '全国一等奖'},
-  {year: '2022', title: '第十七届全国大学生智能汽车竞赛百度完全模型组', level: '全国二等奖'},
+  {date: '2026.05', title: '湘潭大学“易事特”奖学金（2%）', level: '校级'},
+  {date: '2024.08', title: '第十九届全国大学生智能汽车竞赛地平线智慧医疗组全国一等奖', level: '国家级'},
+  {date: '2024.06', title: '湘潭大学优秀毕业生', level: '校级'},
+  {date: '2023.12', title: '湘潭大学三好学生', level: '校级'},
+  {date: '2023.10', title: '湘潭大学优秀决赛团队', level: '校级'},
+  {date: '2023.10', title: '湘潭大学甲等奖学金', level: '校级'},
+  {date: '2023.08', title: '第十八届全国大学生智能汽车竞赛百度完全模型组全国二等奖', level: '国家级'},
+  {date: '2023.07', title: '第十八届全国大学生智能汽车竞赛大疆-天途创意组全国二等奖', level: '国家级'},
+  {date: '2022.12', title: '第十七届全国大学生智能汽车竞赛室外专项赛全国一等奖', level: '国家级'},
+  {date: '2022.08', title: '全球智能自主机器人比赛优秀奖', level: '国际级'},
+  {date: '2022.08', title: '全国大学生智能汽车竞赛百度完全模型组全国二等奖', level: '国家级'},
 ];
 
 export const skills = {
@@ -107,4 +155,10 @@ export const featuredPosts = [
   {title: '关于遥感检测与分割', description: '从目标检测、语义分割与少样本学习出发，介绍当前研究方向。', to: '/blog/intro_me', tag: 'Research'},
   {title: '有关视觉识别领域发展的观点', description: '围绕视觉表征、域差异与开放域识别记录思考。', to: '/blog/CV-Talk', tag: 'Perspective'},
   {title: '竞赛经验分享', description: '从智能车与电子设计竞赛中总结工程实践和团队协作经验。', to: '/blog/shareing', tag: 'Experience'},
+];
+
+export const homeHighlights = [
+  {date: '2026', label: 'Journal', title: 'MDR-Net 发表于 IEEE JSTARS', to: '/scholar'},
+  {date: '2026', label: 'Conference', title: '矿区少样本分割工作获 IGARSS Oral 录用', to: '/scholar'},
+  {date: '2026.05', label: 'Honor', title: '获湘潭大学“易事特”奖学金', to: '/awards'},
 ];

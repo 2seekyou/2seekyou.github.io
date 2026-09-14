@@ -33,7 +33,7 @@ export function InterestGrid({items}) {
 }
 
 export function PublicationList({items}) {
-  const sorted = [...items].sort((a, b) => b.year - a.year);
+  const sorted = [...items].sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
   const renderAuthors = (authors) => {
     const [before, after = ''] = authors.split('Quan Cui');
     return <>{before}<strong>Quan Cui</strong>{after}</>;
@@ -42,19 +42,17 @@ export function PublicationList({items}) {
     <div className={styles.publicationList}>
       {sorted.map((publication) => (
         <article className={styles.publication} key={publication.id}>
-          <div className={styles.publicationYear}>{publication.year}</div>
+          <div className={styles.publicationYear}>{publication.year ?? publication.yearLabel}</div>
           <div className={styles.publicationBody}>
             <div className={styles.publicationMeta}>
               <span>{publication.type}</span>
-              <span className={publication.status === 'Published' ? styles.published : styles.accepted}>{publication.status}</span>
+              <span className={publication.status === 'Published' ? styles.published : publication.status === 'Accepted' ? styles.accepted : styles.reviewing}>{publication.statusLabel}</span>
               {publication.note && <span>{publication.note}</span>}
             </div>
             <Heading as="h3">{publication.title}</Heading>
             <p className={styles.authors}>{renderAuthors(publication.authors)}</p>
             <p className={styles.venue}>{publication.venue}</p>
-            <div className={styles.linkRow}>
-              {publication.links.map((link) => <Link href={link.url} key={link.url}>{link.label} ↗</Link>)}
-            </div>
+            {publication.links.length > 0 && <div className={styles.linkRow}>{publication.links.map((link) => <Link href={link.url} key={link.url}>{link.label} ↗</Link>)}</div>}
           </div>
         </article>
       ))}
@@ -94,11 +92,12 @@ export function ProjectGrid({items}) {
 }
 
 export function AwardList({items}) {
+  const sorted = [...items].sort((a, b) => b.date.localeCompare(a.date));
   return (
     <div className={styles.awardList}>
-      {items.map((award) => (
-        <article key={`${award.year}-${award.title}`}>
-          <span>{award.year}</span>
+      {sorted.map((award) => (
+        <article key={`${award.date}-${award.title}`}>
+          <span>{award.date}</span>
           <div><Heading as="h3">{award.title}</Heading><strong>{award.level}</strong></div>
         </article>
       ))}

@@ -70,3 +70,9 @@ body {background: var(--academic-bg);}
 :focus-visible {outline: 3px solid color-mix(in srgb, var(--academic-blue) 35%, transparent); outline-offset: 3px;}
 @media(max-width:760px){.academicSection{padding:3.8rem 0}.aboutLead{gap:2.2rem;grid-template-columns:1fr}.aboutLead>img{max-width:240px}.skillColumns{grid-template-columns:1fr}.academicPageHero .container{padding-bottom:3rem;padding-top:3rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.blogSidebarMore{border-top:1px solid var(--academic-border);display:block;font-size:.78rem;font-weight:750;margin-top:1.25rem;padding-top:1rem;text-decoration:none}
+.awardStats{display:grid;gap:.8rem;grid-template-columns:repeat(4,1fr);margin-bottom:4rem}
+.awardStats>div{background:var(--academic-tint);border:1px solid var(--academic-border);border-radius:10px;display:flex;flex-direction:column;padding:1.25rem;text-align:center}
+.awardStats strong{color:var(--academic-blue);font-family:var(--academic-serif);font-size:2rem;line-height:1}
+.awardStats span{color:var(--academic-muted);font-size:.72rem;margin-top:.55rem}
+@media(max-width:760px){.awardStats{grid-template-columns:repeat(2,1fr);margin-bottom:3rem}}

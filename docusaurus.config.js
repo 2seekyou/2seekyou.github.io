@@ -96,6 +96,8 @@ const config = {
           showReadingTime: true,
           blogTitle: '文章与随笔',
           blogDescription: '记录遥感、计算机视觉、工程实践与沿途思考',
+          blogSidebarTitle: '近期文章',
+          blogSidebarCount: 10,
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
           postsPerPage: 8,
@@ -130,6 +132,7 @@ const config = {
       items: [
         {to: '/', label: '首页', position: 'left'},
         {to: '/scholar', label: '学者', position: 'left'},
+        {to: '/awards', label: '获奖成果', position: 'left'},
         {to: '/blog', label: '博客', position: 'left'},
         {to: '/docs/all-skill-intro', label: '研究笔记', position: 'left'},
         {to: '/introduce', label: '关于我', position: 'left'},
@@ -143,6 +146,7 @@ const config = {
           title: '学术',
           items: [
             {label: '研究与成果', to: '/scholar'},
+            {label: '获奖成果', to: '/awards'},
             {label: '研究博客', to: '/blog/tags/research'},
             {label: '研究笔记', to: '/docs/all-skill-intro'},
           ],

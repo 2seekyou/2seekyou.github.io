@@ -3,8 +3,8 @@ import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import {InterestGrid, PublicationList, SectionTitle, Timeline} from '../components/Academic';
-import {experiences, featuredPosts, profile, publications, researchInterests} from '../data/academic';
+import {SectionTitle} from '../components/Academic';
+import {featuredPosts, homeHighlights, profile} from '../data/academic';
 import styles from './index.module.css';
 
 function Hero() {
@@ -43,34 +43,16 @@ export default function Home() {
         <Hero />
         <section className="academicSection">
           <div className="container">
-            <SectionTitle eyebrow="Research Interests" title="研究兴趣" description="围绕数据稀缺、尺度变化和复杂空间结构，探索遥感影像理解中的可靠视觉学习方法。" />
-            <InterestGrid items={researchInterests} />
-          </div>
-        </section>
-        <section className="academicSection academicSection--tint">
-          <div className="container">
-            <SectionTitle eyebrow="Selected Publications" title="代表性成果" description="展示已正式发表或录用的研究成果。" action={<Link className="academicLink" to="/scholar">查看全部成果 →</Link>} />
-            <PublicationList items={publications} />
-          </div>
-        </section>
-        <section className="academicSection">
-          <div className={`container ${styles.twoColumn}`}>
-            <div>
-              <SectionTitle eyebrow="Academic Path" title="研究经历" />
-              <Timeline items={experiences} />
-            </div>
-            <div>
-              <SectionTitle eyebrow="Writing" title="近期文章" />
-              <div className={styles.postList}>
-                {featuredPosts.map((post) => (
-                  <Link to={post.to} className={styles.postCard} key={post.to}>
-                    <span>{post.tag}</span><Heading as="h3">{post.title}</Heading><p>{post.description}</p><b>阅读全文 →</b>
-                  </Link>
-                ))}
-              </div>
+            <SectionTitle eyebrow="Explore" title="了解我的工作" description="首页保留概览，完整研究、荣誉与个人经历分别进入独立栏目。" />
+            <div className={styles.gatewayGrid}>
+              <Link to="/scholar" className={styles.gatewayCard}><span>01</span><Heading as="h2">学术研究</Heading><p>研究方向、论文成果、审稿中工作与研究项目。</p><b>进入学者栏目 →</b></Link>
+              <Link to="/awards" className={styles.gatewayCard}><span>02</span><Heading as="h2">获奖成果</Heading><p>奖学金、荣誉称号及智能汽车竞赛获奖记录。</p><b>查看荣誉记录 →</b></Link>
+              <Link to="/introduce" className={styles.gatewayCard}><span>03</span><Heading as="h2">个人介绍</Heading><p>教育经历、技术能力、研究理念与科研之外。</p><b>阅读关于我 →</b></Link>
             </div>
           </div>
         </section>
+        <section className="academicSection academicSection--tint"><div className="container"><SectionTitle eyebrow="Latest Highlights" title="近期动态"/><div className={styles.highlightList}>{homeHighlights.map((item) => <Link to={item.to} key={`${item.date}-${item.title}`}><time>{item.date}</time><span>{item.label}</span><strong>{item.title}</strong><b>→</b></Link>)}</div></div></section>
+        <section className="academicSection"><div className="container"><SectionTitle eyebrow="Writing" title="近期文章" action={<Link className="academicLink" to="/blog">查看更多文章 →</Link>}/><div className={styles.postList}>{featuredPosts.map((post) => <Link to={post.to} className={styles.postCard} key={post.to}><span>{post.tag}</span><Heading as="h3">{post.title}</Heading><p>{post.description}</p><b>阅读全文 →</b></Link>)}</div></div></section>
       </main>
     </Layout>
   );
