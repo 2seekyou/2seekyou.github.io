@@ -1,79 +1,77 @@
-import clsx from 'clsx';
-//import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import BottomFeatures from '../components/HomepageFeatures/bottom';
-
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
 import React from 'react';
-import MusicPlayer from '../components/HomepageFeatures/MusicPlayer';
-import Translate, {translate} from '@docusaurus/Translate';
-import kunkun from '../components/HomepageFeatures/kunkun'; // 导入组件 必要的 不然会导致下方显示出bug
+import Link from '@docusaurus/Link';
+import Layout from '@theme/Layout';
+import Heading from '@theme/Heading';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import {InterestGrid, PublicationList, SectionTitle, Timeline} from '../components/Academic';
+import {experiences, featuredPosts, profile, publications, researchInterests} from '../data/academic';
+import styles from './index.module.css';
 
-//调用自congig.js中的siteConfig
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  const handleImageClick = (event) => {
-    event.preventDefault();
-  };
-
+function Hero() {
+  const avatar = useBaseUrl(profile.avatar);
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1
-          style={{
-            fontSize: '3.5rem',  // 调整字体大小
-            fontWeight: 'bold',
-            color: '#fff',
-            fontDisplay: 'swap',  // 需要在 CSS 中使用 `font-display`，内联样式可能不支持
-            textAlign: 'center',
-            marginTop: '0',
-            marginBottom: '1rem'
-          }}
-        >
-          <Translate>
-          Seekyou's site
-          </Translate>
-        </h1>
-        <a href="https://git.io/typing-svg" onClick={handleImageClick} className={styles.linkRight}>
-          <img
-            src="https://readme-typing-svg.demolab.com?font=Roboto&size=25&duration=1500&pause=50000&color=F7F7F7&center=true%C2%A0%E7%9C%9F&Center=Ture%C2%A0%E5%81%87&repeat=true%C2%A0%E7%9C%9F&random=false%C2%A0%E5%81%87&width=441&lines= ->>+++Hello!++This+is+seekyou++(*%C2%B4%E2%88%80%60)++~++%E2%99%A5++<<-"
-            alt="Typing SVG"
-          />
-        </a>
-        <div className="button-container">
-          <BottomFeatures />
+    <header className={styles.hero}>
+      <div className={`container ${styles.heroGrid}`}>
+        <div className={styles.heroCopy}>
+          <span className={styles.kicker}>REMOTE SENSING · COMPUTER VISION</span>
+          <Heading as="h1"><span>{profile.nameZh}</span><small>{profile.nameEn}</small></Heading>
+          <p className={styles.role}>{profile.roleZh}<br/><span>{profile.roleEn}</span></p>
+          <p className={styles.bio}>{profile.bio}</p>
+          <div className={styles.actions}>
+            <Link className="button button--primary button--lg" to="/scholar">研究与成果</Link>
+            <Link className="button button--outline button--lg" to="/blog">文章与随笔</Link>
+          </div>
+          <div className={styles.contactRow}>
+            <a href={`mailto:${profile.email}`}>Email</a><span>/</span>
+            <a href={profile.github}>GitHub</a><span>/</span>
+            <span>{profile.affiliation}</span>
+          </div>
+        </div>
+        <div className={styles.portraitWrap}>
+          <div className={styles.portraitFrame}><img src={avatar} alt="崔全 Quan Cui" /></div>
+          <div className={styles.portraitNote}><b>Research Focus</b><span>Reliable perception for remote sensing imagery</span></div>
         </div>
       </div>
     </header>
   );
 }
 
-
-
-//主页结构
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`${siteConfig.title}的小站`}
-      description="Blog of Seekyou | Hello from cq">
-      <HomepageHeader />
-      <MusicPlayer />
+    <Layout title="学术主页" description="崔全的个人学术主页，研究方向包括遥感目标检测、少样本遥感分割与视觉基础模型。">
       <main>
-      <HomepageFeatures />
+        <Hero />
+        <section className="academicSection">
+          <div className="container">
+            <SectionTitle eyebrow="Research Interests" title="研究兴趣" description="围绕数据稀缺、尺度变化和复杂空间结构，探索遥感影像理解中的可靠视觉学习方法。" />
+            <InterestGrid items={researchInterests} />
+          </div>
+        </section>
+        <section className="academicSection academicSection--tint">
+          <div className="container">
+            <SectionTitle eyebrow="Selected Publications" title="代表性成果" description="展示已正式发表或录用的研究成果。" action={<Link className="academicLink" to="/scholar">查看全部成果 →</Link>} />
+            <PublicationList items={publications} />
+          </div>
+        </section>
+        <section className="academicSection">
+          <div className={`container ${styles.twoColumn}`}>
+            <div>
+              <SectionTitle eyebrow="Academic Path" title="研究经历" />
+              <Timeline items={experiences} />
+            </div>
+            <div>
+              <SectionTitle eyebrow="Writing" title="近期文章" />
+              <div className={styles.postList}>
+                {featuredPosts.map((post) => (
+                  <Link to={post.to} className={styles.postCard} key={post.to}>
+                    <span>{post.tag}</span><Heading as="h3">{post.title}</Heading><p>{post.description}</p><b>阅读全文 →</b>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <div className="custom-image-container">
-      <img
-        src="https://gw.alicdn.com/imgextra/O1CN01rOGq191KlTe1YyiZM_!!6000000001204-2-yinhe.png_.webp"
-        alt=""
-        className="custom-image"
-      />
-      
-    </div>
     </Layout>
-    
   );
 }

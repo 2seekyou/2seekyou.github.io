@@ -2,7 +2,7 @@
 slug: CV-Talk
 title:  有关视觉识别领域发展的观点
 authors: [seekyou]
-tags: [Note,seekyou]
+tags: [research, computer-vision, perspective]
 ---
 先对24年华为天才少年谢凌曦的讨论再总结一下（文末括号表示个人的想法）， 后续或许更新自己的一些想法/ideas。
 <!-- truncate -->

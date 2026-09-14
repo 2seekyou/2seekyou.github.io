@@ -1,26 +1,53 @@
-# Website
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
-### Installation
+# Quan Cui Academic Homepage
+
+崔全的个人学术主页，基于 Docusaurus 3.10.2 构建。网站以遥感智能解译研究为主线，保留原创博客与技术笔记。
+
+## 本地运行
+
+需要 Node.js 20+ 和 pnpm。
+
+```bash
+pnpm install
+pnpm start
 ```
-$ yarn
+
+生产构建：
+
+```bash
+pnpm build
+pnpm serve
 ```
-### Local Development
-```
-$ yarn start
-```
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-### Build
-```
-$ yarn build
-```
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-### Deployment
-Using SSH:
-```
-$ USE_SSH=true yarn deploy
-```
-Not using SSH:
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+## 内容维护
+
+学术信息集中在 `src/data/academic.js`：
+
+- `profile`：姓名、身份、邮箱、个人简介。
+- `researchInterests`：研究兴趣。
+- `publications`：已发表或已录用论文，页面会按年份倒序排列。
+- `projects`：研究与工程项目。
+- `experiences`：教育及研究经历。
+- `awards`：代表性荣誉。
+- `skills`：研究、工程与学术能力。
+- `featuredPosts`：首页推荐文章。
+
+新增论文时复制一条 `publications` 记录，保证 `id` 唯一，并填写正式题目、作者、年份、状态与可信链接。在投稿件不放入公开数据文件。
+
+个人头像位于 `static/img/profile/quan-cui.jpg`。替换时沿用文件名即可，无需修改页面。
+
+## 页面
+
+- `/`：学术首页
+- `/scholar`：研究方向、论文、项目与荣誉
+- `/introduce`：个人介绍
+- `/blog`：原创文章与随笔
+- `/docs/all-skill-intro`：研究与技术笔记
+
+## 部署
+
+推送到 `main` 后，GitHub Actions 会自动安装依赖、构建站点并发布到
+`gh-pages` 分支。自定义域名固定写在 `static/CNAME`，构建产物和自动部署都会
+保留 `cq.seekyou.top`，无需每次重新填写 GitHub Pages 的 Custom domain。
+
+首次启用自动部署时，请确认仓库 **Settings → Pages → Build and deployment**
+仍选择 **Deploy from a branch**，分支为 `gh-pages`、目录为 `/ (root)`。

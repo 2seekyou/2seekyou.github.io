@@ -1,11 +1,7 @@
 ---
 slug: first-blog-post
 title: Welcome！
-authors:
-  name: Cui quan
-  title: Maintainer of Site
-  url: https://github.com/cowqer
-  image_url: https://avatars.githubusercontent.com/u/102907373?v=4
+authors: [seekyou]
 tags: [seekyou]
 ---
 

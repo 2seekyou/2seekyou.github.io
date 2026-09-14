@@ -1,31 +1,72 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: rgba(105, 209, 250, 0.979);
-  --ifm-color-primary-dark: #5bccf7;
-  --ifm-color-primary-darker: #49c6f6;
-  --ifm-color-primary-darkest: #13b5f4;
-  --ifm-color-primary-light: #a3e2fb;
-  --ifm-color-primary-lighter: #b5e8fc;
-  --ifm-color-primary-lightest: #ebf9fe;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(213, 191, 191, 0);
+  --ifm-color-primary: #174a78;
+  --ifm-color-primary-dark: #15436c;
+  --ifm-color-primary-darker: #143f66;
+  --ifm-color-primary-darkest: #103454;
+  --ifm-color-primary-light: #195284;
+  --ifm-color-primary-lighter: #1a568a;
+  --ifm-color-primary-lightest: #1e619c;
+  --ifm-font-family-base: Inter, "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  --ifm-heading-font-family: Inter, "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  --ifm-navbar-height: 4.25rem;
+  --ifm-line-height-base: 1.75;
+  --academic-serif: Georgia, "Noto Serif SC", "Songti SC", serif;
+  --academic-navy: #102a46;
+  --academic-blue: #174a78;
+  --academic-accent: #a94343;
+  --academic-muted: #627080;
+  --academic-bg: #fff;
+  --academic-card: #fff;
+  --academic-tint: #f4f7f9;
+  --academic-border: #dfe6eb;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #2dc0fb;
-  --ifm-color-primary-dark: #10b7fa;
-  --ifm-color-primary-darker: #05b2f7;
-  --ifm-color-primary-darkest: #0492cb;
-  --ifm-color-primary-light: #4ac9fc;
-  --ifm-color-primary-lighter: #59cdfc;
-  --ifm-color-primary-lightest: #84dafd;
-  --docusaurus-highlighted-code-line-bg: rgba(150, 150, 253, 0.48);
+  --ifm-color-primary: #75addb;
+  --ifm-background-color: #0c1723;
+  --ifm-background-surface-color: #122130;
+  --academic-navy: #09131e;
+  --academic-blue: #86b9e2;
+  --academic-accent: #df8585;
+  --academic-muted: #a9b4c0;
+  --academic-bg: #0c1723;
+  --academic-card: #122130;
+  --academic-tint: #101d2a;
+  --academic-border: #2a3c4e;
 }
 
+html {scroll-behavior: smooth;}
+body {background: var(--academic-bg);}
+.navbar {border-bottom: 1px solid var(--academic-border); box-shadow: none;}
+.navbar__title {font-family: var(--academic-serif); font-size: 1.05rem; letter-spacing: .04em;}
+.navbar__link {font-size: .86rem; font-weight: 650;}
+.navbar__link--active {color: var(--academic-accent);}
+.navbar__logo img {height: 32px; width: 32px;}
+.footer {background: #081827; border-top: 1px solid #1e3449;}
+.footer__title {font-family: var(--academic-serif); font-size: .9rem;}
+.footer__link-item {font-size: .78rem;}
+.academicSection {padding: 5.5rem 0;}
+.academicSection--tint {background: var(--academic-tint);}
+.academicNarrow {max-width: 900px;}
+.academicLink {color: var(--academic-blue); font-size: .82rem; font-weight: 750; text-decoration: none;}
+.academicLink:hover {color: var(--academic-accent); text-decoration: none;}
+.academicPageHero {background: linear-gradient(120deg, #0b2138, #174a78); color: #fff; overflow: hidden; position: relative;}
+.academicPageHero::after {border: 55px solid rgba(255,255,255,.055); border-radius: 50%; content: ''; height: 330px; position: absolute; right: 8%; top: -165px; width: 330px;}
+.academicPageHero .container {padding-bottom: 4rem; padding-top: 4rem; position: relative; z-index: 1;}
+.academicPageHero span,.academicEyebrow {color: #a9c5df; font-size: .7rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase;}
+.academicPageHero h1 {color: #fff; font-family: var(--academic-serif); font-size: clamp(2.5rem,5vw,4rem); margin: .7rem 0;}
+.academicPageHero p {color: #c4d6e7; font-family: var(--academic-serif); margin: 0;}
+.aboutLead {align-items:center; display:grid; gap:4rem; grid-template-columns:260px 1fr; max-width:1000px;}
+.aboutLead>img {border: 1px solid var(--academic-border); padding: 9px; width:100%;}
+.aboutLead h2 {font-family:var(--academic-serif); font-size:2.2rem; margin:.6rem 0 1.2rem;}
+.aboutLead h2 small {color:var(--academic-muted); font-size:.48em; font-weight:400; margin-left:.45rem;}
+.aboutLead p,.aboutProse {color:var(--academic-muted); line-height:1.95;}
+.aboutLinks {display:flex; flex-wrap:wrap; gap:1.3rem; margin-top:1.5rem;}
+.aboutLinks a {font-size:.8rem; font-weight:750;}
+.skillColumns {display:grid; gap:2rem; grid-template-columns:repeat(3,1fr);}
+.theme-blog-list-page-main,.theme-doc-markdown {max-width: 900px;}
+.theme-blog-post-page article h1,.theme-doc-markdown h1 {font-family: var(--academic-serif);}
+.blog-wrapper article {border-bottom: 1px solid var(--academic-border); padding-bottom: 2rem;}
+:focus-visible {outline: 3px solid color-mix(in srgb, var(--academic-blue) 35%, transparent); outline-offset: 3px;}
+@media(max-width:760px){.academicSection{padding:3.8rem 0}.aboutLead{gap:2.2rem;grid-template-columns:1fr}.aboutLead>img{max-width:240px}.skillColumns{grid-template-columns:1fr}.academicPageHero .container{padding-bottom:3rem;padding-top:3rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

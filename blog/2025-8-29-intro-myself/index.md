@@ -2,7 +2,7 @@
 slug: intro_me
 title:  关于遥感检测/分割
 authors: [seekyou]
-tags: [Note,seekyou]
+tags: [research, remote-sensing, computer-vision]
 ---
 简要介绍一下自己的研究方向
 

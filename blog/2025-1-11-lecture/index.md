@@ -229,6 +229,4 @@ tags: [Note,seekyou,competition]
 
 [![OEfNOl.png](https://ooo.0x0.ooo/2025/01/11/OEfNOl.png)](https://img.tg/image/OEfNOl)
  
-QQ:**(seekyou)** 1625629469
-
 [![OEfrEB.th.png](https://ooo.0x0.ooo/2025/01/11/OEfrEB.th.png)](https://img.tg/image/OEfrEB)

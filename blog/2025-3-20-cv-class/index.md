@@ -21,7 +21,7 @@ tags: [Note,seekyou]
 4. &zwnj;**描述子生成**&zwnj;：将16x16邻域划分为4x4子区域，每个子区域计算8方向梯度直方图，形成128维特征向量
 
 $$
-\text{梯度计算：} 
+\text{梯度计算}\colon
 \begin{aligned}
 m(x,y) &= \sqrt{(L(x+1,y)-L(x-1,y))^2 + (L(x,y+1)-L(x,y-1))^2} \\
 \theta(x,y) &= \arctan\left(\frac{L(x,y+1)-L(x,y-1)}{L(x+1,y)-L(x-1,y)}\right)
@@ -53,7 +53,7 @@ G_y = I(x, y+1) - I(x, y-1)
 $$
 - &zwnj;**幅值与方向**&zwnj;：  
 $$
-\text{梯度计算：} 
+\text{梯度计算}\colon
 \begin{aligned}
 m(x, y) &= \sqrt{(L(x+1, y) - L(x-1, y))^2 + (L(x, y+1) - L(x, y-1))^2} \\[10pt]
 \theta(x, y) &= \arctan\left(\frac{L(x, y+1) - L(x, y-1)}{L(x+1, y) - L(x-1, y)}\right)
@@ -83,13 +83,13 @@ $$
 
 $$
 \begin{aligned}
-& 1.\ \text{计算 L2 范数}： v = \sqrt{\sum_{i=1}^{n} f_i^2 + \varepsilon^2} \\  
+& 1.\ \text{计算 L2 范数}\colon v = \sqrt{\sum_{i=1}^{n} f_i^2 + \varepsilon^2} \\
 
-& 2.\ \text{初步归一化}： f'_i = \frac{f_i}{v} \\  
+& 2.\ \text{初步归一化}\colon f'_i = \frac{f_i}{v} \\
 
-& 3.\ \text{截断限制}： f''_i = \min\{f'_i, 0.2\} \\  
+& 3.\ \text{截断限制}\colon f''_i = \min\{f'_i, 0.2\} \\
 
-& 4.\ \text{重新归一化}： f'''_i = \frac{f''_i}{\sqrt{\sum_{i=1}^{n} (f''_i)^2}}  
+& 4.\ \text{重新归一化}\colon f'''_i = \frac{f''_i}{\sqrt{\sum_{i=1}^{n} (f''_i)^2}}
 
 \end{aligned}
 $$
