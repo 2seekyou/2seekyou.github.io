@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkquan_cui_academic_homepage=self.webpackChunkquan_cui_academic_homepage||[]).push([[1235],{8552(e){e.exports=JSON.parse('{"name":"docusaurus-plugin-content-pages","id":"default"}')}}]);
