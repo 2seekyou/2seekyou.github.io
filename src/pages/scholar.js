@@ -1,12 +1,15 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import {InterestGrid, ProjectGrid, PublicationList, SectionTitle} from '../components/Academic';
 import {projects, publications, researchInterests, worksInReview} from '../data/academic';
+import {scholarStructuredData} from '../data/seo';
 
 export default function ScholarPage() {
   return (
     <Layout title="学者" description="崔全的研究方向、论文成果、科研项目与学术经历。">
+      <Head><script type="application/ld+json">{JSON.stringify(scholarStructuredData)}</script></Head>
       <main>
         <header className="academicPageHero"><div className="container"><span>ACADEMIC PROFILE</span><h1>研究与成果</h1><p>Research, publications and selected projects in remote sensing and computer vision.</p></div></header>
         <section className="academicSection"><div className="container"><SectionTitle eyebrow="Research Agenda" title="研究方向" description="聚焦遥感影像中的可靠视觉感知，连接方法研究与真实场景需求。"/><InterestGrid items={researchInterests}/></div></section>

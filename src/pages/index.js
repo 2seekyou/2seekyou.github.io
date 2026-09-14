@@ -2,9 +2,11 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import {SectionTitle} from '../components/Academic';
 import {featuredPosts, homeHighlights, profile} from '../data/academic';
+import {homeStructuredData} from '../data/seo';
 import styles from './index.module.css';
 
 function Hero() {
@@ -39,6 +41,7 @@ function Hero() {
 export default function Home() {
   return (
     <Layout title="学术主页" description="崔全的个人学术主页，研究方向包括遥感目标检测、少样本遥感分割与视觉基础模型。">
+      <Head><script type="application/ld+json">{JSON.stringify(homeStructuredData)}</script></Head>
       <main>
         <Hero />
         <section className="academicSection">

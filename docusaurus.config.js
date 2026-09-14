@@ -3,49 +3,6 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
-const personSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Quan Cui',
-  alternateName: '崔全',
-  url: 'https://cq.seekyou.top',
-  image: 'https://cq.seekyou.top/img/profile/quan-cui.jpg',
-  affiliation: {
-    '@type': 'CollegeOrUniversity',
-    name: 'Xiangtan University',
-  },
-  jobTitle: 'M.S. Student in Control Science and Engineering',
-  email: 'mailto:cuiquan@smail.xtu.edu.cn',
-  sameAs: ['https://github.com/cowqer'],
-  knowsAbout: [
-    'Remote Sensing',
-    'Computer Vision',
-    'Oriented Object Detection',
-    'Few-shot Semantic Segmentation',
-    'Vision Foundation Models',
-  ],
-};
-
-const articleSchemas = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ScholarlyArticle',
-    headline: 'Multidirectional Rotation-Aware Network for Oriented Ship Detection From Remote Sensing Imagery',
-    author: { '@type': 'Person', name: 'Quan Cui' },
-    datePublished: '2026',
-    isPartOf: { '@type': 'Periodical', name: 'IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing' },
-    identifier: 'https://doi.org/10.1109/JSTARS.2025.3629101',
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ScholarlyArticle',
-    headline: 'Few-Shot Segmentation of Mining Areas via Adaptive Prior Enhancement and Selective Edge Attention',
-    author: { '@type': 'Person', name: 'Quan Cui' },
-    datePublished: '2026',
-    publication: { '@type': 'Event', name: 'IGARSS 2026' },
-  },
-];
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '崔全 Quan Cui',
@@ -68,18 +25,6 @@ const config = {
       'zh-Hans': {label: '简体中文', htmlLang: 'zh-CN'},
     },
   },
-  headTags: [
-    {
-      tagName: 'script',
-      attributes: {type: 'application/ld+json'},
-      innerHTML: JSON.stringify(personSchema),
-    },
-    ...articleSchemas.map((schema) => ({
-      tagName: 'script',
-      attributes: {type: 'application/ld+json'},
-      innerHTML: JSON.stringify(schema),
-    })),
-  ],
   presets: [
     [
       'classic',
@@ -120,6 +65,7 @@ const config = {
     metadata: [
       {name: 'keywords', content: '崔全, Quan Cui, 遥感, 计算机视觉, 旋转目标检测, 少样本分割, 湘潭大学'},
       {name: 'author', content: 'Quan Cui'},
+      {name: 'robots', content: 'index, follow, max-image-preview:large'},
     ],
     colorMode: {
       defaultMode: 'light',
@@ -156,6 +102,7 @@ const config = {
           items: [
             {label: 'Email', href: 'mailto:cuiquan@smail.xtu.edu.cn'},
             {label: 'GitHub', href: 'https://github.com/cowqer'},
+            {label: 'DBLP', href: 'https://dblp.org/pid/234/7752.html'},
             {label: 'MDR-Net', href: 'https://github.com/cowqer/MDR-Net'},
           ],
         },

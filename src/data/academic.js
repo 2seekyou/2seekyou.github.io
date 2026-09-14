@@ -7,6 +7,7 @@ export const profile = {
   affiliation: '湘潭大学 · 自动化与电子信息学院',
   email: 'cuiquan@smail.xtu.edu.cn',
   github: 'https://github.com/cowqer',
+  dblp: 'https://dblp.org/pid/234/7752.html',
   avatar: '/img/profile/quan-cui.jpg',
   bio: '我的研究聚焦遥感影像智能解译，关注复杂场景中的旋转目标检测、少样本语义分割与视觉基础模型适配，希望构建更可靠、更高效的数据驱动感知方法。',
 };

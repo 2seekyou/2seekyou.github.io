@@ -53,3 +53,11 @@ pnpm serve
 
 首次启用自动部署时，请确认仓库 **Settings → Pages → Build and deployment**
 仍选择 **Deploy from a branch**，分支为 `gh-pages`、目录为 `/ (root)`。
+
+## 搜索引擎收录
+
+- `static/robots.txt` 允许公开抓取，并指向自动生成的 `/sitemap.xml`。
+- 首页、关于页和学者页分别提供 Person、ProfilePage、WebSite 与 ScholarlyArticle 结构化数据。
+- 首次收录需在 Google Search Console 验证 `cq.seekyou.top`，提交
+  `https://cq.seekyou.top/sitemap.xml`，并使用网址检查工具请求首页编入索引。
+- 如需增加 Google 或 Bing 的 HTML 验证信息，请将平台给出的验证字符串加入站点配置，勿提交账户密码或访问令牌。
